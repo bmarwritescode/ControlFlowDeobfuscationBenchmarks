@@ -1,0 +1,8 @@
+description: block-fission
+params: ["--Seed=1"]
+variants:
+  - name: basic
+    procedure:
+      - ["--Transform=Flatten", "--FlattenSplitBasicBlocks=true", "--Functions=SECRET"]
+      - ["--Transform=InitOpaque", "--Functions=SECRET", "--InitOpaqueCount=1", "--InitOpaqueStructs=list,array",
+          "--Transform=AddOpaque", "--Functions=SECRET"]
