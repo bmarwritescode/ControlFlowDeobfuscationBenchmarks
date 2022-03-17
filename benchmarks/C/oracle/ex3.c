@@ -12,18 +12,18 @@ int multiply45Obs(int y)
   while(1) {
     if (a == 0) {
      if (b == 0) {
-       y=z+y; a=¬a;
-       b=¬b;c=¬c;
-       if (¬ c) break;
+       y=z+y; a=~a;
+       b=~b;c=~c;
+       if (~c) break;
      } else {
-       z=z+y; a=¬a; b=¬b; c=¬c;
-       if (¬ c) break;
+       z=z+y; a=~a; b=~b; c=~c;
+       if (~c) break;
      }
     } else if(b == 0) {
       z=y << 2;
-      a=¬a;
+      a=~a;
     } else {
-      z=y << 3; a=¬a; b=¬b;
+      z=y << 3; a=~a; b=~b;
     }
   }
   return y;
