@@ -10,8 +10,14 @@ import tempfile
 import unittest
 
 HYPOTHESIS_TYPE = {
-    "long": st.integers(min_value=5, max_value=1000),
+    "long": st.integers(min_value=0, max_value=2**31),
     "bool": st.booleans()
+}
+
+HYPOTHESIS_SETTINGS = {
+    "max_examples": 100,
+    "deadline": timedelta(seconds=20),
+    "phases": [Phase.generate]
 }
 
 
@@ -24,6 +30,7 @@ def _compile(src_path: str) -> str:
     assert result.returncode == 0
     return out_path
   except CalledProcessError as ex:
+    print(ex.stdout)
     print(ex.stderr)
     return None
 
@@ -53,21 +60,23 @@ def _create_test_driver(prog_1: str, prog_2: str, test_settings: dict) -> callab
 
 def run_test(src_1_path: str, src_2_path: str) -> None:
 
-  prog_1 = _compile(src_1_path)
-  prog_2 = _compile(src_2_path)
+  try:
+    prog_1 = _compile(src_1_path)
+    prog_2 = _compile(src_2_path)
 
-  test_settings = {
-      "max_examples": 20,
-      "deadline": timedelta(seconds=5),
-      "phases": [Phase.generate]
-  }
-  test_driver = _create_test_driver(prog_1, prog_2, test_settings)
+    if not prog_1 or not prog_2:
+      raise Exception("Cannot compile C programs")
 
-  runner = unittest.TextTestRunner()
-  runner.run(unittest.makeSuite(test_driver))
+    test_driver = _create_test_driver(prog_1, prog_2, HYPOTHESIS_SETTINGS)
 
-  os.remove(prog_1)
-  os.remove(prog_2)
+    runner = unittest.TextTestRunner()
+    runner.run(unittest.makeSuite(test_driver))
+  finally:
+    try:
+      os.remove(prog_1)
+      os.remove(prog_2)
+    except:
+      pass
 
 
 if __name__ == "__main__":
