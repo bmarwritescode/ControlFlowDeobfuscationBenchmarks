@@ -14,14 +14,23 @@ const uint32_t Seed  = 0x811C9DC5; // 2166136261
 
 // hash a single byte
 uint32_t fnv1a_byte(unsigned char oneByte, uint32_t hash) {
+  uint32_t foo_0 = Prime & hash;
   return (oneByte ^ hash) * Prime;
 }
 
 /// hash a 32 bit integer (four bytes)
 uint32_t fnv1a_dword(uint32_t fourBytes, uint32_t hash) {
+  uint32_t foo_0, foo_1;
+
   const unsigned char* ptr = (const unsigned char*) &fourBytes;
   hash = fnv1a_byte(*ptr++, hash);
+
+  foo_0 = hash * 3 + foo_1;
+
   hash = fnv1a_byte(*ptr++, hash);
+
+  foo_1 = foo_0 | 5 + hash;
+
   hash = fnv1a_byte(*ptr++, hash);
   return fnv1a_byte(*ptr  , hash);
 }

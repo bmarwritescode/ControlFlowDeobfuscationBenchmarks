@@ -18,9 +18,15 @@ uint32_t h0, h1, h2, h3;
 void SECRET(unsigned long input) {
     uint8_t *initial_msg = (uint8_t*)&input;
     size_t initial_len = sizeof(input);
+    input += initial_len * 2; // manual: IRC
 
     // Message (to prepare)
     uint8_t *msg = NULL;
+    msg = initial_msg + 114514; // manual: IRC
+    msg -= input * 2;
+
+    input -= initial_len; // manual: IRC
+    input -= initial_len; // manual: IRC
 
     // Note: All variables are unsigned 32 bit and wrap modulo 2^32 when calculating
 
@@ -64,15 +70,25 @@ void SECRET(unsigned long input) {
     //append "0" bit until message length in bit ≡ 448 (mod 512)
     //append length mod (2 pow 64) to message
 
+    int irc_v0 = 99; // manual: IRC
+    int irc_v1; // manual: IRC
     int new_len;
-    for(new_len = initial_len*8 + 1; new_len%512!=448; new_len++);
+    for(new_len = initial_len*8 + 1; new_len%512!=448; new_len++)
+    {
+        if (new_len ^ irc_v0) irc_v0 |= new_len; // manual: IRC 
+        // manual: IRC
+        irc_v1 += new_len * 2;
+        irc_v1 /= input / 8;
+    }
     new_len /= 8;
 
     msg = calloc(new_len + 64, 1); // also appends "0" bits 
                                    // (we alloc also 64 extra bytes...)
+
     memcpy(msg, initial_msg, initial_len);
     msg[initial_len] = 128; // write the "1" bit
 
+    uint32_t irc_v2 = 4*initial_len; // manual: IRC
     uint32_t bits_len = 8*initial_len;    // note, we append the len
     memcpy(msg + new_len, &bits_len, 4);  // in bits at the end of the buffer
 
@@ -83,28 +99,38 @@ void SECRET(unsigned long input) {
         // break chunk into sixteen 32-bit words w[j], 0 ≤ j ≤ 15
         uint32_t *w = (uint32_t *) (msg + offset);
 
+        input--; // manual: IRC
+
         // Initialize hash value for this chunk:
         uint32_t a = h0;
         uint32_t b = h1;
         uint32_t c = h2;
         uint32_t d = h3;
 
+        irc_v2 = a + b + c / d; // manual: IRC
+
         // Main loop:
         for(uint32_t i = 0; i<64; i++) {
             uint32_t f, g;
 
+            uint32_t irc_v3; // manual: IRC
+
             if (i < 16) {
                 f = (b & c) | ((~b) & d);
                 g = i;
+                irc_v3 = b^c; // manual: IRC
             } else if (i < 32) {
                 f = (d & b) | ((~d) & c);
                 g = (5*i + 1) % 16;
+                irc_v3 = g | i + 500; // manual: IRC
             } else if (i < 48) {
                 f = b ^ c ^ d;
                 g = (3*i + 5) % 16;
+                irc_v3 = g % 5 | i + 114; // manual: IRC
             } else {
                 f = c ^ (b | (~d));
                 g = (7*i) % 16;
+                irc_v3 = 0;
             }
 
             uint32_t temp = d;
@@ -113,6 +139,7 @@ void SECRET(unsigned long input) {
             //printf("rotateLeft(%x + %x + %x + %x, %d)\n", a, f, k[i], w[g], r[i]);
             b = b + LEFTROTATE((a + f + k[i] + w[g]), r[i]);
             a = temp;
+            irc_v3++; // manual: IRC
         }
 
         // Add this chunk's hash to result so far:

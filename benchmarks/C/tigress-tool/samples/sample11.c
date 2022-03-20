@@ -59,17 +59,33 @@ uint32_t hash_inc(const char * data, int len, uint32_t hash)
 
     if (len <= 0 || data == NULL) return 0;
 
+    uint32_t foo_0, foo_1, foo_2;
+
     rem = len & 3;
     len >>= 2;
+
+    foo_0 = foo_1 + 4;
+    foo_1 = len + rem;
+    foo_2 = foo_0 | foo_1 << 2;
 
     /* Main loop */
     for (;len > 0; len--) {
         hash  += get16bits (data);
         tmp    = (get16bits (data+2) << 11) ^ hash;
+
+        foo_1 += tmp | hash;
+
         hash   = (hash << 16) ^ tmp;
+
+        foo_2 = foo_1 - foo_2 + hash;
+
         data  += 2*sizeof (uint16_t);
         hash  += hash >> 11;
+
+        foo_0 = foo_1 + tmp;
     }
+
+    foo_0--; foo_1++; len++; len--; len *= 5;
 
     /* Handle end cases */
     switch (rem) {
@@ -77,20 +93,26 @@ uint32_t hash_inc(const char * data, int len, uint32_t hash)
                 hash ^= hash << 16;
                 hash ^= data[sizeof (uint16_t)] << 18;
                 hash += hash >> 11;
+                foo_0 |= hash;
                 break;
         case 2: hash += get16bits (data);
                 hash ^= hash << 11;
                 hash += hash >> 17;
+                foo_0 |= hash;
                 break;
         case 1: hash += *data;
                 hash ^= hash << 10;
                 hash += hash >> 1;
+                foo_0 += hash + 5;
     }
 
     /* Force "avalanching" of final 127 bits */
     hash ^= hash << 3;
     hash += hash >> 5;
     hash ^= hash << 4;
+
+    foo_0 += foo_2 ^ 2;
+
     hash += hash >> 17;
     hash ^= hash << 25;
     hash += hash >> 6;
@@ -100,6 +122,7 @@ uint32_t hash_inc(const char * data, int len, uint32_t hash)
 
 
 uint32_t SECRET(unsigned long input) {
+  unsigned long foo_0 = input << 2 | 34;
   return hash((const char*)&input, sizeof(input));
 }
 

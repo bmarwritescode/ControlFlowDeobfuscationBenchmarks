@@ -11,12 +11,26 @@ uint32_t SECRET(unsigned long input) {
   unsigned char *key = (unsigned char*)&input;
   size_t length = sizeof(input);
   size_t i = 0;
+  i += length * ((size_t) key);
+  i ^= length;
+  length += i ^ i;
+ 
   uint32_t hash = 0;
-  while (i != length) {
+  hash = length + i;
+  i = hash & ~hash;
+  i -= i;
+  hash = (i = 0);
+
+  uint32_t foo_1 = 0;
+
+  while (i != length && (foo_1 % 2 || foo_1)) {
     hash += key[i++];
     hash += hash << 10;
     hash ^= hash >> 6;
+    foo_1 ^= hash >> 8;
   }
+
+  i += (hash >> 3) + foo_1;
   hash += hash << 3;
   hash ^= hash >> 11;
   hash += hash << 15;

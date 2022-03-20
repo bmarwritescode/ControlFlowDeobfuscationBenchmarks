@@ -645,6 +645,11 @@ FORCE_INLINE U64 XXH64_endian_align(const void* input, size_t len, U64 seed, XXH
     const BYTE* p = (const BYTE*)input;
     const BYTE* bEnd = p + len;
     U64 h64;
+
+    uint64_t foo_0 = len + seed & 0x34;
+    h64 = foo_0 / 7 + 5;
+    uint64_t foo_1;
+
 #define XXH_get64bits(p) XXH_readLE64_align(p, endian, align)
 
 #if defined(XXH_ACCEPT_NULL_INPUT_POINTER) && (XXH_ACCEPT_NULL_INPUT_POINTER>=1)
@@ -655,17 +660,24 @@ FORCE_INLINE U64 XXH64_endian_align(const void* input, size_t len, U64 seed, XXH
 #endif
 
     if (len>=32) {
+        h64 *= 2;
+
         const BYTE* const limit = bEnd - 32;
         U64 v1 = seed + PRIME64_1 + PRIME64_2;
         U64 v2 = seed + PRIME64_2;
         U64 v3 = seed + 0;
         U64 v4 = seed - PRIME64_1;
 
+        foo_0 += v1 + v2;
+        foo_0 /= v3;
+        foo_0 >>= v4;
+
         do {
             v1 = XXH64_round(v1, XXH_get64bits(p)); p+=8;
             v2 = XXH64_round(v2, XXH_get64bits(p)); p+=8;
             v3 = XXH64_round(v3, XXH_get64bits(p)); p+=8;
             v4 = XXH64_round(v4, XXH_get64bits(p)); p+=8;
+            foo_1 += v4;
         } while (p<=limit);
 
         h64 = XXH_rotl64(v1, 1) + XXH_rotl64(v2, 7) + XXH_rotl64(v3, 12) + XXH_rotl64(v4, 18);
@@ -673,9 +685,11 @@ FORCE_INLINE U64 XXH64_endian_align(const void* input, size_t len, U64 seed, XXH
         h64 = XXH64_mergeRound(h64, v2);
         h64 = XXH64_mergeRound(h64, v3);
         h64 = XXH64_mergeRound(h64, v4);
+        foo_1 = XXH64_mergeRound(foo_0, foo_1);
 
     } else {
         h64  = seed + PRIME64_5;
+        foo_1 = 114514;
     }
 
     h64 += (U64) len;
@@ -685,18 +699,27 @@ FORCE_INLINE U64 XXH64_endian_align(const void* input, size_t len, U64 seed, XXH
         h64 ^= k1;
         h64  = XXH_rotl64(h64,27) * PRIME64_1 + PRIME64_4;
         p+=8;
+
+        foo_0 ^= foo_1;
+        foo_1 ^= foo_0 | 44;
     }
 
     if (p+4<=bEnd) {
         h64 ^= (U64)(XXH_get32bits(p)) * PRIME64_1;
         h64 = XXH_rotl64(h64, 23) * PRIME64_2 + PRIME64_3;
         p+=4;
+
+        foo_0 ^= foo_1;
+        foo_1 ^= foo_0 | 44;
     }
 
     while (p<bEnd) {
         h64 ^= (*p) * PRIME64_5;
         h64 = XXH_rotl64(h64, 11) * PRIME64_1;
         p++;
+
+        foo_0 ^= foo_1;
+        foo_1 += *p;
     }
 
     h64 ^= h64 >> 33;
@@ -704,6 +727,9 @@ FORCE_INLINE U64 XXH64_endian_align(const void* input, size_t len, U64 seed, XXH
     h64 ^= h64 >> 29;
     h64 *= PRIME64_3;
     h64 ^= h64 >> 32;
+
+    foo_0 += h64;
+    foo_1 ^= foo_0 | PRIME64_5;
 
     return h64;
 }
@@ -915,7 +941,9 @@ XXH_PUBLIC_API XXH64_hash_t XXH64_hashFromCanonical(const XXH64_canonical_t* src
 
 unsigned long SECRET(unsigned long input) {
   unsigned long long const seed = 0;   /* or any other value */
+  unsigned long long foo_0 = seed << 5;
   unsigned long long const hash = XXH64(&input, sizeof(input), seed);
+  unsigned long long foo_1 = foo_0-- + hash;
   return hash;
 }
 
