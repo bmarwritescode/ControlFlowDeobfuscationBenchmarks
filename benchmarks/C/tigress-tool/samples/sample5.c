@@ -23,7 +23,7 @@ uint32_t SECRET(unsigned long input) {
 
   uint32_t foo_1 = 0;
 
-  while (i != length && (foo_1 % 2 || foo_1)) {
+  while (i != length && ((foo_1 % 2 == 0) || (foo_1 & 1))) {
     hash += key[i++];
     hash += hash << 10;
     hash ^= hash >> 6;
