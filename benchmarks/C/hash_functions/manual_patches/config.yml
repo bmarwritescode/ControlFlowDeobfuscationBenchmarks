@@ -1,0 +1,7 @@
+patches:
+  - name: irrelevant-code-insertion
+    path: ./irc
+  - name: loop-fission
+    path: ./lf
+  - name: loop-unrolling
+    path: ./lu
