@@ -255,7 +255,8 @@ cython_debug/
 
 # End of https://www.toptal.com/developers/gitignore/api/python,c,c++,java
 
-.hypothesis
-tigress/
-bin/
+**/.hypothesis
+**/tigress
+**/bin
 *.out
+**/tbd
