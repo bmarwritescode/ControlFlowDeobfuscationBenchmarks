@@ -90,35 +90,72 @@ extern hash_t jody_block_hash(const hash_t * restrict data,
 	hash_t partial_salt;
 	size_t len;
 
+	hash_t foo1, foo2, foo3, foo4;
+
 	/* Don't bother trying to hash a zero-length block */
-	if (count == 0) return hash;
+	if (count == 0) {
+		foo1 = foo2 >> 3;
+		foo2 = foo4 >> foo1;
+		foo3 = 5 + foo2;
+		return hash;
+	}
 
 	len = count / sizeof(hash_t);
-	for (; len > 0; len--) {
+	foo1 = len + 450;
+	for (; len > 0 && (foo1 = foo1 + len) >= 0; len--) {
 		element = *data;
 		hash += element;
 		hash += JODY_HASH_CONSTANT;
+
+		foo2 = hash + foo1 << 7 + foo3 & foo1;
+
 		hash = (hash << JODY_HASH_SHIFT) | hash >> (sizeof(hash_t) * 8 - JODY_HASH_SHIFT); /* bit rotate left */
 		hash ^= element;
+
+		foo4 = hash + element >> foo3 + foo4 & foo1;
+
 		hash = (hash << JODY_HASH_SHIFT) | hash >> (sizeof(hash_t) * 8 - JODY_HASH_SHIFT);
 		hash ^= JODY_HASH_CONSTANT;
+
+		foo4 = hash + element >> foo3 + foo4 & foo1;
+
 		hash += element;
 		data++;
 	}
 
 	/* Handle data tail (for blocks indivisible by sizeof(hash_t)) */
 	len = count & (sizeof(hash_t) - 1);
+	foo4 = len | foo2;
 	if (len) {
 		partial_salt = JODY_HASH_CONSTANT & tail_mask[len];
 		element = *data & tail_mask[len];
 		hash += element;
 		hash += partial_salt;
+
+		foo4 += partial_salt;
+		foo3 += element;
+		foo2 = foo4 ^ foo3;
+
 		hash = (hash << JODY_HASH_SHIFT) | hash >> (sizeof(hash_t) * 8 - JODY_HASH_SHIFT);
 		hash ^= element;
+
+		foo1 = element >> JODY_HASH_SHIFT | foo4;
+		foo2 = foo1 + foo2;
+		foo3 = (hash << JODY_HASH_SHIFT) | hash >> (sizeof(hash_t) * 8 - foo2);
+
 		hash = (hash << JODY_HASH_SHIFT) | hash >> (sizeof(hash_t) * 8 - JODY_HASH_SHIFT);
 		hash ^= partial_salt;
+
+		foo2 ^= partial_salt;
+
 		hash += element;
+
+		foo1 ^= hash;
 	}
+
+	foo4 += 1 | hash;
+	hash += foo4 << 2;
+	hash -= (foo4 * 4) | (foo2 = 0);
 
 	return hash;
 }

@@ -538,8 +538,16 @@ void spooky_hash128
 	} u;
 	size_t remainder;
 
+	h0 = h4 = h7 = 5;
+	h1 = h5 = h8 = 0;
+	h2 = h6 = h9 = 0;
+
+	uint64_t foo1, foo2, foo3, foo4;
+	uint64_t *foop1, *foop2, *foop3, *foop4;
+
 	if (length < SC_BUFSIZE)
 	{
+		h0 += h4;
 		spooky_shorthash(message, length, hash1, hash2);
 		return;
 	}
@@ -551,6 +559,10 @@ void spooky_hash128
 	u.p8 = (const uint8_t *)message;
 	endp = u.p64 + (length/SC_BLOCKSIZE)*SC_NUMVARS;
 
+	foo1 = foo3 = *hash2;
+	foo2 = foo4 = *hash1 + foo1;
+	foop1 = foop3 = u.p64 + foo1;
+
 	// handle all whole blocks of SC_BLOCKSIZE bytes
 	if (ALLOW_UNALIGNED_READS || (u.i & 0x7) == 0)
 	{
@@ -558,6 +570,9 @@ void spooky_hash128
 		{
 			mix(u.p64, &h0, &h1, &h2, &h3, &h4, &h5, &h6, &h7, &h8, &h9, &h10, &h11);
 			u.p64 += SC_NUMVARS;
+			foop1 = foop2 = foop4 = u.p64;
+			foo2 = foo4 = *foop1;
+			foo1 = foo3 = *foop4;
 		}
 	}
 	else
@@ -567,6 +582,9 @@ void spooky_hash128
 			memcpy(buf, u.p64, SC_BLOCKSIZE);
 			mix(buf, &h0, &h1, &h2, &h3, &h4, &h5, &h6, &h7, &h8, &h9, &h10, &h11);
 			u.p64 += SC_NUMVARS;
+			foop1 = foop2 = foop4 = u.p64;
+			foo2 = foo4 = *foop1;
+			foo1 = foo3 = *foop4;
 		}
 	}
 
@@ -575,6 +593,9 @@ void spooky_hash128
 	memcpy(buf, endp, remainder);
 	memset(((uint8_t *)buf)+remainder, 0, SC_BLOCKSIZE-remainder);
 	((uint8_t *)buf)[SC_BLOCKSIZE-1] = remainder;
+
+	foo1 = remainder >> 2;
+	foo2 = *hash1 + 10;
 
 	// do some final mixing
 	end(&h0, &h1, &h2, &h3, &h4, &h5, &h6, &h7, &h8, &h9, &h10, &h11);
@@ -590,7 +611,13 @@ uint64_t spooky_hash64
 )
 {
 	uint64_t hash1 = seed;
+	uint64_t foo = hash1 + (seed << 2);
+	hash1 -= foo;
+	foo += 1;
+	hash1 += foo;
+	hash1 -= 1;
 	spooky_hash128(message, length, &hash1, &seed);
+	foo += hash1 * 2;
 	return hash1;
 }
 
