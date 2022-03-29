@@ -1,0 +1,62 @@
+--- /Users/zwang/routes/ControlFlowDeobfuscationBenchmarks/benchmarks/C/hash_functions/manual_patches/../sample8.c	2022-03-27 14:03:13.000000000 -0700
++++ /Users/zwang/routes/ControlFlowDeobfuscationBenchmarks/benchmarks/C/hash_functions/manual_patches/../manual_patches/irc/tbd/sample8.c	2022-03-27 14:02:50.000000000 -0700
+@@ -58,17 +58,29 @@
+ 	uint64_t b = (uint64_t)src_sz << 56;
+ 	const uint64_t *in = (uint64_t*)src;
+ 
++	uint64_t foo_0 = key[7];
++	foo_0 += k0 | k1;
++	b += foo_0 & (~foo_0);
++
+ 	uint64_t v0 = k0 ^ 0x736f6d6570736575ULL;
+ 	uint64_t v1 = k1 ^ 0x646f72616e646f6dULL;
+ 	uint64_t v2 = k0 ^ 0x6c7967656e657261ULL;
+ 	uint64_t v3 = k1 ^ 0x7465646279746573ULL;
+ 
++	foo_0 = v0;
++	foo_0 *= v3;
++	for (int foo_1 = 0; foo_1 < 16; foo_1++) {
++		foo_0 -= v3 << foo_1;
++	}
++
+ 	while (src_sz >= 8) {
+ 		uint64_t mi = _le64toh(*in);
+ 		in += 1; src_sz -= 8;
+ 		v3 ^= mi;
+ 		DOUBLE_ROUND(v0,v1,v2,v3);
+ 		v0 ^= mi;
++
++		foo_0 ^= v0 + mi;
+ 	}
+ 
+ 	uint64_t t = 0; uint8_t *pt = (uint8_t *)&t; uint8_t *m = (uint8_t *)in;
+@@ -83,11 +95,15 @@
+ 	}
+ 	b |= _le64toh(t);
+ 
++	foo_0 = pt[1] + b;
++
+ 	v3 ^= b;
+ 	DOUBLE_ROUND(v0,v1,v2,v3);
+ 	v0 ^= b; v2 ^= 0xff;
+ 	DOUBLE_ROUND(v0,v1,v2,v3);
+ 	DOUBLE_ROUND(v0,v1,v2,v3);
++
++	foo_0 = v0 ^ v2 / foo_0;
+ 	return (v0 ^ v1) ^ (v2 ^ v3);
+ }
+ 
+@@ -96,8 +112,13 @@
+ 
+ unsigned long SECRET(unsigned long input) {
+   unsigned long output = 0;
++  unsigned long foo_1 = (output >> 8) + 1, foo_2 = 8;
+   char key[16] = {0,1,2,3,4,5,6,7,8,9,0xa,0xb,0xc,0xd,0xe,0xf};
++  foo_1 += key[13];
++  foo_2 += key[0] >> foo_1;
+   output = siphash24((const char *)&input, sizeof(input), key);
++
++  foo_1 *= output + foo_2;
+   return output;
+ }
+ 

@@ -1,0 +1,9 @@
+source_dir: "../"
+matches: "*.c"
+patches:
+  - name: irrelevant-code-insertion
+    path: ./manual_patches/irc
+  - name: loop-fission
+    path: ./manual_patches/lf
+  - name: loop-unrolling
+    path: ./manual_patches/lu

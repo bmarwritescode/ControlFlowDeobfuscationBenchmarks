@@ -9,13 +9,17 @@ import os
 import tempfile
 import unittest
 
+from tqdm import tqdm
+
+__all__ = ["run_test"]
+
 HYPOTHESIS_TYPE = {
     "long": st.integers(min_value=0, max_value=2**31),
     "bool": st.booleans()
 }
 
 HYPOTHESIS_SETTINGS = {
-    "max_examples": 100,
+    "max_examples": 10000,
     "deadline": timedelta(seconds=20),
     "phases": [Phase.generate]
 }
@@ -46,6 +50,8 @@ def _run_program(exec_path: str, args: list[str]) -> str:
 
 def _create_test_driver(prog_1: str, prog_2: str, test_settings: dict) -> callable[[int], None]:
 
+  pbar = tqdm(total=test_settings["max_examples"])
+
   class TestProgramEquivalence(unittest.TestCase):
     @given(value=HYPOTHESIS_TYPE["long"])
     @settings(**test_settings)
@@ -54,6 +60,7 @@ def _create_test_driver(prog_1: str, prog_2: str, test_settings: dict) -> callab
       out_2 = _run_program(prog_2, [str(value)])
 
       self.assertEqual(out_1, out_2)
+      pbar.update()
 
   return TestProgramEquivalence
 
