@@ -83,3 +83,5 @@ dkms.conf
 tigress/
 bin/
 *.out
+out/
+samples/

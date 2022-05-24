@@ -4,12 +4,10 @@ import subprocess
 import yaml
 
 from pathlib import Path
-from shutil import copy
+from shutil import copy, which
 from collections import namedtuple
 
-CONFIG_DIR = "./configs"
-OUTPUT_DIR = "./bin"
-SOURCE_DIR = "./samples"
+# specify tigress path if not installed
 TIGRESS_HOME = "./tigress/3.3.2"
 
 TIGRESS_ENV = "x86_64:Darwin:Clang:5.1"
@@ -37,10 +35,13 @@ def get_args():
 
 
 def call_tigress(tigress_home, params, src_file, out_file):
-    try:
+    # setup Tigress environment and path
+    tigress_exec = which("tigress")
+    if tigress_exec is None:
         os.environ["TIGRESS_HOME"] = tigress_home
         tigress_exec = os.path.join(tigress_home, "tigress")
 
+    try:
         output = subprocess.run([tigress_exec, f"--out={out_file}"] + TIGRESS_PARAMS + params + [src_file],
                                 encoding="utf8",
                                 check=True,
