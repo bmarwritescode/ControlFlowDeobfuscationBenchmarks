@@ -1,40 +1,41 @@
 typedef void *__builtin_va_list;
-struct __anonstruct_fd_set_356711149;
-struct __pthread_internal_slist;
-union __anonunion_pthread_mutex_t_335460617;
-struct __pthread_internal_list;
-struct _2_OBF_FUNC_1_opaque_NodeStruct;
-struct __anonstruct___sigset_t_973126068;
-struct __anonstruct___g1_start32_961093919;
-struct __pthread_cond_s;
-struct __anonstruct_lldiv_t_103911545;
-union __anonunion_pthread_condattr_t_488594145;
-struct __anonstruct_ldiv_t_790849867;
-struct drand48_data;
-struct random_data;
-union __anonunion_pthread_rwlockattr_t_145707745;
-struct __anonstruct___fsid_t_109580352;
-struct __pthread_mutex_s;
-struct __anonstruct_div_t_773697287;
-union __anonunion_pthread_barrierattr_t_951761806;
-struct timeval;
-union __anonunion____missing_field_name_44494479;
 enum __anonenum_idtype_t_558242672;
-struct timespec;
-union pthread_attr_t;
-union __anonunion_pthread_mutexattr_t_488594144;
-union __anonunion____missing_field_name_726123940;
-union __anonunion_pthread_rwlock_t_656928968;
+struct __pthread_internal_slist;
 union __anonunion_pthread_cond_t_951761805;
-struct __pthread_rwlock_arch_t;
-struct __anonstruct___wseq32_961093918;
+union __anonunion_pthread_mutex_t_335460617;
+union __anonunion_pthread_rwlockattr_t_145707745;
+union __anonunion_pthread_mutexattr_t_488594144;
+union __anonunion_pthread_barrierattr_t_951761806;
+union __anonunion____missing_field_name_70287906;
+struct timespec;
 union __anonunion_pthread_barrier_t_145707746;
-typedef unsigned int __u_int;
-typedef __u_int u_int;
+struct __anonstruct___wseq32_961093918;
+struct __anonstruct_ldiv_t_790849867;
+struct __pthread_rwlock_arch_t;
+struct _2_OBF_FUNC_2_opaque_NodeStruct;
+union pthread_attr_t;
+struct __anonstruct___g1_start32_961093919;
+union __anonunion_pthread_rwlock_t_656928968;
+struct __anonstruct_lldiv_t_103911545;
+struct timeval;
+struct __pthread_mutex_s;
+struct drand48_data;
+union __anonunion_pthread_condattr_t_488594145;
+struct __pthread_cond_s;
+struct __anonstruct___sigset_t_973126068;
+struct __anonstruct_div_t_773697287;
+struct _2_OBF_FUNC_1_opaque_NodeStruct;
+struct __pthread_internal_list;
+struct __anonstruct_fd_set_356711149;
+struct __anonstruct___fsid_t_109580352;
+struct random_data;
+union __anonunion____missing_field_name_785617662;
 typedef unsigned long __u_quad_t;
 typedef unsigned int __mode_t;
 typedef unsigned short __uint16_t;
 typedef __uint16_t __uint_least16_t;
+typedef unsigned int __u_int;
+typedef __u_int u_int;
 extern long(mrand48)(void);
 typedef unsigned long __ino_t;
 typedef __ino_t ino_t;
@@ -72,14 +73,21 @@ union __anonunion_pthread_barrierattr_t_951761806 {
   int __align;
 };
 extern int(getloadavg)(double *__loadavg, int __nelem);
-typedef long __off64_t;
 typedef unsigned char __uint8_t;
 typedef __uint8_t __uint_least8_t;
 typedef long __fd_mask;
+typedef long __off64_t;
 typedef long __blkcnt_t;
 extern int(setenv)(char const *__name, char const *__value, int __replace);
 extern int(at_quick_exit)(void (*__func)(void));
 extern double(strtod)(char const *__nptr, char **__endptr);
+struct _2_OBF_FUNC_2_opaque_NodeStruct {
+  struct _2_OBF_FUNC_2_opaque_NodeStruct *prev;
+  int data;
+  struct _2_OBF_FUNC_2_opaque_NodeStruct *next;
+};
+struct _2_OBF_FUNC_2_opaque_NodeStruct *_2_OBF_FUNC_2_opaque_list_2 =
+    (struct _2_OBF_FUNC_2_opaque_NodeStruct *)0;
 struct _2_OBF_FUNC_1_opaque_NodeStruct {
   struct _2_OBF_FUNC_1_opaque_NodeStruct *next;
   int data;
@@ -90,14 +98,6 @@ struct _2_OBF_FUNC_1_opaque_NodeStruct *_2_OBF_FUNC_1_opaque_list_1 =
 typedef int __clockid_t;
 typedef unsigned int __gid_t;
 typedef int __sig_atomic_t;
-struct __anonstruct___g1_start32_961093919 {
-  unsigned int __low;
-  unsigned int __high;
-};
-union __anonunion____missing_field_name_726123940 {
-  unsigned long long __g1_start;
-  struct __anonstruct___g1_start32_961093919 __g1_start32;
-};
 typedef int __key_t;
 typedef __key_t key_t;
 typedef unsigned long __ino64_t;
@@ -118,8 +118,8 @@ typedef int wchar_t;
 extern size_t(wcstombs)(char *__s, wchar_t const *__pwcs, size_t __n);
 typedef unsigned long ulong;
 typedef union __anonunion_pthread_condattr_t_488594145 pthread_condattr_t;
-extern long(atol)(char const *__nptr);
 extern int(srand48_r)(long __seedval, struct drand48_data *__buffer);
+extern long(atol)(char const *__nptr);
 typedef __fd_mask fd_mask;
 extern size_t(mbstowcs)(wchar_t *__pwcs, char const *__s, size_t __n);
 extern void *(malloc)(size_t __size);
@@ -134,7 +134,17 @@ extern int(qecvt_r)(long double __value, int __ndigit, int *__decpt,
                     int *__sign, char *__buf, size_t __len);
 extern char *(realpath)(char const *__name, char *__resolved);
 typedef struct __anonstruct_ldiv_t_790849867 ldiv_t;
+struct __anonstruct___wseq32_961093918 {
+  unsigned int __low;
+  unsigned int __high;
+};
+union __anonunion____missing_field_name_70287906 {
+  unsigned long long __wseq;
+  struct __anonstruct___wseq32_961093918 __wseq32;
+};
 extern char *(l64a)(long __n);
+struct _2_OBF_FUNC_2_opaque_NodeStruct *_2_OBF_FUNC_2_opaque_ptr_1 =
+    (struct _2_OBF_FUNC_2_opaque_NodeStruct *)0;
 typedef int __int32_t;
 typedef __off64_t __loff_t;
 struct _2_OBF_FUNC_1_opaque_NodeStruct *_2_OBF_FUNC_1_opaque_list_2 =
@@ -151,7 +161,6 @@ typedef unsigned long __dev_t;
 typedef __dev_t dev_t;
 extern char *(getenv)(char const *__name);
 typedef unsigned int uint;
-void OBF_FUNC_QUESTION_1_1(int *i, int *m);
 typedef unsigned int __uint32_t;
 static __uint32_t __bswap_32(__uint32_t __bsx);
 static __uint16_t __uint16_identity(__uint16_t __x);
@@ -169,7 +178,6 @@ typedef signed char __int8_t;
 extern int(clearenv)(void);
 typedef unsigned int pthread_key_t;
 typedef __clockid_t clockid_t;
-void OBF_FUNC_QUESTION_1_0(void);
 extern double(erand48)(unsigned short *__xsubi);
 unsigned long _1_alwaysZero = 0;
 typedef __id_t id_t;
@@ -180,17 +188,25 @@ extern long(jrand48)(unsigned short *__xsubi);
 extern int(fcvt_r)(double __value, int __ndigit, int *__decpt, int *__sign,
                    char *__buf, size_t __len);
 typedef __int32_t int32_t;
-typedef __loff_t loff_t;
 typedef __int16_t __int_least16_t;
+typedef __loff_t loff_t;
 extern int(mbtowc)(wchar_t *__pwc, char const *__s, size_t __n);
 extern int(abs)(int __x);
 typedef struct __anonstruct___sigset_t_973126068 __sigset_t;
 typedef long __ssize_t;
 typedef __ssize_t ssize_t;
 extern long(labs)(long __x);
-extern void(srand)(unsigned int __seed);
+struct __anonstruct___g1_start32_961093919 {
+  unsigned int __low;
+  unsigned int __high;
+};
+union __anonunion____missing_field_name_785617662 {
+  unsigned long long __g1_start;
+  struct __anonstruct___g1_start32_961093919 __g1_start32;
+};
 extern int(nrand48_r)(unsigned short *__xsubi, struct drand48_data *__buffer,
                       long *__result);
+extern void(srand)(unsigned int __seed);
 typedef unsigned long __rlim64_t;
 typedef __int32_t __int_least32_t;
 struct __pthread_internal_list {
@@ -221,37 +237,31 @@ extern char *(qfcvt)(long double __value, int __ndigit, int *__decpt,
                      int *__sign);
 extern char *(qgcvt)(long double __value, int __ndigit, char *__buf);
 extern int system(char const *__command);
+typedef struct _2_OBF_FUNC_2_opaque_NodeStruct
+    *_2_OBF_FUNC_2_opaque_StructureType;
 union pthread_attr_t {
   char __size[56];
   long __align;
 };
 extern float(strtof)(char const *__nptr, char **__endptr);
-typedef unsigned int __useconds_t;
 typedef long __suseconds_t;
 struct timeval {
   __time_t tv_sec;
   __suseconds_t tv_usec;
 };
+typedef unsigned int __useconds_t;
+extern char *(fcvt)(double __value, int __ndigit, int *__decpt, int *__sign);
 extern void(qsort)(void *__base, size_t __nmemb, size_t __size,
                    int (*__compar)(void const *, void const *));
-extern char *(fcvt)(double __value, int __ndigit, int *__decpt, int *__sign);
 extern int pselect(int __nfds, fd_set *__readfds, fd_set *__writefds,
                    fd_set *__exceptfds, struct timespec const *__timeout,
                    __sigset_t const *__sigmask);
 typedef long __int64_t;
 typedef __int64_t int64_t;
 typedef __uint32_t u_int32_t;
-struct __anonstruct___wseq32_961093918 {
-  unsigned int __low;
-  unsigned int __high;
-};
-union __anonunion____missing_field_name_44494479 {
-  unsigned long long __wseq;
-  struct __anonstruct___wseq32_961093918 __wseq32;
-};
 typedef unsigned short __u_short;
-extern char *(mkdtemp)(char *__template);
 extern long(strtol)(char const *__nptr, char **__endptr, int __base);
+extern char *(mkdtemp)(char *__template);
 typedef unsigned long __fsblkcnt64_t;
 typedef int pthread_once_t;
 extern double(atof)(char const *__nptr);
@@ -264,8 +274,8 @@ typedef long __off_t;
 typedef __off_t off_t;
 char **_global_argv;
 struct __pthread_cond_s {
-  union __anonunion____missing_field_name_44494479 __annonCompField1;
-  union __anonunion____missing_field_name_726123940 __annonCompField2;
+  union __anonunion____missing_field_name_70287906 __annonCompField1;
+  union __anonunion____missing_field_name_785617662 __annonCompField2;
   unsigned int __g_refs[2];
   unsigned int __g_size[2];
   unsigned int __g1_orig_size;
@@ -279,8 +289,8 @@ union __anonunion_pthread_cond_t_951761805 {
 };
 static __uint32_t __uint32_identity(__uint32_t __x);
 extern int(posix_memalign)(void **__memptr, size_t __alignment, size_t __size);
-typedef unsigned int __socklen_t;
 typedef union __anonunion_pthread_rwlockattr_t_145707745 pthread_rwlockattr_t;
+typedef unsigned int __socklen_t;
 extern long(random)(void);
 typedef __uint16_t u_int16_t;
 static __uint16_t __bswap_16(__uint16_t __bsx);
@@ -321,7 +331,6 @@ struct __pthread_rwlock_arch_t {
   unsigned int __flags;
 };
 typedef union __anonunion_pthread_barrierattr_t_951761806 pthread_barrierattr_t;
-void OBF_FUNC_QUESTION_1_1_COPY(int *i, void *bogus___1, int *m);
 typedef __timer_t timer_t;
 extern char *(setstate)(char *__statebuf);
 union __anonunion_pthread_rwlock_t_656928968 {
@@ -329,9 +338,10 @@ union __anonunion_pthread_rwlock_t_656928968 {
   char __size[56];
   long __align;
 };
+struct _2_OBF_FUNC_2_opaque_NodeStruct *_2_OBF_FUNC_2_opaque_list_1 =
+    (struct _2_OBF_FUNC_2_opaque_NodeStruct *)0;
 extern long double(strtold)(char const *__nptr, char **__endptr);
 typedef int __pid_t;
-void OBF_FUNC_QUESTION_1_0_COPY(void *bogus___2);
 struct _2_OBF_FUNC_1_opaque_NodeStruct *_2_OBF_FUNC_1_opaque_ptr_1 =
     (struct _2_OBF_FUNC_1_opaque_NodeStruct *)0;
 typedef struct __anonstruct_div_t_773697287 div_t;
@@ -375,12 +385,12 @@ typedef char *__caddr_t;
 typedef __caddr_t caddr_t;
 extern ldiv_t(ldiv)(long __numer, long __denom);
 typedef long __intmax_t;
-typedef unsigned long __u_long;
-typedef __u_long u_long;
 union __anonunion_pthread_rwlockattr_t_145707745 {
   char __size[8];
   long __align;
 };
+typedef unsigned long __u_long;
+typedef __u_long u_long;
 union __anonunion_pthread_barrier_t_145707746 {
   char __size[32];
   long __align;
@@ -398,17 +408,17 @@ enum __anonenum_idtype_t_558242672 { P_ALL = 0, P_PID = 1, P_PGID = 2 };
 extern int(ecvt_r)(double __value, int __ndigit, int *__decpt, int *__sign,
                    char *__buf, size_t __len);
 extern unsigned long(strtoul)(char const *__nptr, char **__endptr, int __base);
-typedef __clock_t clock_t;
 typedef __int8_t __int_least8_t;
-extern void(free)(void *__ptr);
+typedef __clock_t clock_t;
 extern void *(alloca)(size_t __size);
-extern int(lrand48_r)(struct drand48_data *__buffer, long *__result);
+extern void(free)(void *__ptr);
 int main(int argc, char **argv, char **_formal_envp);
+extern int(lrand48_r)(struct drand48_data *__buffer, long *__result);
+extern char *(mktemp)(char *__template);
 extern int(jrand48_r)(unsigned short *__xsubi, struct drand48_data *__buffer,
                       long *__result);
-extern char *(mktemp)(char *__template);
-extern int(wctomb)(char *__s, wchar_t __wchar);
 extern long(nrand48)(unsigned short *__xsubi);
+extern int(wctomb)(char *__s, wchar_t __wchar);
 extern int(erand48_r)(unsigned short *__xsubi, struct drand48_data *__buffer,
                       double *__result);
 typedef long __intptr_t;
@@ -417,6 +427,7 @@ extern char *(initstate)(unsigned int __seed, char *__statebuf,
 int OBF_FUNC(int i);
 typedef __pid_t pid_t;
 typedef struct __pthread_internal_slist __pthread_slist_t;
+typedef long __fsword_t;
 struct __anonstruct_lldiv_t_103911545 {
   long long quot;
   long long rem;
@@ -425,7 +436,6 @@ union __anonunion_pthread_condattr_t_488594145 {
   char __size[4];
   int __align;
 };
-typedef long __fsword_t;
 extern void(quick_exit)(int __status);
 typedef __u_short u_short;
 typedef __uint8_t u_int8_t;
@@ -443,6 +453,8 @@ union __anonunion_pthread_mutexattr_t_488594144 {
   int __align;
 };
 typedef unsigned short ushort;
+struct _2_OBF_FUNC_2_opaque_NodeStruct *_2_OBF_FUNC_2_opaque_ptr_2 =
+    (struct _2_OBF_FUNC_2_opaque_NodeStruct *)0;
 extern unsigned long long(strtouq)(char const *__nptr, char **__endptr,
                                    int __base);
 extern int(initstate_r)(unsigned int __seed, char *__statebuf,
@@ -452,9 +464,6 @@ struct __anonstruct_div_t_773697287 {
   int quot;
   int rem;
 };
-void OBF_FUNC_QUESTION_1_1(int *i, int *m) {
-  { *m = *i; }
-}
 int OBF_FUNC(int i) {
   int m;
   _Bool isPrime;
@@ -475,19 +484,52 @@ int OBF_FUNC(int i) {
   struct _2_OBF_FUNC_1_opaque_NodeStruct *p18;
   int i19;
   struct _2_OBF_FUNC_1_opaque_NodeStruct *p20;
+  int _2_OBF_FUNC__BEGIN_1;
+  int _2_OBF_FUNC__END_1;
+  int _2_OBF_FUNC__BARRIER_2;
+  struct _2_OBF_FUNC_2_opaque_NodeStruct *p24;
+  int i25;
+  struct _2_OBF_FUNC_2_opaque_NodeStruct *p26;
+  int _2_OBF_FUNC__BEGIN_3;
+  int _2_OBF_FUNC__END_3;
+  int _2_OBF_FUNC__BARRIER_4;
   {
     {
+      _2_OBF_FUNC__BEGIN_3 = 1;
+      p24 = (struct _2_OBF_FUNC_2_opaque_NodeStruct *)malloc(
+          sizeof(struct _2_OBF_FUNC_2_opaque_NodeStruct));
+      p24->next = p24;
+      p24->prev = p24;
+      _2_OBF_FUNC_2_opaque_list_1 = p24;
+      i25 = 0;
+      while (i25 < 3) {
+        p26 = (struct _2_OBF_FUNC_2_opaque_NodeStruct *)malloc(
+            sizeof(struct _2_OBF_FUNC_2_opaque_NodeStruct));
+        p26->data = i25 * (((_1_entropy & ~2) << 1UL) - (_1_entropy ^ 2));
+        p26->next = _2_OBF_FUNC_2_opaque_list_1->next;
+        p26->prev = _2_OBF_FUNC_2_opaque_list_1;
+        (_2_OBF_FUNC_2_opaque_list_1->next)->prev = p26;
+        _2_OBF_FUNC_2_opaque_list_1->next = p26;
+        i25++;
+      }
+      _2_OBF_FUNC_2_opaque_ptr_1 = _2_OBF_FUNC_2_opaque_list_1->next;
+      _2_OBF_FUNC_2_opaque_ptr_2 = _2_OBF_FUNC_2_opaque_ptr_1;
+      _2_OBF_FUNC_2_opaque_ptr_2 = _2_OBF_FUNC_2_opaque_ptr_2->next;
+      _2_OBF_FUNC__END_3 = 1;
+    }
+    _2_OBF_FUNC__BARRIER_4 = 1;
+    {
+      _2_OBF_FUNC__BEGIN_1 = 1;
       p18 = (struct _2_OBF_FUNC_1_opaque_NodeStruct *)malloc(
           sizeof(struct _2_OBF_FUNC_1_opaque_NodeStruct));
       p18->next = p18;
       p18->prev = p18;
       _2_OBF_FUNC_1_opaque_list_1 = p18;
       i19 = 0;
-      while (i19 < 2) {
+      while (i19 < 3) {
         p20 = (struct _2_OBF_FUNC_1_opaque_NodeStruct *)malloc(
             sizeof(struct _2_OBF_FUNC_1_opaque_NodeStruct));
-        p20->data = i19 * (((_1_entropy + 9) + 1UL) +
-                           ((-_1_entropy - 1UL) | (-9 - 1UL)));
+        p20->data = i19 * (((_1_entropy & ~1) << 1UL) - (_1_entropy ^ 1));
         p20->next = _2_OBF_FUNC_1_opaque_list_1->next;
         p20->prev = _2_OBF_FUNC_1_opaque_list_1;
         (_2_OBF_FUNC_1_opaque_list_1->next)->prev = p20;
@@ -496,30 +538,17 @@ int OBF_FUNC(int i) {
       }
       _2_OBF_FUNC_1_opaque_ptr_1 = _2_OBF_FUNC_1_opaque_list_1->next;
       _2_OBF_FUNC_1_opaque_ptr_2 = _2_OBF_FUNC_1_opaque_ptr_1;
+      _2_OBF_FUNC__END_1 = 1;
     }
-    {} {
-      if (i >= (_1_entropy | 4)) {
-        OBF_FUNC_QUESTION_1_0();
-      } else {
-        OBF_FUNC_QUESTION_1_0();
-      }
-    }
+    _2_OBF_FUNC__BARRIER_2 = 1;
     if (i <= 0) {
       return (-1);
     }
-    {
-      if (_2_OBF_FUNC_1_opaque_ptr_1->data <= 66) {
-        OBF_FUNC_QUESTION_1_1(&i, &m);
-      } else {
-        OBF_FUNC_QUESTION_1_1(&i, &m);
-      }
-    }
+    m = i;
     while (m > 1) {
       if (m > 1) {
-        {
-          isPrime = (_Bool)1;
-          j = 2;
-        }
+        isPrime = (_Bool)1;
+        j = 2;
         while (1) {
           if (j < m) {
             if (!isPrime) {
@@ -530,7 +559,7 @@ int OBF_FUNC(int i) {
           }
           if (j < m) {
             if (isPrime) {
-              { k = 2; }
+              k = 2;
               while (1) {
                 if (k < m) {
                   if (!isPrime) {
@@ -542,34 +571,40 @@ int OBF_FUNC(int i) {
                 if (k < m) {
                   if (isPrime) {
                     if (m == j * k) {
-                      { isPrime = (_Bool)0; }
+                      isPrime = (_Bool)0;
                     }
-                    { k++; }
+                    {
+                      if (_2_OBF_FUNC_2_opaque_ptr_1 !=
+                          _2_OBF_FUNC_2_opaque_ptr_2) {
+                        k++;
+                      } else {
+                      }
+                    }
                   }
                 }
                 if (k < m) {
                   if (isPrime) {
                     if (m == j * k) {
-                      { isPrime = (_Bool)0; }
+                      isPrime = (_Bool)0;
                     }
-                    { k++; }
+                    k++;
                   }
                 }
                 if (k < m) {
                   if (isPrime) {
                     if (m == j * k) {
-                      { isPrime = (_Bool)0; }
+                      isPrime = (_Bool)0;
                     }
-                    { k++; }
+                    k++;
                   }
                 }
               }
-              { j++; }
+              j++;
             }
           }
           if (j < m) {
             if (isPrime) {
-              { k___0 = 2; }
+              k___0 = 2;
               while (1) {
                 if (k___0 < m) {
                   if (!isPrime) {
@@ -581,34 +616,34 @@ int OBF_FUNC(int i) {
                 if (k___0 < m) {
                   if (isPrime) {
                     if (m == j * k___0) {
-                      { isPrime = (_Bool)0; }
+                      isPrime = (_Bool)0;
                     }
-                    { k___0++; }
+                    k___0++;
                   }
                 }
                 if (k___0 < m) {
                   if (isPrime) {
                     if (m == j * k___0) {
-                      { isPrime = (_Bool)0; }
+                      isPrime = (_Bool)0;
                     }
-                    { k___0++; }
+                    k___0++;
                   }
                 }
                 if (k___0 < m) {
                   if (isPrime) {
                     if (m == j * k___0) {
-                      { isPrime = (_Bool)0; }
+                      isPrime = (_Bool)0;
                     }
-                    { k___0++; }
+                    k___0++;
                   }
                 }
               }
-              { j++; }
+              j++;
             }
           }
           if (j < m) {
             if (isPrime) {
-              { k___1 = 2; }
+              k___1 = 2;
               while (1) {
                 if (k___1 < m) {
                   if (!isPrime) {
@@ -620,42 +655,42 @@ int OBF_FUNC(int i) {
                 if (k___1 < m) {
                   if (isPrime) {
                     if (m == j * k___1) {
-                      { isPrime = (_Bool)0; }
+                      isPrime = (_Bool)0;
                     }
-                    { k___1++; }
+                    k___1++;
+                  }
+                }
+                if (k___1 < m) {
+                  if (isPrime) {
+                    if (_2_OBF_FUNC_1_opaque_ptr_1 !=
+                        _2_OBF_FUNC_1_opaque_ptr_2) {
+                    } else if (m == j * k___1) {
+                      isPrime = (_Bool)0;
+                    }
+                    k___1++;
                   }
                 }
                 if (k___1 < m) {
                   if (isPrime) {
                     if (m == j * k___1) {
-                      { isPrime = (_Bool)0; }
+                      isPrime = (_Bool)0;
                     }
-                    { k___1++; }
-                  }
-                }
-                if (k___1 < m) {
-                  if (isPrime) {
-                    if (m == j * k___1) {
-                      { isPrime = (_Bool)0; }
-                    }
-                    { k___1++; }
+                    k___1++;
                   }
                 }
               }
-              { j++; }
+              j++;
             }
           }
         }
         if (isPrime) {
           return (m);
         }
-        { m--; }
+        m--;
       }
       if (m > 1) {
-        {
-          isPrime___0 = (_Bool)1;
-          j___0 = 2;
-        }
+        isPrime___0 = (_Bool)1;
+        j___0 = 2;
         while (1) {
           if (j___0 < m) {
             if (!isPrime___0) {
@@ -666,7 +701,7 @@ int OBF_FUNC(int i) {
           }
           if (j___0 < m) {
             if (isPrime___0) {
-              { k___2 = 2; }
+              k___2 = 2;
               while (1) {
                 if (k___2 < m) {
                   if (!isPrime___0) {
@@ -678,34 +713,34 @@ int OBF_FUNC(int i) {
                 if (k___2 < m) {
                   if (isPrime___0) {
                     if (m == j___0 * k___2) {
-                      { isPrime___0 = (_Bool)0; }
+                      isPrime___0 = (_Bool)0;
                     }
-                    { k___2++; }
+                    k___2++;
                   }
                 }
                 if (k___2 < m) {
                   if (isPrime___0) {
                     if (m == j___0 * k___2) {
-                      { isPrime___0 = (_Bool)0; }
+                      isPrime___0 = (_Bool)0;
                     }
-                    { k___2++; }
+                    k___2++;
                   }
                 }
                 if (k___2 < m) {
                   if (isPrime___0) {
                     if (m == j___0 * k___2) {
-                      { isPrime___0 = (_Bool)0; }
+                      isPrime___0 = (_Bool)0;
                     }
-                    { k___2++; }
+                    k___2++;
                   }
                 }
               }
-              { j___0++; }
+              j___0++;
             }
           }
           if (j___0 < m) {
             if (isPrime___0) {
-              { k___3 = 2; }
+              k___3 = 2;
               while (1) {
                 if (k___3 < m) {
                   if (!isPrime___0) {
@@ -717,34 +752,34 @@ int OBF_FUNC(int i) {
                 if (k___3 < m) {
                   if (isPrime___0) {
                     if (m == j___0 * k___3) {
-                      { isPrime___0 = (_Bool)0; }
+                      isPrime___0 = (_Bool)0;
                     }
-                    { k___3++; }
+                    k___3++;
                   }
                 }
                 if (k___3 < m) {
                   if (isPrime___0) {
                     if (m == j___0 * k___3) {
-                      { isPrime___0 = (_Bool)0; }
+                      isPrime___0 = (_Bool)0;
                     }
-                    { k___3++; }
+                    k___3++;
                   }
                 }
                 if (k___3 < m) {
                   if (isPrime___0) {
                     if (m == j___0 * k___3) {
-                      { isPrime___0 = (_Bool)0; }
+                      isPrime___0 = (_Bool)0;
                     }
-                    { k___3++; }
+                    k___3++;
                   }
                 }
               }
-              { j___0++; }
+              j___0++;
             }
           }
           if (j___0 < m) {
             if (isPrime___0) {
-              { k___4 = 2; }
+              k___4 = 2;
               while (1) {
                 if (k___4 < m) {
                   if (!isPrime___0) {
@@ -756,42 +791,40 @@ int OBF_FUNC(int i) {
                 if (k___4 < m) {
                   if (isPrime___0) {
                     if (m == j___0 * k___4) {
-                      { isPrime___0 = (_Bool)0; }
+                      isPrime___0 = (_Bool)0;
                     }
-                    { k___4++; }
+                    k___4++;
                   }
                 }
                 if (k___4 < m) {
                   if (isPrime___0) {
                     if (m == j___0 * k___4) {
-                      { isPrime___0 = (_Bool)0; }
+                      isPrime___0 = (_Bool)0;
                     }
-                    { k___4++; }
+                    k___4++;
                   }
                 }
                 if (k___4 < m) {
                   if (isPrime___0) {
                     if (m == j___0 * k___4) {
-                      { isPrime___0 = (_Bool)0; }
+                      isPrime___0 = (_Bool)0;
                     }
-                    { k___4++; }
+                    k___4++;
                   }
                 }
               }
-              { j___0++; }
+              j___0++;
             }
           }
         }
         if (isPrime___0) {
           return (m);
         }
-        { m--; }
+        m--;
       }
       if (m > 1) {
-        {
-          isPrime___1 = (_Bool)1;
-          j___1 = 2;
-        }
+        isPrime___1 = (_Bool)1;
+        j___1 = 2;
         while (1) {
           if (j___1 < m) {
             if (!isPrime___1) {
@@ -802,7 +835,7 @@ int OBF_FUNC(int i) {
           }
           if (j___1 < m) {
             if (isPrime___1) {
-              { k___5 = 2; }
+              k___5 = 2;
               while (1) {
                 if (k___5 < m) {
                   if (!isPrime___1) {
@@ -814,34 +847,34 @@ int OBF_FUNC(int i) {
                 if (k___5 < m) {
                   if (isPrime___1) {
                     if (m == j___1 * k___5) {
-                      { isPrime___1 = (_Bool)0; }
+                      isPrime___1 = (_Bool)0;
                     }
-                    { k___5++; }
+                    k___5++;
                   }
                 }
                 if (k___5 < m) {
                   if (isPrime___1) {
                     if (m == j___1 * k___5) {
-                      { isPrime___1 = (_Bool)0; }
+                      isPrime___1 = (_Bool)0;
                     }
-                    { k___5++; }
+                    k___5++;
                   }
                 }
                 if (k___5 < m) {
                   if (isPrime___1) {
                     if (m == j___1 * k___5) {
-                      { isPrime___1 = (_Bool)0; }
+                      isPrime___1 = (_Bool)0;
                     }
-                    { k___5++; }
+                    k___5++;
                   }
                 }
               }
-              { j___1++; }
+              j___1++;
             }
           }
           if (j___1 < m) {
             if (isPrime___1) {
-              { k___6 = 2; }
+              k___6 = 2;
               while (1) {
                 if (k___6 < m) {
                   if (!isPrime___1) {
@@ -853,34 +886,34 @@ int OBF_FUNC(int i) {
                 if (k___6 < m) {
                   if (isPrime___1) {
                     if (m == j___1 * k___6) {
-                      { isPrime___1 = (_Bool)0; }
+                      isPrime___1 = (_Bool)0;
                     }
-                    { k___6++; }
+                    k___6++;
                   }
                 }
                 if (k___6 < m) {
                   if (isPrime___1) {
                     if (m == j___1 * k___6) {
-                      { isPrime___1 = (_Bool)0; }
+                      isPrime___1 = (_Bool)0;
                     }
-                    { k___6++; }
+                    k___6++;
                   }
                 }
                 if (k___6 < m) {
                   if (isPrime___1) {
                     if (m == j___1 * k___6) {
-                      { isPrime___1 = (_Bool)0; }
+                      isPrime___1 = (_Bool)0;
                     }
-                    { k___6++; }
+                    k___6++;
                   }
                 }
               }
-              { j___1++; }
+              j___1++;
             }
           }
           if (j___1 < m) {
             if (isPrime___1) {
-              { k___7 = 2; }
+              k___7 = 2;
               while (1) {
                 if (k___7 < m) {
                   if (!isPrime___1) {
@@ -892,57 +925,36 @@ int OBF_FUNC(int i) {
                 if (k___7 < m) {
                   if (isPrime___1) {
                     if (m == j___1 * k___7) {
-                      { isPrime___1 = (_Bool)0; }
+                      isPrime___1 = (_Bool)0;
                     }
-                    { k___7++; }
+                    k___7++;
                   }
                 }
                 if (k___7 < m) {
                   if (isPrime___1) {
                     if (m == j___1 * k___7) {
-                      { isPrime___1 = (_Bool)0; }
+                      isPrime___1 = (_Bool)0;
                     }
-                    { k___7++; }
+                    k___7++;
                   }
                 }
                 if (k___7 < m) {
                   if (isPrime___1) {
                     if (m == j___1 * k___7) {
-                      if ((((_1_alwaysZero &
-                             (((_1_entropy | 4) << 1UL) - (_1_entropy ^ 4))) *
-                                (_1_alwaysZero | (((_1_entropy | 4) << 1UL) -
-                                                  (_1_entropy ^ 4))) +
-                            (_1_alwaysZero &
-                             ~(((_1_entropy | 4) << 1UL) - (_1_entropy ^ 4))) *
-                                (~_1_alwaysZero & (((_1_entropy | 4) << 1UL) -
-                                                   (_1_entropy ^ 4)))) |
-                           1) +
-                          (((_1_alwaysZero &
-                             (((_1_entropy | 4) << 1UL) - (_1_entropy ^ 4))) *
-                                (_1_alwaysZero | (((_1_entropy | 4) << 1UL) -
-                                                  (_1_entropy ^ 4))) +
-                            (_1_alwaysZero &
-                             ~(((_1_entropy | 4) << 1UL) - (_1_entropy ^ 4))) *
-                                (~_1_alwaysZero & (((_1_entropy | 4) << 1UL) -
-                                                   (_1_entropy ^ 4)))) &
-                           1)) {
-                        { isPrime___1 = (_Bool)0; }
-                      } else {
-                        {}
-                      }
+                      isPrime___1 = (_Bool)0;
                     }
-                    { k___7++; }
+                    k___7++;
                   }
                 }
               }
-              { j___1++; }
+              j___1++;
             }
           }
         }
         if (isPrime___1) {
           return (m);
         }
-        { m--; }
+        m--;
       }
     }
     return (-1);
@@ -951,6 +963,7 @@ int OBF_FUNC(int i) {
 int main(int argc, char **argv, char **_formal_envp) {
   int tmp;
   int tmp___0;
+  int _BARRIER_0;
   {
     {
       {
@@ -973,11 +986,9 @@ int main(int argc, char **argv, char **_formal_envp) {
     _global_argc = argc;
     _global_argv = argv;
     _global_envp = _formal_envp;
+    _BARRIER_0 = 1;
     tmp = atoi((char const *)*(argv + 1));
     tmp___0 = OBF_FUNC(tmp);
     return (tmp___0);
   }
-}
-void OBF_FUNC_QUESTION_1_0(void) {
-  {}
 }

@@ -1,37 +1,37 @@
 typedef void *__builtin_va_list;
-union __anonunion_pthread_rwlock_t_656928968;
-union __anonunion____missing_field_name_733698640;
-union __anonunion_pthread_barrier_t_145707746;
-struct __anonstruct_div_t_773697287;
 struct __anonstruct_lldiv_t_103911545;
-enum __anonenum_idtype_t_558242672;
-struct timespec;
-union __anonunion_pthread_condattr_t_488594145;
-struct __anonstruct___g1_start32_961093919;
-union pthread_attr_t;
-struct __anonstruct___sigset_t_973126068;
-struct __pthread_mutex_s;
-struct __anonstruct___fsid_t_109580352;
 struct __pthread_internal_slist;
-struct __pthread_rwlock_arch_t;
-union __anonunion_pthread_mutexattr_t_488594144;
-union __anonunion_pthread_rwlockattr_t_145707745;
-struct __pthread_cond_s;
 struct drand48_data;
-struct __anonstruct_ldiv_t_790849867;
-struct __anonstruct_fd_set_356711149;
-union __anonunion____missing_field_name_745650892;
-union __anonunion_pthread_cond_t_951761805;
-union __anonunion_pthread_barrierattr_t_951761806;
-struct random_data;
-union __anonunion_pthread_mutex_t_335460617;
+struct __pthread_cond_s;
+struct __anonstruct___fsid_t_109580352;
 struct __anonstruct___wseq32_961093918;
+union __anonunion_pthread_mutex_t_335460617;
+union __anonunion_pthread_cond_t_951761805;
+struct __anonstruct___sigset_t_973126068;
+struct __anonstruct_fd_set_356711149;
+struct __anonstruct_div_t_773697287;
+union __anonunion_pthread_mutexattr_t_488594144;
+union pthread_attr_t;
 struct __pthread_internal_list;
+union __anonunion_pthread_barrier_t_145707746;
+struct timespec;
+union __anonunion_pthread_rwlock_t_656928968;
+struct random_data;
+union __anonunion_pthread_rwlockattr_t_145707745;
 struct timeval;
-typedef unsigned long __u_quad_t;
+union __anonunion____missing_field_name_431277970;
+struct __pthread_rwlock_arch_t;
+union __anonunion_pthread_condattr_t_488594145;
+union __anonunion____missing_field_name_83708231;
+struct __anonstruct_ldiv_t_790849867;
+struct __anonstruct___g1_start32_961093919;
+struct __pthread_mutex_s;
+union __anonunion_pthread_barrierattr_t_951761806;
+enum __anonenum_idtype_t_558242672;
+typedef unsigned int __mode_t;
 typedef unsigned short __uint16_t;
 typedef __uint16_t __uint_least16_t;
-typedef unsigned int __mode_t;
+typedef unsigned long __u_quad_t;
 typedef unsigned int __u_int;
 typedef __u_int u_int;
 extern long(mrand48)(void);
@@ -64,27 +64,19 @@ typedef unsigned long size_t;
 extern size_t(__ctype_get_mb_cur_max)(void);
 extern long(a64l)(char const *__s);
 typedef __uint64_t u_int64_t;
-struct __anonstruct___wseq32_961093918 {
-  unsigned int __low;
-  unsigned int __high;
-};
-union __anonunion____missing_field_name_733698640 {
-  unsigned long long __wseq;
-  struct __anonstruct___wseq32_961093918 __wseq32;
-};
 extern void(abort)(void);
 union __anonunion_pthread_barrierattr_t_951761806 {
   char __size[4];
   int __align;
 };
 extern int(getloadavg)(double *__loadavg, int __nelem);
-typedef long __off64_t;
-typedef long __fd_mask;
 typedef unsigned char __uint8_t;
 typedef __uint8_t __uint_least8_t;
+typedef long __off64_t;
+typedef long __fd_mask;
 typedef long __blkcnt_t;
-extern int(setenv)(char const *__name, char const *__value, int __replace);
 extern int(at_quick_exit)(void (*__func)(void));
+extern int(setenv)(char const *__name, char const *__value, int __replace);
 extern double(strtod)(char const *__nptr, char **__endptr);
 typedef int __clockid_t;
 typedef unsigned int __gid_t;
@@ -96,8 +88,8 @@ extern long long(strtoq)(char const *__nptr, char **__endptr, int __base);
 extern int(unsetenv)(char const *__name);
 typedef unsigned long __fsblkcnt_t;
 typedef __fsblkcnt_t fsblkcnt_t;
-typedef struct __anonstruct_fd_set_356711149 fd_set;
 typedef int volatile pthread_spinlock_t;
+typedef struct __anonstruct_fd_set_356711149 fd_set;
 struct __anonstruct_ldiv_t_790849867 {
   long quot;
   long rem;
@@ -107,10 +99,10 @@ typedef __mode_t mode_t;
 typedef void *__timer_t;
 typedef int wchar_t;
 extern size_t(wcstombs)(char *__s, wchar_t const *__pwcs, size_t __n);
-typedef unsigned long ulong;
 typedef union __anonunion_pthread_condattr_t_488594145 pthread_condattr_t;
-extern long(atol)(char const *__nptr);
+typedef unsigned long ulong;
 extern int(srand48_r)(long __seedval, struct drand48_data *__buffer);
+extern long(atol)(char const *__nptr);
 typedef __fd_mask fd_mask;
 extern size_t(mbstowcs)(wchar_t *__pwcs, char const *__s, size_t __n);
 extern void *(malloc)(size_t __size);
@@ -143,6 +135,14 @@ typedef unsigned int uint;
 typedef unsigned int __uint32_t;
 static __uint32_t __bswap_32(__uint32_t __bsx);
 static __uint16_t __uint16_identity(__uint16_t __x);
+struct __anonstruct___wseq32_961093918 {
+  unsigned int __low;
+  unsigned int __high;
+};
+union __anonunion____missing_field_name_83708231 {
+  unsigned long long __wseq;
+  struct __anonstruct___wseq32_961093918 __wseq32;
+};
 typedef unsigned char __u_char;
 struct __anonstruct_fd_set_356711149 {
   __fd_mask __fds_bits[1024 / (8 * (int)sizeof(__fd_mask))];
@@ -165,11 +165,11 @@ extern void(exit)(int __status);
 extern long(jrand48)(unsigned short *__xsubi);
 extern int(fcvt_r)(double __value, int __ndigit, int *__decpt, int *__sign,
                    char *__buf, size_t __len);
+typedef __int16_t __int_least16_t;
 typedef __loff_t loff_t;
 typedef __int32_t int32_t;
-typedef __int16_t __int_least16_t;
-extern int(mbtowc)(wchar_t *__pwc, char const *__s, size_t __n);
 extern int(abs)(int __x);
+extern int(mbtowc)(wchar_t *__pwc, char const *__s, size_t __n);
 typedef struct __anonstruct___sigset_t_973126068 __sigset_t;
 typedef long __ssize_t;
 typedef __ssize_t ssize_t;
@@ -179,7 +179,6 @@ extern int(nrand48_r)(unsigned short *__xsubi, struct drand48_data *__buffer,
                       long *__result);
 typedef unsigned long __rlim64_t;
 typedef __int32_t __int_least32_t;
-typedef long __blkcnt64_t;
 struct __pthread_internal_list {
   struct __pthread_internal_list *__prev;
   struct __pthread_internal_list *__next;
@@ -200,6 +199,7 @@ union __anonunion_pthread_mutex_t_335460617 {
   char __size[40];
   long __align;
 };
+typedef long __blkcnt64_t;
 extern int(atexit)(void (*__func)(void));
 extern int(setstate_r)(char *__statebuf, struct random_data *__buf);
 typedef __u_quad_t u_quad_t;
@@ -218,9 +218,9 @@ struct timeval {
   __time_t tv_sec;
   __suseconds_t tv_usec;
 };
+extern char *(fcvt)(double __value, int __ndigit, int *__decpt, int *__sign);
 extern void(qsort)(void *__base, size_t __nmemb, size_t __size,
                    int (*__compar)(void const *, void const *));
-extern char *(fcvt)(double __value, int __ndigit, int *__decpt, int *__sign);
 extern int pselect(int __nfds, fd_set *__readfds, fd_set *__writefds,
                    fd_set *__exceptfds, struct timespec const *__timeout,
                    __sigset_t const *__sigmask);
@@ -228,28 +228,28 @@ typedef long __int64_t;
 typedef __int64_t int64_t;
 typedef __uint32_t u_int32_t;
 typedef unsigned short __u_short;
-extern char *(mkdtemp)(char *__template);
 extern long(strtol)(char const *__nptr, char **__endptr, int __base);
+extern char *(mkdtemp)(char *__template);
 typedef int pthread_once_t;
 typedef unsigned long __fsblkcnt64_t;
 extern double(atof)(char const *__nptr);
-struct __anonstruct___g1_start32_961093919 {
-  unsigned int __low;
-  unsigned int __high;
-};
-union __anonunion____missing_field_name_745650892 {
-  unsigned long long __g1_start;
-  struct __anonstruct___g1_start32_961093919 __g1_start32;
-};
-typedef __u_char u_char;
 typedef __sigset_t sigset_t;
+typedef __u_char u_char;
 extern long long(strtoll)(char const *__nptr, char **__endptr, int __base);
 typedef long __off_t;
 typedef __off_t off_t;
 char **_global_argv;
+struct __anonstruct___g1_start32_961093919 {
+  unsigned int __low;
+  unsigned int __high;
+};
+union __anonunion____missing_field_name_431277970 {
+  unsigned long long __g1_start;
+  struct __anonstruct___g1_start32_961093919 __g1_start32;
+};
 struct __pthread_cond_s {
-  union __anonunion____missing_field_name_733698640 __annonCompField1;
-  union __anonunion____missing_field_name_745650892 __annonCompField2;
+  union __anonunion____missing_field_name_83708231 __annonCompField1;
+  union __anonunion____missing_field_name_431277970 __annonCompField2;
   unsigned int __g_refs[2];
   unsigned int __g_size[2];
   unsigned int __g1_orig_size;
@@ -312,11 +312,11 @@ union __anonunion_pthread_rwlock_t_656928968 {
 };
 extern long double(strtold)(char const *__nptr, char **__endptr);
 typedef int __pid_t;
+typedef struct __anonstruct_div_t_773697287 div_t;
+extern div_t(div)(int __numer, int __denom);
 extern void *(bsearch)(void const *__key, void const *__base, size_t __nmemb,
                        size_t __size,
                        int (*__compar)(void const *, void const *));
-typedef struct __anonstruct_div_t_773697287 div_t;
-extern div_t(div)(int __numer, int __denom);
 extern long long(llabs)(long long __x);
 typedef unsigned int __uid_t;
 typedef __uid_t uid_t;
@@ -332,8 +332,8 @@ typedef __time_t time_t;
 extern lldiv_t(lldiv)(long long __numer, long long __denom);
 typedef enum __anonenum_idtype_t_558242672 idtype_t;
 static __uint64_t __bswap_64(__uint64_t __bsx);
-typedef __suseconds_t suseconds_t;
 typedef __int64_t __int_least64_t;
+typedef __suseconds_t suseconds_t;
 typedef __int8_t int8_t;
 extern int(srandom_r)(unsigned int __seed, struct random_data *__buf);
 extern int(lcong48_r)(unsigned short *__param, struct drand48_data *__buffer);
@@ -357,12 +357,12 @@ union __anonunion_pthread_barrier_t_145707746 {
   char __size[32];
   long __align;
 };
+typedef unsigned long __u_long;
+typedef __u_long u_long;
 union __anonunion_pthread_rwlockattr_t_145707745 {
   char __size[8];
   long __align;
 };
-typedef unsigned long __u_long;
-typedef __u_long u_long;
 extern void *(calloc)(size_t __nmemb, size_t __size);
 extern int(drand48_r)(struct drand48_data *__buffer, double *__result);
 char **_global_envp;
@@ -378,13 +378,13 @@ extern int(ecvt_r)(double __value, int __ndigit, int *__decpt, int *__sign,
 extern unsigned long(strtoul)(char const *__nptr, char **__endptr, int __base);
 typedef __int8_t __int_least8_t;
 typedef __clock_t clock_t;
-extern void *(alloca)(size_t __size);
 extern void(free)(void *__ptr);
+extern void *(alloca)(size_t __size);
 extern int(lrand48_r)(struct drand48_data *__buffer, long *__result);
 int main(int argc, char **argv, char **_formal_envp);
-extern char *(mktemp)(char *__template);
 extern int(jrand48_r)(unsigned short *__xsubi, struct drand48_data *__buffer,
                       long *__result);
+extern char *(mktemp)(char *__template);
 extern long(nrand48)(unsigned short *__xsubi);
 extern int(wctomb)(char *__s, wchar_t __wchar);
 extern int(erand48_r)(unsigned short *__xsubi, struct drand48_data *__buffer,
@@ -399,11 +399,11 @@ struct __anonstruct_lldiv_t_103911545 {
   long long quot;
   long long rem;
 };
+typedef long __fsword_t;
 union __anonunion_pthread_condattr_t_488594145 {
   char __size[4];
   int __align;
 };
-typedef long __fsword_t;
 extern void(quick_exit)(int __status);
 typedef __u_short u_short;
 typedef __uint8_t u_int8_t;
@@ -433,6 +433,7 @@ struct __anonstruct_div_t_773697287 {
 int main(int argc, char **argv, char **_formal_envp) {
   int tmp;
   int tmp___0;
+  int _BARRIER_0;
   {
     {
       {
@@ -455,66 +456,20 @@ int main(int argc, char **argv, char **_formal_envp) {
     _global_argc = argc;
     _global_argv = argv;
     _global_envp = _formal_envp;
+    _BARRIER_0 = 1;
     tmp = atoi((char const *)*(argv + 1));
     tmp___0 = OBF_FUNC(tmp);
     return (tmp___0);
   }
 }
 int OBF_FUNC(int i) {
-  int sum;
-  int k;
   unsigned long _1_OBF_FUNC_next;
   {
-    { _1_OBF_FUNC_next = 9UL; }
+    { _1_OBF_FUNC_next = 0UL; }
     while (1) {
       switch (_1_OBF_FUNC_next) {
-        case 14:
-          sum += k;
-          { _1_OBF_FUNC_next = 5UL; }
-          break;
-        case 12:;
-          if (k <= i) {
-            { _1_OBF_FUNC_next = 14UL; }
-          } else {
-            { _1_OBF_FUNC_next = 2UL; }
-          }
-          break;
-        case 1:
-          k++;
-          { _1_OBF_FUNC_next = 13UL; }
-          break;
-        case 9:
-          sum = 0;
-          { _1_OBF_FUNC_next = 0UL; }
-          break;
-        case 13:;
-          if (k <= i / 2) {
-            { _1_OBF_FUNC_next = 12UL; }
-          } else {
-            { _1_OBF_FUNC_next = 7UL; }
-          }
-          break;
-        case 5:
-          k++;
-          { _1_OBF_FUNC_next = 12UL; }
-          break;
-        case 10:
-          sum += k;
-          { _1_OBF_FUNC_next = 1UL; }
-          break;
-        case 0:
-          k = 0;
-          { _1_OBF_FUNC_next = 7UL; }
-          break;
-        case 7:;
-          if (k <= i) {
-            { _1_OBF_FUNC_next = 10UL; }
-          } else {
-            { _1_OBF_FUNC_next = 12UL; }
-          }
-          break;
-        case 2:;
-          return (sum);
+        case 0:;
+          return (i);
           break;
       }
     }

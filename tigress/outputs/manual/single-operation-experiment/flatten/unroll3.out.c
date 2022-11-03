@@ -11,9 +11,9 @@ struct __pthread_internal_list;
 struct __pthread_cond_s;
 struct __anonstruct_ldiv_t_790849867;
 union __anonunion_pthread_rwlock_t_656928968;
-union __anonunion____missing_field_name_538253505;
+union __anonunion____missing_field_name_83708231;
 union __anonunion_pthread_barrierattr_t_951761806;
-union __anonunion____missing_field_name_62192993;
+union __anonunion____missing_field_name_431277970;
 union __anonunion_pthread_barrier_t_145707746;
 struct __anonstruct_div_t_773697287;
 union __anonunion_pthread_rwlockattr_t_145707745;
@@ -135,6 +135,14 @@ typedef unsigned int uint;
 typedef unsigned int __uint32_t;
 static __uint32_t __bswap_32(__uint32_t __bsx);
 static __uint16_t __uint16_identity(__uint16_t __x);
+struct __anonstruct___wseq32_961093918 {
+  unsigned int __low;
+  unsigned int __high;
+};
+union __anonunion____missing_field_name_83708231 {
+  unsigned long long __wseq;
+  struct __anonstruct___wseq32_961093918 __wseq32;
+};
 typedef unsigned char __u_char;
 struct __anonstruct_fd_set_356711149 {
   __fd_mask __fds_bits[1024 / (8 * (int)sizeof(__fd_mask))];
@@ -166,14 +174,6 @@ typedef struct __anonstruct___sigset_t_973126068 __sigset_t;
 typedef long __ssize_t;
 typedef __ssize_t ssize_t;
 extern long(labs)(long __x);
-struct __anonstruct___wseq32_961093918 {
-  unsigned int __low;
-  unsigned int __high;
-};
-union __anonunion____missing_field_name_538253505 {
-  unsigned long long __wseq;
-  struct __anonstruct___wseq32_961093918 __wseq32;
-};
 extern void(srand)(unsigned int __seed);
 extern int(nrand48_r)(unsigned short *__xsubi, struct drand48_data *__buffer,
                       long *__result);
@@ -243,13 +243,13 @@ struct __anonstruct___g1_start32_961093919 {
   unsigned int __low;
   unsigned int __high;
 };
-union __anonunion____missing_field_name_62192993 {
+union __anonunion____missing_field_name_431277970 {
   unsigned long long __g1_start;
   struct __anonstruct___g1_start32_961093919 __g1_start32;
 };
 struct __pthread_cond_s {
-  union __anonunion____missing_field_name_538253505 __annonCompField1;
-  union __anonunion____missing_field_name_62192993 __annonCompField2;
+  union __anonunion____missing_field_name_83708231 __annonCompField1;
+  union __anonunion____missing_field_name_431277970 __annonCompField2;
   unsigned int __g_refs[2];
   unsigned int __g_size[2];
   unsigned int __g1_orig_size;
@@ -433,6 +433,7 @@ struct __anonstruct_div_t_773697287 {
 int main(int argc, char **argv, char **_formal_envp) {
   int tmp;
   int tmp___0;
+  int _BARRIER_0;
   {
     {
       {
@@ -455,6 +456,7 @@ int main(int argc, char **argv, char **_formal_envp) {
     _global_argc = argc;
     _global_argv = argv;
     _global_envp = _formal_envp;
+    _BARRIER_0 = 1;
     tmp = atoi((char const *)*(argv + 1));
     tmp___0 = OBF_FUNC(tmp);
     return (tmp___0);
