@@ -1,8 +1,7 @@
 from pathlib import Path
 from shutil import copy, which
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from argparse import ArgumentParser, Namespace
-from itertools import dropwhile
 
 import os
 import subprocess
@@ -16,9 +15,9 @@ TIGRESS_PARAMS = [f"--Environment={TIGRESS_ENV}"]
 @dataclass(frozen=True)
 class TigressVariant:
     name: str
-    procedure: list[list[str]]
-    args: dict[str, str]
-    format: bool
+    procedure: list[list[str]] = field(default_factory=list)
+    args: dict[str, str] = field(default_factory=dict)
+    format: bool = True
 
 
 @dataclass(frozen=True)
@@ -26,6 +25,7 @@ class TigressConfig:
     description: str
     params: list[str]
     variants: list[TigressVariant]
+    args: dict[str, str] = field(default_factory=dict)
 
 
 def get_args() -> Namespace:
@@ -72,6 +72,9 @@ def run_tigress(config: TigressConfig, source_dir: Path, output_dir: Path) -> No
 
     for variant in config.variants:
 
+        if not variant.procedure:
+            continue
+
         # ensure dir exists
         out_dir = output_dir / config.description / variant.name
         out_dir.mkdir(parents=True, exist_ok=True)
@@ -90,7 +93,7 @@ def run_tigress(config: TigressConfig, source_dir: Path, output_dir: Path) -> No
 
             # sequentially apply transformation to C file
             for proc in variant.procedure:
-                proc = [p.format(**variant.args) for p in proc]
+                proc = [p.format(**{**config.args, **variant.args}) for p in proc]
 
                 out = call_tigress(
                     TIGRESS_HOME,
@@ -99,7 +102,7 @@ def run_tigress(config: TigressConfig, source_dir: Path, output_dir: Path) -> No
                     str(src_out_file),
                 )
                 if out:
-                    print(out)
+                    print(f"===== {variant.name} ({src_name}): ===== {out}\n")
                 copy(src_out_file, src_in_file)
 
             os.remove(src_in_file)
@@ -135,9 +138,7 @@ typedef void* __builtin_va_list;"""
 
     # remove lines that are not part of the source code
     src_lines = [
-        line
-        for line in src_lines
-        if not line.startswith("#") and line.strip()
+        line for line in src_lines if not line.startswith("#") and line.strip()
     ]
 
     with open(src_path, "w") as f:
