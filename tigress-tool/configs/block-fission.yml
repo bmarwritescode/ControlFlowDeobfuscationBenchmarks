@@ -3,6 +3,11 @@ params: ["--Seed=1"]
 variants:
   - name: basic
     procedure:
-      - ["--Transform=Flatten", "--FlattenSplitBasicBlocks=true", "--Functions=SECRET"]
-      - ["--Transform=InitOpaque", "--Functions=SECRET", "--InitOpaqueCount=1", "--InitOpaqueStructs=list,array",
-          "--Transform=AddOpaque", "--Functions=SECRET"]
+      # - ["--Transform=Flatten", "--FlattenSplitBasicBlocks=true", "--Functions={func}"]
+      - ["--Transform=InitEntropy", "--Functions={func}", "--InitEntropyKinds=vars",
+          "--Transform=InitOpaque", "--Functions={func}", "--InitOpaqueCount=1", "--InitOpaqueStructs=env",
+          "--Transform=AddOpaque", "--Functions={func}",
+          "--Transform=CleanUp", "--CleanUpKinds=annotations,compress,removeUnusedFunctions"]
+    format: true
+    args:
+      func: OBF_FUNC
