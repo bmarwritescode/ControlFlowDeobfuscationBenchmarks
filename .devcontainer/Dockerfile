@@ -24,6 +24,6 @@ ENV DEBIAN_FRONTEND=dialog
 ARG TIGRESS_VER=3.3.2
 
 # Install TIGRESS
-COPY ./tigress /tigress/
+COPY ./tigress_binary /tigress/
 ENV TIGRESS_HOME=/tigress/${TIGRESS_VER}
 ENV PATH="/tigress/${TIGRESS_VER}:${PATH}"
