@@ -6,16 +6,24 @@ import yaml
 from pathlib import Path
 from shutil import copy, which
 from collections import namedtuple
+from dataclasses import dataclass
 
 # specify tigress path if not installed
 TIGRESS_HOME = "./tigress/3.3.2"
-
-TIGRESS_ENV = "x86_64:Darwin:Clang:5.1"
+TIGRESS_ENV = "--Environment=x86_64:Linux:Gcc:4.6"
 TIGRESS_PARAMS = [f"--Environment={TIGRESS_ENV}"]
 
-TigressConfig = namedtuple(
-    "TigressConfig", ["description", "params", "variants"])
-TigressVariant = namedtuple("TigressVariant", ["name", "procedure"])
+@dataclass(frozen=True)
+    name: str
+    func: str
+    procedure: list[list[str]]
+
+
+@dataclass(frozen=True)
+class TigressConfig:
+    description: str
+    params: list[str]
+    variants: list[TigressVariant]
 
 
 def get_args():
