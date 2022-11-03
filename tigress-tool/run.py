@@ -12,8 +12,6 @@ TIGRESS_HOME = "./tigress/3.3.2"
 TIGRESS_ENV = "x86_64:Linux:Gcc:4.6"
 TIGRESS_PARAMS = [f"--Environment={TIGRESS_ENV}"]
 
-FAKE_LIBC_INCLUDE = "./fake_libc_include"
-
 
 @dataclass(frozen=True)
 class TigressVariant:
@@ -115,7 +113,6 @@ def format_c_source(src_path: str) -> None:
     PREPROCESS_COMMAND = [
         "gcc",
         "-E",
-        f"-I{FAKE_LIBC_INCLUDE}",
         src_path,
     ]
     HEADERS = """#define __attribute__(x)
@@ -125,8 +122,6 @@ def format_c_source(src_path: str) -> None:
 #define __asm__(x)
 
 typedef void* __builtin_va_list;"""
-    LINE_AFTER_HEADERS = "typedef unsigned short ushort;"
-
     with open(src_path, "r") as src_file:
         src_lines = src_file.readlines()
 
@@ -141,7 +136,7 @@ typedef void* __builtin_va_list;"""
     # remove lines that are not part of the source code
     src_lines = [
         line
-        for line in src_lines# dropwhile(lambda x: x != LINE_AFTER_HEADERS, src_lines)
+        for line in src_lines
         if not line.startswith("#") and line.strip()
     ]
 
