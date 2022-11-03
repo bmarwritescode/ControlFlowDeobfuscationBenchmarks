@@ -1,44 +1,58 @@
 typedef void *__builtin_va_list;
-enum __anonenum_idtype_t_558242672;
-union pthread_attr_t;
-struct __pthread_internal_list;
-union __anonunion_pthread_barrierattr_t_951761806;
-struct __anonstruct_fd_set_356711149;
-struct __pthread_rwlock_arch_t;
+struct __anonstruct___fsid_t_109580352;
+struct drand48_data;
+struct __anonstruct_lldiv_t_103911545;
 struct __pthread_mutex_s;
-union __anonunion_pthread_rwlockattr_t_145707745;
-union __anonunion_pthread_mutexattr_t_488594144;
+union __anonunion_pthread_rwlock_t_656928968;
+struct __pthread_cond_s;
+struct __anonstruct_ldiv_t_790849867;
+struct _3_OBF_FUNC_1_opaque_NodeStruct;
+struct __anonstruct___sigset_t_973126068;
+union __anonunion____missing_field_name_430751349;
+union pthread_attr_t;
 struct timeval;
 struct __anonstruct___wseq32_961093918;
-struct timespec;
-struct __pthread_internal_slist;
+union __anonunion_pthread_rwlockattr_t_145707745;
 union __anonunion_pthread_condattr_t_488594145;
-struct __anonstruct_ldiv_t_790849867;
-struct random_data;
-union __anonunion_pthread_cond_t_951761805;
-struct __anonstruct___fsid_t_109580352;
-struct __anonstruct_lldiv_t_103911545;
+struct __anonstruct_fd_set_356711149;
+union __anonunion_pthread_mutexattr_t_488594144;
 union __anonunion_pthread_mutex_t_335460617;
-union __anonunion_pthread_barrier_t_145707746;
-struct drand48_data;
-struct __pthread_cond_s;
-struct __anonstruct___g1_start32_961093919;
-struct __anonstruct_div_t_773697287;
-struct __anonstruct___sigset_t_973126068;
-union __anonunion_pthread_rwlock_t_656928968;
+struct __pthread_internal_slist;
+struct __pthread_internal_list;
+struct __pthread_rwlock_arch_t;
+struct _3_OBF_FUNC_2_opaque_NodeStruct;
+union __anonunion_pthread_barrierattr_t_951761806;
 union __anonunion____missing_field_name_328771734;
-union __anonunion____missing_field_name_430751349;
-struct _2_OBF_FUNC_1_opaque_NodeStruct;
-struct _2_OBF_FUNC_2_opaque_NodeStruct;
+struct __anonstruct___g1_start32_961093919;
+enum __anonenum_idtype_t_558242672;
+union __anonunion_pthread_cond_t_951761805;
+struct random_data;
+struct timespec;
+struct __anonstruct_div_t_773697287;
+union __anonunion_pthread_barrier_t_145707746;
+struct _3_OBF_FUNC_2_opaque_NodeStruct {
+  struct _3_OBF_FUNC_2_opaque_NodeStruct *next;
+  struct _3_OBF_FUNC_2_opaque_NodeStruct *prev;
+  int data;
+};
+struct _3_OBF_FUNC_2_opaque_NodeStruct *_3_OBF_FUNC_2_opaque_ptr_1 =
+    (struct _3_OBF_FUNC_2_opaque_NodeStruct *)0;
 typedef unsigned int __mode_t;
-typedef unsigned int __u_int;
-typedef __u_int u_int;
 typedef unsigned short __uint16_t;
 typedef __uint16_t __uint_least16_t;
+typedef unsigned int __u_int;
+typedef __u_int u_int;
 typedef unsigned long __u_quad_t;
 extern long(mrand48)(void);
 typedef unsigned long __ino_t;
 typedef __ino_t ino_t;
+struct _3_OBF_FUNC_1_opaque_NodeStruct {
+  int data;
+  struct _3_OBF_FUNC_1_opaque_NodeStruct *next;
+  struct _3_OBF_FUNC_1_opaque_NodeStruct *prev;
+};
+struct _3_OBF_FUNC_1_opaque_NodeStruct *_3_OBF_FUNC_1_opaque_list_1 =
+    (struct _3_OBF_FUNC_1_opaque_NodeStruct *)0;
 typedef long __blksize_t;
 typedef __blksize_t blksize_t;
 typedef int __daddr_t;
@@ -48,7 +62,6 @@ extern void(lcong48)(unsigned short *__param);
 typedef unsigned long __fsfilcnt_t;
 typedef __fsfilcnt_t fsfilcnt_t;
 typedef long __quad_t;
-unsigned long _1_entropy = 166962006872878902UL;
 typedef long __syscall_slong_t;
 typedef long __time_t;
 struct timespec {
@@ -73,34 +86,20 @@ union __anonunion_pthread_barrierattr_t_951761806 {
   int __align;
 };
 extern int(getloadavg)(double *__loadavg, int __nelem);
-typedef long __fd_mask;
+typedef long __off64_t;
 typedef unsigned char __uint8_t;
 typedef __uint8_t __uint_least8_t;
-typedef long __off64_t;
+typedef long __fd_mask;
 typedef long __blkcnt_t;
 extern int(setenv)(char const *__name, char const *__value, int __replace);
 extern int(at_quick_exit)(void (*__func)(void));
 extern double(strtod)(char const *__nptr, char **__endptr);
-struct _2_OBF_FUNC_2_opaque_NodeStruct {
-  struct _2_OBF_FUNC_2_opaque_NodeStruct *prev;
-  int data;
-  struct _2_OBF_FUNC_2_opaque_NodeStruct *next;
-};
-struct _2_OBF_FUNC_2_opaque_NodeStruct *_2_OBF_FUNC_2_opaque_list_2 =
-    (struct _2_OBF_FUNC_2_opaque_NodeStruct *)0;
-struct _2_OBF_FUNC_1_opaque_NodeStruct {
-  struct _2_OBF_FUNC_1_opaque_NodeStruct *next;
-  int data;
-  struct _2_OBF_FUNC_1_opaque_NodeStruct *prev;
-};
-struct _2_OBF_FUNC_1_opaque_NodeStruct *_2_OBF_FUNC_1_opaque_list_1 =
-    (struct _2_OBF_FUNC_1_opaque_NodeStruct *)0;
 typedef int __clockid_t;
 typedef unsigned int __gid_t;
 typedef int __sig_atomic_t;
+typedef unsigned long __ino64_t;
 typedef int __key_t;
 typedef __key_t key_t;
-typedef unsigned long __ino64_t;
 extern long long(strtoq)(char const *__nptr, char **__endptr, int __base);
 extern int(unsetenv)(char const *__name);
 typedef unsigned long __fsblkcnt_t;
@@ -112,19 +111,21 @@ struct __anonstruct_ldiv_t_790849867 {
   long rem;
 };
 extern int(rand_r)(unsigned int *__seed);
+struct _3_OBF_FUNC_2_opaque_NodeStruct *_3_OBF_FUNC_2_opaque_ptr_2 =
+    (struct _3_OBF_FUNC_2_opaque_NodeStruct *)0;
 typedef __mode_t mode_t;
 typedef void *__timer_t;
 typedef int wchar_t;
 extern size_t(wcstombs)(char *__s, wchar_t const *__pwcs, size_t __n);
 typedef union __anonunion_pthread_condattr_t_488594145 pthread_condattr_t;
 typedef unsigned long ulong;
-extern long(atol)(char const *__nptr);
 extern int(srand48_r)(long __seedval, struct drand48_data *__buffer);
+extern long(atol)(char const *__nptr);
 typedef __fd_mask fd_mask;
 extern size_t(mbstowcs)(wchar_t *__pwcs, char const *__s, size_t __n);
 extern void *(malloc)(size_t __size);
-extern int(mkstemps)(char *__template, int __suffixlen);
 extern int(seed48_r)(unsigned short *__seed16v, struct drand48_data *__buffer);
+extern int(mkstemps)(char *__template, int __suffixlen);
 struct __anonstruct___sigset_t_973126068 {
   unsigned long __val[1024UL / (8UL * sizeof(unsigned long))];
 };
@@ -135,12 +136,8 @@ extern int(qecvt_r)(long double __value, int __ndigit, int *__decpt,
 extern char *(realpath)(char const *__name, char *__resolved);
 typedef struct __anonstruct_ldiv_t_790849867 ldiv_t;
 extern char *(l64a)(long __n);
-struct _2_OBF_FUNC_2_opaque_NodeStruct *_2_OBF_FUNC_2_opaque_ptr_1 =
-    (struct _2_OBF_FUNC_2_opaque_NodeStruct *)0;
 typedef int __int32_t;
 typedef __off64_t __loff_t;
-struct _2_OBF_FUNC_1_opaque_NodeStruct *_2_OBF_FUNC_1_opaque_list_2 =
-    (struct _2_OBF_FUNC_1_opaque_NodeStruct *)0;
 struct drand48_data {
   unsigned short __x[3];
   unsigned short __old_x[3];
@@ -179,7 +176,6 @@ extern int(clearenv)(void);
 typedef unsigned int pthread_key_t;
 typedef __clockid_t clockid_t;
 extern double(erand48)(unsigned short *__xsubi);
-unsigned long _1_alwaysZero = 0;
 typedef __id_t id_t;
 typedef union __anonunion_pthread_barrier_t_145707746 pthread_barrier_t;
 typedef int (*__compar_fn_t)(void const *, void const *);
@@ -187,11 +183,11 @@ extern void(exit)(int __status);
 extern long(jrand48)(unsigned short *__xsubi);
 extern int(fcvt_r)(double __value, int __ndigit, int *__decpt, int *__sign,
                    char *__buf, size_t __len);
-typedef __int16_t __int_least16_t;
 typedef __int32_t int32_t;
 typedef __loff_t loff_t;
-extern int(abs)(int __x);
+typedef __int16_t __int_least16_t;
 extern int(mbtowc)(wchar_t *__pwc, char const *__s, size_t __n);
+extern int(abs)(int __x);
 typedef struct __anonstruct___sigset_t_973126068 __sigset_t;
 typedef long __ssize_t;
 typedef __ssize_t ssize_t;
@@ -227,24 +223,24 @@ extern int(setstate_r)(char *__statebuf, struct random_data *__buf);
 typedef __u_quad_t u_quad_t;
 extern char *(qfcvt)(long double __value, int __ndigit, int *__decpt,
                      int *__sign);
+typedef struct _3_OBF_FUNC_1_opaque_NodeStruct
+    *_3_OBF_FUNC_1_opaque_StructureType;
 extern char *(qgcvt)(long double __value, int __ndigit, char *__buf);
 extern int system(char const *__command);
-typedef struct _2_OBF_FUNC_2_opaque_NodeStruct
-    *_2_OBF_FUNC_2_opaque_StructureType;
 union pthread_attr_t {
   char __size[56];
   long __align;
 };
 extern float(strtof)(char const *__nptr, char **__endptr);
+typedef unsigned int __useconds_t;
 typedef long __suseconds_t;
 struct timeval {
   __time_t tv_sec;
   __suseconds_t tv_usec;
 };
-typedef unsigned int __useconds_t;
+extern char *(fcvt)(double __value, int __ndigit, int *__decpt, int *__sign);
 extern void(qsort)(void *__base, size_t __nmemb, size_t __size,
                    int (*__compar)(void const *, void const *));
-extern char *(fcvt)(double __value, int __ndigit, int *__decpt, int *__sign);
 extern int pselect(int __nfds, fd_set *__readfds, fd_set *__writefds,
                    fd_set *__exceptfds, struct timespec const *__timeout,
                    __sigset_t const *__sigmask);
@@ -257,10 +253,8 @@ extern long(strtol)(char const *__nptr, char **__endptr, int __base);
 typedef unsigned long __fsblkcnt64_t;
 typedef int pthread_once_t;
 extern double(atof)(char const *__nptr);
-typedef struct _2_OBF_FUNC_1_opaque_NodeStruct
-    *_2_OBF_FUNC_1_opaque_StructureType;
-typedef __u_char u_char;
 typedef __sigset_t sigset_t;
+typedef __u_char u_char;
 extern long long(strtoll)(char const *__nptr, char **__endptr, int __base);
 typedef long __off_t;
 typedef __off_t off_t;
@@ -289,6 +283,8 @@ union __anonunion_pthread_cond_t_951761805 {
 };
 static __uint32_t __uint32_identity(__uint32_t __x);
 extern int(posix_memalign)(void **__memptr, size_t __alignment, size_t __size);
+typedef struct _3_OBF_FUNC_2_opaque_NodeStruct
+    *_3_OBF_FUNC_2_opaque_StructureType;
 typedef union __anonunion_pthread_rwlockattr_t_145707745 pthread_rwlockattr_t;
 typedef unsigned int __socklen_t;
 extern long(random)(void);
@@ -306,8 +302,6 @@ struct random_data {
   int32_t *end_ptr;
 };
 typedef unsigned long __rlim_t;
-struct _2_OBF_FUNC_1_opaque_NodeStruct *_2_OBF_FUNC_1_opaque_ptr_2 =
-    (struct _2_OBF_FUNC_1_opaque_NodeStruct *)0;
 typedef unsigned long __uintmax_t;
 extern void *(reallocarray)(void *__ptr, size_t __nmemb, size_t __size);
 extern int(getsubopt)(char **__optionp, char *const *__tokens, char **__valuep);
@@ -333,17 +327,15 @@ struct __pthread_rwlock_arch_t {
 typedef union __anonunion_pthread_barrierattr_t_951761806 pthread_barrierattr_t;
 typedef __timer_t timer_t;
 extern char *(setstate)(char *__statebuf);
+struct _3_OBF_FUNC_1_opaque_NodeStruct *_3_OBF_FUNC_1_opaque_ptr_1 =
+    (struct _3_OBF_FUNC_1_opaque_NodeStruct *)0;
 union __anonunion_pthread_rwlock_t_656928968 {
   struct __pthread_rwlock_arch_t __data;
   char __size[56];
   long __align;
 };
-struct _2_OBF_FUNC_2_opaque_NodeStruct *_2_OBF_FUNC_2_opaque_list_1 =
-    (struct _2_OBF_FUNC_2_opaque_NodeStruct *)0;
 extern long double(strtold)(char const *__nptr, char **__endptr);
 typedef int __pid_t;
-struct _2_OBF_FUNC_1_opaque_NodeStruct *_2_OBF_FUNC_1_opaque_ptr_1 =
-    (struct _2_OBF_FUNC_1_opaque_NodeStruct *)0;
 extern void *(bsearch)(void const *__key, void const *__base, size_t __nmemb,
                        size_t __size,
                        int (*__compar)(void const *, void const *));
@@ -357,6 +349,7 @@ struct __pthread_internal_slist {
 };
 extern unsigned long long(strtoull)(char const *__nptr, char **__endptr,
                                     int __base);
+unsigned long _2_entropy = 6668340197648247518UL;
 typedef union __anonunion_pthread_cond_t_951761805 pthread_cond_t;
 typedef __uint64_t __uint_least64_t;
 extern char *(gcvt)(double __value, int __ndigit, char *__buf);
@@ -364,13 +357,14 @@ typedef __time_t time_t;
 extern lldiv_t(lldiv)(long long __numer, long long __denom);
 typedef enum __anonenum_idtype_t_558242672 idtype_t;
 static __uint64_t __bswap_64(__uint64_t __bsx);
-typedef __suseconds_t suseconds_t;
 typedef __int64_t __int_least64_t;
+typedef __suseconds_t suseconds_t;
 typedef __int8_t int8_t;
 extern int(srandom_r)(unsigned int __seed, struct random_data *__buf);
 extern int(lcong48_r)(unsigned short *__param, struct drand48_data *__buffer);
 typedef unsigned long __fsfilcnt64_t;
 extern int(mblen)(char const *__s, size_t __n);
+unsigned long _2_alwaysZero = 0;
 typedef union __anonunion_pthread_rwlock_t_656928968 pthread_rwlock_t;
 struct __anonstruct___fsid_t_109580352 {
   int __val[2];
@@ -384,17 +378,19 @@ typedef char *__caddr_t;
 typedef __caddr_t caddr_t;
 typedef __gid_t gid_t;
 extern ldiv_t(ldiv)(long __numer, long __denom);
+struct _3_OBF_FUNC_2_opaque_NodeStruct *_3_OBF_FUNC_2_opaque_list_2 =
+    (struct _3_OBF_FUNC_2_opaque_NodeStruct *)0;
 typedef long __intmax_t;
-union __anonunion_pthread_barrier_t_145707746 {
-  char __size[32];
-  long __align;
-};
+typedef unsigned long __u_long;
+typedef __u_long u_long;
 union __anonunion_pthread_rwlockattr_t_145707745 {
   char __size[8];
   long __align;
 };
-typedef unsigned long __u_long;
-typedef __u_long u_long;
+union __anonunion_pthread_barrier_t_145707746 {
+  char __size[32];
+  long __align;
+};
 extern void *(calloc)(size_t __nmemb, size_t __size);
 extern int(drand48_r)(struct drand48_data *__buffer, double *__result);
 char **_global_envp;
@@ -407,11 +403,13 @@ typedef unsigned long __syscall_ulong_t;
 enum __anonenum_idtype_t_558242672 { P_ALL = 0, P_PID = 1, P_PGID = 2 };
 extern int(ecvt_r)(double __value, int __ndigit, int *__decpt, int *__sign,
                    char *__buf, size_t __len);
+struct _3_OBF_FUNC_2_opaque_NodeStruct *_3_OBF_FUNC_2_opaque_list_1 =
+    (struct _3_OBF_FUNC_2_opaque_NodeStruct *)0;
 extern unsigned long(strtoul)(char const *__nptr, char **__endptr, int __base);
-typedef __int8_t __int_least8_t;
 typedef __clock_t clock_t;
-extern void *(alloca)(size_t __size);
+typedef __int8_t __int_least8_t;
 extern void(free)(void *__ptr);
+extern void *(alloca)(size_t __size);
 extern int(lrand48_r)(struct drand48_data *__buffer, long *__result);
 int main(int argc, char **argv, char **_formal_envp);
 extern char *(mktemp)(char *__template);
@@ -425,17 +423,21 @@ typedef long __intptr_t;
 extern char *(initstate)(unsigned int __seed, char *__statebuf,
                          size_t __statelen);
 int OBF_FUNC(int i);
+struct _3_OBF_FUNC_1_opaque_NodeStruct *_3_OBF_FUNC_1_opaque_list_2 =
+    (struct _3_OBF_FUNC_1_opaque_NodeStruct *)0;
+struct _3_OBF_FUNC_1_opaque_NodeStruct *_3_OBF_FUNC_1_opaque_ptr_2 =
+    (struct _3_OBF_FUNC_1_opaque_NodeStruct *)0;
 typedef struct __pthread_internal_slist __pthread_slist_t;
 typedef __pid_t pid_t;
-union __anonunion_pthread_condattr_t_488594145 {
-  char __size[4];
-  int __align;
-};
 struct __anonstruct_lldiv_t_103911545 {
   long long quot;
   long long rem;
 };
 typedef long __fsword_t;
+union __anonunion_pthread_condattr_t_488594145 {
+  char __size[4];
+  int __align;
+};
 extern void(quick_exit)(int __status);
 typedef __u_short u_short;
 typedef __uint8_t u_int8_t;
@@ -453,12 +455,10 @@ union __anonunion_pthread_mutexattr_t_488594144 {
   char __size[4];
   int __align;
 };
-struct _2_OBF_FUNC_2_opaque_NodeStruct *_2_OBF_FUNC_2_opaque_ptr_2 =
-    (struct _2_OBF_FUNC_2_opaque_NodeStruct *)0;
-extern int(initstate_r)(unsigned int __seed, char *__statebuf,
-                        size_t __statelen, struct random_data *__buf);
 extern unsigned long long(strtouq)(char const *__nptr, char **__endptr,
                                    int __base);
+extern int(initstate_r)(unsigned int __seed, char *__statebuf,
+                        size_t __statelen, struct random_data *__buf);
 extern int(atoi)(char const *__nptr);
 struct __anonstruct_div_t_773697287 {
   int quot;
@@ -482,1332 +482,1333 @@ int OBF_FUNC(int i) {
   int k___6;
   int k___7;
   unsigned long _1_OBF_FUNC_next;
-  struct _2_OBF_FUNC_1_opaque_NodeStruct *p19;
+  struct _3_OBF_FUNC_1_opaque_NodeStruct *p19;
   int i20;
-  struct _2_OBF_FUNC_1_opaque_NodeStruct *p21;
-  int _2_OBF_FUNC__BEGIN_1;
-  int _2_OBF_FUNC__END_1;
-  int _2_OBF_FUNC__BARRIER_2;
-  struct _2_OBF_FUNC_2_opaque_NodeStruct *p25;
+  struct _3_OBF_FUNC_1_opaque_NodeStruct *p21;
+  int _3_OBF_FUNC__BEGIN_1;
+  int _3_OBF_FUNC__END_1;
+  int _3_OBF_FUNC__BARRIER_2;
+  struct _3_OBF_FUNC_2_opaque_NodeStruct *p25;
   int i26;
-  struct _2_OBF_FUNC_2_opaque_NodeStruct *p27;
-  int _2_OBF_FUNC__BEGIN_3;
-  int _2_OBF_FUNC__END_3;
-  int _2_OBF_FUNC__BARRIER_4;
+  struct _3_OBF_FUNC_2_opaque_NodeStruct *p27;
+  int _3_OBF_FUNC__BEGIN_3;
+  int _3_OBF_FUNC__END_3;
+  int _3_OBF_FUNC__BARRIER_4;
   {
     {
-      _2_OBF_FUNC__BEGIN_3 = 1;
-      p25 = (struct _2_OBF_FUNC_2_opaque_NodeStruct *)malloc(
-          sizeof(struct _2_OBF_FUNC_2_opaque_NodeStruct));
+      _3_OBF_FUNC__BEGIN_3 = 1;
+      p25 = (struct _3_OBF_FUNC_2_opaque_NodeStruct *)malloc(
+          sizeof(struct _3_OBF_FUNC_2_opaque_NodeStruct));
       p25->next = p25;
       p25->prev = p25;
-      _2_OBF_FUNC_2_opaque_list_1 = p25;
+      _3_OBF_FUNC_2_opaque_list_1 = p25;
       i26 = 0;
-      while (i26 < 3) {
-        p27 = (struct _2_OBF_FUNC_2_opaque_NodeStruct *)malloc(
-            sizeof(struct _2_OBF_FUNC_2_opaque_NodeStruct));
-        p27->data = i26 * (((_1_entropy & ~2) << 1UL) - (_1_entropy ^ 2));
-        p27->next = _2_OBF_FUNC_2_opaque_list_1->next;
-        p27->prev = _2_OBF_FUNC_2_opaque_list_1;
-        (_2_OBF_FUNC_2_opaque_list_1->next)->prev = p27;
-        _2_OBF_FUNC_2_opaque_list_1->next = p27;
+      while (i26 < 4) {
+        p27 = (struct _3_OBF_FUNC_2_opaque_NodeStruct *)malloc(
+            sizeof(struct _3_OBF_FUNC_2_opaque_NodeStruct));
+        p27->data = i26 * ((_2_entropy | 1) - (_2_entropy & 1));
+        p27->next = _3_OBF_FUNC_2_opaque_list_1->next;
+        p27->prev = _3_OBF_FUNC_2_opaque_list_1;
+        (_3_OBF_FUNC_2_opaque_list_1->next)->prev = p27;
+        _3_OBF_FUNC_2_opaque_list_1->next = p27;
         i26++;
       }
-      _2_OBF_FUNC_2_opaque_ptr_1 = _2_OBF_FUNC_2_opaque_list_1->next;
-      _2_OBF_FUNC_2_opaque_ptr_2 = _2_OBF_FUNC_2_opaque_ptr_1;
-      _2_OBF_FUNC_2_opaque_ptr_2 = _2_OBF_FUNC_2_opaque_ptr_2->next;
-      _2_OBF_FUNC__END_3 = 1;
+      _3_OBF_FUNC_2_opaque_ptr_1 = _3_OBF_FUNC_2_opaque_list_1->next;
+      _3_OBF_FUNC_2_opaque_ptr_2 = _3_OBF_FUNC_2_opaque_ptr_1;
+      _3_OBF_FUNC__END_3 = 1;
     }
-    _2_OBF_FUNC__BARRIER_4 = 1;
+    _3_OBF_FUNC__BARRIER_4 = 1;
     {
-      _2_OBF_FUNC__BEGIN_1 = 1;
-      p19 = (struct _2_OBF_FUNC_1_opaque_NodeStruct *)malloc(
-          sizeof(struct _2_OBF_FUNC_1_opaque_NodeStruct));
+      _3_OBF_FUNC__BEGIN_1 = 1;
+      p19 = (struct _3_OBF_FUNC_1_opaque_NodeStruct *)malloc(
+          sizeof(struct _3_OBF_FUNC_1_opaque_NodeStruct));
       p19->next = p19;
       p19->prev = p19;
-      _2_OBF_FUNC_1_opaque_list_1 = p19;
+      _3_OBF_FUNC_1_opaque_list_1 = p19;
       i20 = 0;
-      while (i20 < 3) {
-        p21 = (struct _2_OBF_FUNC_1_opaque_NodeStruct *)malloc(
-            sizeof(struct _2_OBF_FUNC_1_opaque_NodeStruct));
-        p21->data = i20 * (((_1_entropy & ~1) << 1UL) - (_1_entropy ^ 1));
-        p21->next = _2_OBF_FUNC_1_opaque_list_1->next;
-        p21->prev = _2_OBF_FUNC_1_opaque_list_1;
-        (_2_OBF_FUNC_1_opaque_list_1->next)->prev = p21;
-        _2_OBF_FUNC_1_opaque_list_1->next = p21;
+      while (i20 < 4) {
+        p21 = (struct _3_OBF_FUNC_1_opaque_NodeStruct *)malloc(
+            sizeof(struct _3_OBF_FUNC_1_opaque_NodeStruct));
+        p21->data =
+            i20 * (((_2_entropy - 7) - ((_2_entropy | ~7) << 1UL)) - 2UL);
+        p21->next = _3_OBF_FUNC_1_opaque_list_1->next;
+        p21->prev = _3_OBF_FUNC_1_opaque_list_1;
+        (_3_OBF_FUNC_1_opaque_list_1->next)->prev = p21;
+        _3_OBF_FUNC_1_opaque_list_1->next = p21;
         i20++;
       }
-      _2_OBF_FUNC_1_opaque_ptr_1 = _2_OBF_FUNC_1_opaque_list_1->next;
-      _2_OBF_FUNC_1_opaque_ptr_2 = _2_OBF_FUNC_1_opaque_ptr_1;
-      _2_OBF_FUNC__END_1 = 1;
+      _3_OBF_FUNC_1_opaque_ptr_1 = _3_OBF_FUNC_1_opaque_list_1->next;
+      _3_OBF_FUNC_1_opaque_ptr_2 = _3_OBF_FUNC_1_opaque_ptr_1;
+      _3_OBF_FUNC__END_1 = 1;
     }
-    _2_OBF_FUNC__BARRIER_2 = 1;
+    _3_OBF_FUNC__BARRIER_2 = 1;
     _1_OBF_FUNC_next = 240UL;
     while (1) {
       switch (_1_OBF_FUNC_next) {
-        case 239UL:
+        case 239:
           k___7++;
           _1_OBF_FUNC_next = 31UL;
           break;
-        case 182UL:
+        case 182:
           j___1++;
           _1_OBF_FUNC_next = 25UL;
           break;
-        case 18UL:
+        case 18:
           k___3 = 2;
           _1_OBF_FUNC_next = 236UL;
           break;
-        case 129UL:
+        case 129:
           isPrime___1 = (_Bool)0;
           _1_OBF_FUNC_next = 53UL;
           break;
-        case 50UL:
+        case 50:
           j++;
           _1_OBF_FUNC_next = 110UL;
           break;
-        case 80UL:
+        case 80:
           k++;
           _1_OBF_FUNC_next = 11UL;
           break;
-        case 108UL:;
+        case 108:;
           if (isPrime___1) {
             _1_OBF_FUNC_next = 227UL;
           } else {
             _1_OBF_FUNC_next = 248UL;
           }
           break;
-        case 166UL:;
+        case 166:;
           if (isPrime___0) {
             _1_OBF_FUNC_next = 113UL;
           } else {
             _1_OBF_FUNC_next = 246UL;
           }
           break;
-        case 104UL:;
+        case 104:;
           if (k___0 < m) {
             _1_OBF_FUNC_next = 205UL;
           } else {
             _1_OBF_FUNC_next = 86UL;
           }
           break;
-        case 130UL:;
+        case 130:;
           if (isPrime) {
             _1_OBF_FUNC_next = 78UL;
           } else {
             _1_OBF_FUNC_next = 7UL;
           }
           break;
-        case 25UL:;
+        case 25:;
           if (j___1 < m) {
             _1_OBF_FUNC_next = 179UL;
           } else {
             _1_OBF_FUNC_next = 48UL;
           }
           break;
-        case 49UL:
+        case 49:
           j___1++;
           _1_OBF_FUNC_next = 143UL;
           break;
-        case 52UL:;
+        case 52:;
           if (m > 1) {
             _1_OBF_FUNC_next = 218UL;
           } else {
             _1_OBF_FUNC_next = 74UL;
           }
           break;
-        case 188UL:
+        case 188:
           k___2++;
           _1_OBF_FUNC_next = 24UL;
           break;
-        case 4UL:
+        case 4:
           k++;
           _1_OBF_FUNC_next = 75UL;
           break;
-        case 200UL:
+        case 200:
           isPrime = (_Bool)0;
           _1_OBF_FUNC_next = 242UL;
           break;
-        case 219UL:;
+        case 219:;
           return (m);
           break;
-        case 250UL:;
+        case 250:;
           if (k___2 < m) {
             _1_OBF_FUNC_next = 235UL;
           } else {
             _1_OBF_FUNC_next = 24UL;
           }
           break;
-        case 30UL:;
+        case 30:;
           if (j < m) {
             _1_OBF_FUNC_next = 136UL;
           } else {
             _1_OBF_FUNC_next = 156UL;
           }
           break;
-        case 62UL:
+        case 62:
           k___2++;
           _1_OBF_FUNC_next = 246UL;
           break;
-        case 185UL:
+        case 185:
           isPrime___0 = (_Bool)0;
           _1_OBF_FUNC_next = 176UL;
           break;
-        case 189UL:
+        case 189:
           m = i;
           _1_OBF_FUNC_next = 214UL;
           break;
-        case 102UL:;
+        case 102:;
           if (k___4 < m) {
             _1_OBF_FUNC_next = 202UL;
           } else {
             _1_OBF_FUNC_next = 149UL;
           }
           break;
-        case 106UL:;
+        case 106:;
           return (-1);
           break;
-        case 14UL:
+        case 14:
           k___3++;
           _1_OBF_FUNC_next = 236UL;
           break;
-        case 111UL:;
+        case 111:;
           if (k___5 < m) {
             _1_OBF_FUNC_next = 186UL;
           } else {
             _1_OBF_FUNC_next = 193UL;
           }
           break;
-        case 82UL:;
+        case 82:;
           return (m);
           break;
-        case 133UL:;
+        case 133:;
           if (k___4 < m) {
             _1_OBF_FUNC_next = 169UL;
           } else {
             _1_OBF_FUNC_next = 102UL;
           }
           break;
-        case 89UL:;
+        case 89:;
           if (k___0 < m) {
             _1_OBF_FUNC_next = 251UL;
           } else {
             _1_OBF_FUNC_next = 213UL;
           }
           break;
-        case 221UL:;
+        case 221:;
           if (m == j * k___0) {
             _1_OBF_FUNC_next = 200UL;
           } else {
             _1_OBF_FUNC_next = 242UL;
           }
           break;
-        case 180UL:;
+        case 180:;
           return (-1);
           break;
-        case 56UL:
+        case 56:
           isPrime___0 = (_Bool)0;
           _1_OBF_FUNC_next = 198UL;
           break;
-        case 79UL:;
+        case 79:;
           if (isPrime___0) {
             _1_OBF_FUNC_next = 151UL;
           } else {
             _1_OBF_FUNC_next = 1UL;
           }
           break;
-        case 217UL:;
+        case 217:;
           if (k___6 < m) {
             _1_OBF_FUNC_next = 128UL;
           } else {
             _1_OBF_FUNC_next = 173UL;
           }
           break;
-        case 164UL:
+        case 164:
           isPrime___1 = (_Bool)0;
           _1_OBF_FUNC_next = 20UL;
           break;
-        case 31UL:;
+        case 31:;
           if (k___7 < m) {
             _1_OBF_FUNC_next = 140UL;
           } else {
             _1_OBF_FUNC_next = 155UL;
           }
           break;
-        case 121UL:;
+        case 121:;
           if (isPrime___1) {
             _1_OBF_FUNC_next = 152UL;
           } else {
             _1_OBF_FUNC_next = 25UL;
           }
           break;
-        case 12UL:;
+        case 12:;
           if (k___1 < m) {
             _1_OBF_FUNC_next = 59UL;
           } else {
             _1_OBF_FUNC_next = 234UL;
           }
           break;
-        case 141UL:
+        case 141:
           k___7++;
           _1_OBF_FUNC_next = 117UL;
           break;
-        case 216UL:;
+        case 216:;
           if (j___0 < m) {
             _1_OBF_FUNC_next = 79UL;
           } else {
             _1_OBF_FUNC_next = 1UL;
           }
           break;
-        case 101UL:;
+        case 101:;
           if (m == j * k___0) {
             _1_OBF_FUNC_next = 60UL;
           } else {
             _1_OBF_FUNC_next = 34UL;
           }
           break;
-        case 209UL:;
+        case 209:;
           if (m == j * k___1) {
             _1_OBF_FUNC_next = 243UL;
           } else {
             _1_OBF_FUNC_next = 81UL;
           }
           break;
-        case 152UL:
+        case 152:
           k___5 = 2;
           _1_OBF_FUNC_next = 197UL;
           break;
-        case 205UL:;
+        case 205:;
           if (isPrime) {
             _1_OBF_FUNC_next = 221UL;
           } else {
             _1_OBF_FUNC_next = 86UL;
           }
           break;
-        case 8UL:;
+        case 8:;
           if (k___1 < m) {
             _1_OBF_FUNC_next = 139UL;
           } else {
             _1_OBF_FUNC_next = 215UL;
           }
           break;
-        case 160UL:;
+        case 160:;
           if (k___0 < m) {
             _1_OBF_FUNC_next = 123UL;
           } else {
             _1_OBF_FUNC_next = 104UL;
           }
           break;
-        case 201UL:;
+        case 201:;
           if (m == j___1 * k___7) {
             _1_OBF_FUNC_next = 58UL;
           } else {
             _1_OBF_FUNC_next = 141UL;
           }
           break;
-        case 235UL:;
+        case 235:;
           if (isPrime___0) {
             _1_OBF_FUNC_next = 73UL;
           } else {
             _1_OBF_FUNC_next = 24UL;
           }
           break;
-        case 246UL:;
+        case 246:;
           if (k___2 < m) {
             _1_OBF_FUNC_next = 9UL;
           } else {
             _1_OBF_FUNC_next = 167UL;
           }
           break;
-        case 203UL:
+        case 203:
           j___1 = 2;
           _1_OBF_FUNC_next = 143UL;
           break;
-        case 96UL:;
+        case 96:;
           if (m == j___0 * k___4) {
             _1_OBF_FUNC_next = 226UL;
           } else {
             _1_OBF_FUNC_next = 66UL;
           }
           break;
-        case 195UL:
+        case 195:
           isPrime = (_Bool)0;
           _1_OBF_FUNC_next = 249UL;
           break;
-        case 45UL:;
+        case 45:;
           if (isPrime) {
             _1_OBF_FUNC_next = 253UL;
           } else {
             _1_OBF_FUNC_next = 11UL;
           }
           break;
-        case 54UL:
+        case 54:
           isPrime___0 = (_Bool)0;
           _1_OBF_FUNC_next = 188UL;
           break;
-        case 78UL:;
+        case 78:;
           if (k < m) {
             _1_OBF_FUNC_next = 45UL;
           } else {
             _1_OBF_FUNC_next = 11UL;
           }
           break;
-        case 124UL:;
+        case 124:;
           if (m == j___1 * k___7) {
             _1_OBF_FUNC_next = 109UL;
           } else {
             _1_OBF_FUNC_next = 239UL;
           }
           break;
-        case 118UL:
+        case 118:
           k___0 = 2;
           _1_OBF_FUNC_next = 89UL;
           break;
-        case 140UL:;
+        case 140:;
           if (isPrime___1) {
             _1_OBF_FUNC_next = 32UL;
           } else {
             _1_OBF_FUNC_next = 155UL;
           }
           break;
-        case 1UL:;
+        case 1:;
           if (isPrime___0) {
             _1_OBF_FUNC_next = 219UL;
           } else {
             _1_OBF_FUNC_next = 150UL;
           }
           break;
-        case 81UL:
+        case 81:
           k___1++;
           _1_OBF_FUNC_next = 8UL;
           break;
-        case 128UL:;
+        case 128:;
           if (isPrime___1) {
             _1_OBF_FUNC_next = 57UL;
           } else {
             _1_OBF_FUNC_next = 173UL;
           }
           break;
-        case 236UL:;
+        case 236:;
           if (k___3 < m) {
             _1_OBF_FUNC_next = 16UL;
           } else {
             _1_OBF_FUNC_next = 76UL;
           }
           break;
-        case 77UL:;
+        case 77:;
           if (isPrime___1) {
             _1_OBF_FUNC_next = 187UL;
           } else {
             _1_OBF_FUNC_next = 49UL;
           }
           break;
-        case 242UL:
+        case 242:
           k___0++;
           _1_OBF_FUNC_next = 86UL;
           break;
-        case 70UL:;
+        case 70:;
           if (isPrime___0) {
             _1_OBF_FUNC_next = 116UL;
           } else {
             _1_OBF_FUNC_next = 216UL;
           }
           break;
-        case 159UL:
+        case 159:
           k___4++;
           _1_OBF_FUNC_next = 102UL;
           break;
-        case 3UL:
+        case 3:
           j = 2;
           _1_OBF_FUNC_next = 110UL;
           break;
-        case 134UL:
+        case 134:
           isPrime___1 = (_Bool)0;
           _1_OBF_FUNC_next = 122UL;
           break;
-        case 16UL:;
+        case 16:;
           if (isPrime___0) {
             _1_OBF_FUNC_next = 55UL;
           } else {
             _1_OBF_FUNC_next = 76UL;
           }
           break;
-        case 24UL:;
+        case 24:;
           if (k___2 < m) {
             _1_OBF_FUNC_next = 166UL;
           } else {
             _1_OBF_FUNC_next = 246UL;
           }
           break;
-        case 94UL:;
+        case 94:;
           if (k___6 < m) {
             _1_OBF_FUNC_next = 99UL;
           } else {
             _1_OBF_FUNC_next = 222UL;
           }
           break;
-        case 109UL:
+        case 109:
           isPrime___1 = (_Bool)0;
           _1_OBF_FUNC_next = 239UL;
           break;
-        case 190UL:;
+        case 190:;
           if (j___0 < m) {
             _1_OBF_FUNC_next = 70UL;
           } else {
             _1_OBF_FUNC_next = 216UL;
           }
           break;
-        case 167UL:
+        case 167:
           j___0++;
           _1_OBF_FUNC_next = 6UL;
           break;
-        case 76UL:
+        case 76:
           j___0++;
           _1_OBF_FUNC_next = 190UL;
           break;
-        case 131UL:;
+        case 131:;
           if (m == j___0 * k___3) {
             _1_OBF_FUNC_next = 5UL;
           } else {
             _1_OBF_FUNC_next = 14UL;
           }
           break;
-        case 197UL:;
+        case 197:;
           if (k___5 < m) {
             _1_OBF_FUNC_next = 212UL;
           } else {
             _1_OBF_FUNC_next = 182UL;
           }
           break;
-        case 231UL:;
+        case 231:;
           if (isPrime___1) {
             _1_OBF_FUNC_next = 124UL;
           } else {
             _1_OBF_FUNC_next = 31UL;
           }
           break;
-        case 57UL:;
+        case 57:;
           if (m == j___1 * k___6) {
             _1_OBF_FUNC_next = 93UL;
           } else {
             _1_OBF_FUNC_next = 228UL;
           }
           break;
-        case 156UL:;
+        case 156:;
           if (j < m) {
             _1_OBF_FUNC_next = 161UL;
           } else {
             _1_OBF_FUNC_next = 110UL;
           }
           break;
-        case 213UL:
+        case 213:
           j++;
           _1_OBF_FUNC_next = 156UL;
           break;
-        case 122UL:
+        case 122:
           k___5++;
           _1_OBF_FUNC_next = 197UL;
           break;
-        case 181UL:;
+        case 181:;
           if (isPrime___1) {
             _1_OBF_FUNC_next = 71UL;
           } else {
             _1_OBF_FUNC_next = 138UL;
           }
           break;
-        case 237UL:
+        case 237:
           k___3++;
           _1_OBF_FUNC_next = 142UL;
           break;
-        case 85UL:;
+        case 85:;
           if (m == j___1 * k___6) {
             _1_OBF_FUNC_next = 26UL;
           } else {
             _1_OBF_FUNC_next = 63UL;
           }
           break;
-        case 26UL:
+        case 26:
           isPrime___1 = (_Bool)0;
           _1_OBF_FUNC_next = 63UL;
           break;
-        case 98UL:
+        case 98:
           k___5++;
           _1_OBF_FUNC_next = 193UL;
           break;
-        case 105UL:;
+        case 105:;
           if (m == j___1 * k___5) {
             _1_OBF_FUNC_next = 170UL;
           } else {
             _1_OBF_FUNC_next = 98UL;
           }
           break;
-        case 214UL:;
+        case 214:;
           if (m > 1) {
             _1_OBF_FUNC_next = 229UL;
-          } else if (_2_OBF_FUNC_1_opaque_ptr_1 != _2_OBF_FUNC_1_opaque_ptr_2) {
           } else {
             _1_OBF_FUNC_next = 106UL;
           }
           break;
-        case 11UL:;
+        case 11:;
           if (k < m) {
             _1_OBF_FUNC_next = 146UL;
           } else {
             _1_OBF_FUNC_next = 75UL;
           }
           break;
-        case 202UL:;
+        case 202:;
           if (isPrime___0) {
-            _1_OBF_FUNC_next = 37UL;
+            {
+              if (_3_OBF_FUNC_2_opaque_ptr_1 == _3_OBF_FUNC_2_opaque_ptr_2) {
+                _1_OBF_FUNC_next = 37UL;
+              } else {
+              }
+            }
           } else {
             _1_OBF_FUNC_next = 149UL;
           }
           break;
-        case 9UL:;
+        case 9:;
           if (isPrime___0) {
             _1_OBF_FUNC_next = 210UL;
           } else {
             _1_OBF_FUNC_next = 167UL;
           }
           break;
-        case 225UL:;
+        case 225:;
           if (m == j * k___1) {
             _1_OBF_FUNC_next = 162UL;
           } else {
             _1_OBF_FUNC_next = 91UL;
           }
           break;
-        case 247UL:;
+        case 247:;
           if (m == j___0 * k___3) {
             _1_OBF_FUNC_next = 19UL;
           } else {
             _1_OBF_FUNC_next = 237UL;
           }
           break;
-        case 135UL:
+        case 135:
           k = 2;
           _1_OBF_FUNC_next = 72UL;
           break;
-        case 13UL:
+        case 13:
           isPrime = (_Bool)0;
           _1_OBF_FUNC_next = 192UL;
           break;
-        case 63UL:
+        case 63:
           k___6++;
           _1_OBF_FUNC_next = 94UL;
           break;
-        case 176UL:
+        case 176:
           k___3++;
           _1_OBF_FUNC_next = 127UL;
           break;
-        case 186UL:;
+        case 186:;
           if (isPrime___1) {
             _1_OBF_FUNC_next = 105UL;
           } else {
             _1_OBF_FUNC_next = 193UL;
           }
           break;
-        case 51UL:;
+        case 51:;
           if (isPrime) {
             _1_OBF_FUNC_next = 88UL;
           } else {
             _1_OBF_FUNC_next = 175UL;
           }
           break;
-        case 107UL:;
+        case 107:;
           if (isPrime___0) {
             _1_OBF_FUNC_next = 10UL;
           } else {
             _1_OBF_FUNC_next = 250UL;
           }
           break;
-        case 146UL:;
+        case 146:;
           if (isPrime) {
             _1_OBF_FUNC_next = 125UL;
           } else {
             _1_OBF_FUNC_next = 75UL;
           }
           break;
-        case 192UL:
+        case 192:
           k___1++;
           _1_OBF_FUNC_next = 234UL;
           break;
-        case 125UL:;
+        case 125:;
           if (m == j * k) {
             _1_OBF_FUNC_next = 120UL;
           } else {
             _1_OBF_FUNC_next = 4UL;
           }
           break;
-        case 249UL:
+        case 249:
           k++;
           _1_OBF_FUNC_next = 72UL;
           break;
-        case 143UL:;
+        case 143:;
           if (j___1 < m) {
             _1_OBF_FUNC_next = 181UL;
           } else {
             _1_OBF_FUNC_next = 138UL;
           }
           break;
-        case 19UL:
+        case 19:
           isPrime___0 = (_Bool)0;
           _1_OBF_FUNC_next = 237UL;
           break;
-        case 32UL:;
+        case 32:;
           if (m == j___1 * k___7) {
             _1_OBF_FUNC_next = 164UL;
           } else {
             _1_OBF_FUNC_next = 20UL;
           }
           break;
-        case 227UL:;
+        case 227:;
           if (m == j___1 * k___5) {
             _1_OBF_FUNC_next = 35UL;
           } else {
             _1_OBF_FUNC_next = 244UL;
           }
           break;
-        case 17UL:;
+        case 17:;
           if (m == j___0 * k___4) {
             _1_OBF_FUNC_next = 56UL;
           } else {
             _1_OBF_FUNC_next = 198UL;
           }
           break;
-        case 90UL:;
+        case 90:;
           if (isPrime) {
             _1_OBF_FUNC_next = 209UL;
           } else {
             _1_OBF_FUNC_next = 8UL;
           }
           break;
-        case 172UL:;
+        case 172:;
           if (m == j___1 * k___5) {
             _1_OBF_FUNC_next = 134UL;
           } else {
             _1_OBF_FUNC_next = 122UL;
           }
           break;
-        case 228UL:
+        case 228:
           k___6++;
           _1_OBF_FUNC_next = 173UL;
           break;
-        case 226UL:
+        case 226:
           isPrime___0 = (_Bool)0;
           _1_OBF_FUNC_next = 66UL;
           break;
-        case 40UL:
+        case 40:
           k___0++;
           _1_OBF_FUNC_next = 104UL;
           break;
-        case 199UL:
+        case 199:
           j___1++;
           _1_OBF_FUNC_next = 48UL;
           break;
-        case 210UL:;
+        case 210:;
           if (k___2 < m) {
             _1_OBF_FUNC_next = 107UL;
           } else {
             _1_OBF_FUNC_next = 250UL;
           }
           break;
-        case 55UL:;
+        case 55:;
           if (k___3 < m) {
             _1_OBF_FUNC_next = 114UL;
           } else {
             _1_OBF_FUNC_next = 142UL;
           }
           break;
-        case 117UL:;
+        case 117:;
           if (k___7 < m) {
             _1_OBF_FUNC_next = 77UL;
           } else {
             _1_OBF_FUNC_next = 49UL;
           }
           break;
-        case 132UL:;
+        case 132:;
           if (isPrime) {
             _1_OBF_FUNC_next = 12UL;
           } else {
             _1_OBF_FUNC_next = 50UL;
           }
           break;
-        case 110UL:;
+        case 110:;
           if (j < m) {
             _1_OBF_FUNC_next = 51UL;
           } else {
             _1_OBF_FUNC_next = 175UL;
           }
           break;
-        case 193UL:;
+        case 193:;
           if (k___5 < m) {
             _1_OBF_FUNC_next = 108UL;
           } else {
             _1_OBF_FUNC_next = 248UL;
           }
           break;
-        case 208UL:
+        case 208:
           j___0 = 2;
           _1_OBF_FUNC_next = 216UL;
           break;
-        case 60UL:
+        case 60:
           isPrime = (_Bool)0;
           _1_OBF_FUNC_next = 34UL;
           break;
-        case 150UL:
+        case 150:
           m--;
           _1_OBF_FUNC_next = 74UL;
           break;
-        case 59UL:;
+        case 59:;
           if (isPrime) {
             _1_OBF_FUNC_next = 255UL;
           } else {
             _1_OBF_FUNC_next = 234UL;
           }
           break;
-        case 187UL:;
-          if (k___7 < m) {
+        case 187:;
+          if (_3_OBF_FUNC_1_opaque_ptr_1 != _3_OBF_FUNC_1_opaque_ptr_2) {
+            __asm__ volatile(".byte 0xbc" :);
+          } else if (k___7 < m) {
             _1_OBF_FUNC_next = 231UL;
           } else {
             _1_OBF_FUNC_next = 31UL;
           }
           break;
-        case 244UL:
+        case 244:
           k___5++;
           _1_OBF_FUNC_next = 248UL;
           break;
-        case 161UL:;
+        case 161:;
           if (isPrime) {
             _1_OBF_FUNC_next = 153UL;
           } else {
             _1_OBF_FUNC_next = 110UL;
           }
           break;
-        case 223UL:
+        case 223:
           isPrime = (_Bool)1;
           _1_OBF_FUNC_next = 3UL;
           break;
-        case 6UL:;
+        case 6:;
           if (j___0 < m) {
             _1_OBF_FUNC_next = 41UL;
           } else {
             _1_OBF_FUNC_next = 190UL;
           }
           break;
-        case 155UL:;
+        case 155:;
           if (k___7 < m) {
             _1_OBF_FUNC_next = 84UL;
           } else {
             _1_OBF_FUNC_next = 117UL;
           }
           break;
-        case 142UL:;
+        case 142:;
           if (k___3 < m) {
             _1_OBF_FUNC_next = 46UL;
           } else {
             _1_OBF_FUNC_next = 127UL;
           }
           break;
-        case 144UL:;
+        case 144:;
           if (isPrime___1) {
             _1_OBF_FUNC_next = 172UL;
           } else {
             _1_OBF_FUNC_next = 197UL;
           }
           break;
-        case 116UL:
+        case 116:
           k___4 = 2;
           _1_OBF_FUNC_next = 102UL;
           break;
-        case 137UL:
+        case 137:
           isPrime___0 = (_Bool)0;
           _1_OBF_FUNC_next = 62UL;
           break;
-        case 154UL:;
+        case 154:;
           if (isPrime___0) {
             _1_OBF_FUNC_next = 17UL;
           } else {
             _1_OBF_FUNC_next = 133UL;
           }
           break;
-        case 243UL:
+        case 243:
           isPrime = (_Bool)0;
           _1_OBF_FUNC_next = 81UL;
           break;
-        case 151UL:;
+        case 151:;
           if (j___0 < m) {
             _1_OBF_FUNC_next = 38UL;
           } else {
             _1_OBF_FUNC_next = 6UL;
           }
           break;
-        case 194UL:
+        case 194:
           m--;
           _1_OBF_FUNC_next = 214UL;
           break;
-        case 38UL:;
+        case 38:;
           if (isPrime___0) {
             _1_OBF_FUNC_next = 87UL;
           } else {
             _1_OBF_FUNC_next = 6UL;
           }
           break;
-        case 61UL:;
+        case 61:;
           if (isPrime___0) {
             _1_OBF_FUNC_next = 131UL;
           } else {
             _1_OBF_FUNC_next = 236UL;
           }
           break;
-        case 158UL:;
+        case 158:;
           if (isPrime) {
             _1_OBF_FUNC_next = 101UL;
           } else {
             _1_OBF_FUNC_next = 89UL;
           }
           break;
-        case 212UL:;
+        case 212:;
           if (isPrime___1) {
             _1_OBF_FUNC_next = 111UL;
           } else {
             _1_OBF_FUNC_next = 182UL;
           }
           break;
-        case 87UL:
+        case 87:
           k___2 = 2;
           _1_OBF_FUNC_next = 246UL;
           break;
-        case 113UL:;
+        case 113:;
           if (m == j___0 * k___2) {
             _1_OBF_FUNC_next = 137UL;
           } else {
             _1_OBF_FUNC_next = 62UL;
           }
           break;
-        case 138UL:;
+        case 138:;
           if (isPrime___1) {
             _1_OBF_FUNC_next = 95UL;
           } else {
             _1_OBF_FUNC_next = 194UL;
           }
           break;
-        case 58UL:
+        case 58:
           isPrime___1 = (_Bool)0;
           _1_OBF_FUNC_next = 141UL;
           break;
-        case 84UL:;
+        case 84:;
           if (isPrime___1) {
             _1_OBF_FUNC_next = 201UL;
           } else {
             _1_OBF_FUNC_next = 117UL;
           }
           break;
-        case 170UL:
+        case 170:
           isPrime___1 = (_Bool)0;
           _1_OBF_FUNC_next = 98UL;
           break;
-        case 183UL:;
+        case 183:;
           if (isPrime) {
             _1_OBF_FUNC_next = 174UL;
           } else {
             _1_OBF_FUNC_next = 72UL;
           }
           break;
-        case 34UL:
+        case 34:
           k___0++;
           _1_OBF_FUNC_next = 89UL;
           break;
-        case 74UL:;
+        case 74:;
           if (m > 1) {
             _1_OBF_FUNC_next = 178UL;
           } else {
             _1_OBF_FUNC_next = 214UL;
           }
           break;
-        case 178UL:
+        case 178:
           isPrime___1 = (_Bool)1;
           _1_OBF_FUNC_next = 203UL;
           break;
-        case 255UL:;
+        case 255:;
           if (m == j * k___1) {
             _1_OBF_FUNC_next = 13UL;
           } else {
             _1_OBF_FUNC_next = 192UL;
           }
           break;
-        case 75UL:;
+        case 75:;
           if (k < m) {
             _1_OBF_FUNC_next = 183UL;
           } else {
             _1_OBF_FUNC_next = 72UL;
           }
           break;
-        case 123UL:;
+        case 123:;
           if (isPrime) {
             _1_OBF_FUNC_next = 0UL;
           } else {
             _1_OBF_FUNC_next = 104UL;
           }
           break;
-        case 48UL:;
+        case 48:;
           if (j___1 < m) {
             _1_OBF_FUNC_next = 233UL;
           } else {
             _1_OBF_FUNC_next = 143UL;
           }
           break;
-        case 251UL:;
+        case 251:;
           if (isPrime) {
             _1_OBF_FUNC_next = 160UL;
           } else {
             _1_OBF_FUNC_next = 213UL;
           }
           break;
-        case 169UL:;
+        case 169:;
           if (isPrime___0) {
             _1_OBF_FUNC_next = 43UL;
           } else {
             _1_OBF_FUNC_next = 102UL;
           }
           break;
-        case 127UL:;
+        case 127:;
           if (k___3 < m) {
             _1_OBF_FUNC_next = 61UL;
           } else {
             _1_OBF_FUNC_next = 236UL;
           }
           break;
-        case 139UL:;
+        case 139:;
           if (isPrime) {
             _1_OBF_FUNC_next = 225UL;
           } else {
             _1_OBF_FUNC_next = 215UL;
           }
           break;
-        case 71UL:;
+        case 71:;
           if (j___1 < m) {
             _1_OBF_FUNC_next = 121UL;
           } else {
             _1_OBF_FUNC_next = 25UL;
           }
           break;
-        case 234UL:;
+        case 234:;
           if (k___1 < m) {
             _1_OBF_FUNC_next = 90UL;
           } else {
             _1_OBF_FUNC_next = 8UL;
           }
           break;
-        case 173UL:;
+        case 173:;
           if (k___6 < m) {
             _1_OBF_FUNC_next = 33UL;
           } else {
             _1_OBF_FUNC_next = 94UL;
           }
           break;
-        case 215UL:;
+        case 215:;
           if (k___1 < m) {
             _1_OBF_FUNC_next = 132UL;
           } else {
             _1_OBF_FUNC_next = 50UL;
           }
           break;
-        case 222UL:;
+        case 222:;
           if (k___6 < m) {
             _1_OBF_FUNC_next = 2UL;
           } else {
             _1_OBF_FUNC_next = 199UL;
           }
           break;
-        case 53UL:
+        case 53:
           k___6++;
           _1_OBF_FUNC_next = 222UL;
           break;
-        case 148UL:;
+        case 148:;
           if (isPrime) {
             _1_OBF_FUNC_next = 135UL;
           } else {
             _1_OBF_FUNC_next = 30UL;
           }
           break;
-        case 240UL:;
+        case 240:;
           if (i <= 0) {
             _1_OBF_FUNC_next = 180UL;
           } else {
             _1_OBF_FUNC_next = 189UL;
           }
           break;
-        case 191UL:;
+        case 191:;
           if (isPrime___0) {
             _1_OBF_FUNC_next = 96UL;
           } else {
             _1_OBF_FUNC_next = 42UL;
           }
           break;
-        case 218UL:
+        case 218:
           isPrime___0 = (_Bool)1;
           _1_OBF_FUNC_next = 208UL;
           break;
-        case 73UL:;
+        case 73:;
           if (m == j___0 * k___2) {
             _1_OBF_FUNC_next = 54UL;
           } else {
             _1_OBF_FUNC_next = 188UL;
           }
           break;
-        case 5UL:
+        case 5:
           isPrime___0 = (_Bool)0;
           _1_OBF_FUNC_next = 14UL;
           break;
-        case 91UL:
+        case 91:
           k___1++;
           _1_OBF_FUNC_next = 215UL;
           break;
-        case 120UL:
+        case 120:
           isPrime = (_Bool)0;
           _1_OBF_FUNC_next = 4UL;
           break;
-        case 184UL:
+        case 184:
           k___2++;
           _1_OBF_FUNC_next = 250UL;
           break;
-        case 97UL:
+        case 97:
           k___6 = 2;
           _1_OBF_FUNC_next = 222UL;
           break;
-        case 162UL:
+        case 162:
           isPrime = (_Bool)0;
           _1_OBF_FUNC_next = 91UL;
           break;
-        case 163UL:
+        case 163:
           isPrime___0 = (_Bool)0;
           _1_OBF_FUNC_next = 159UL;
           break;
-        case 230UL:;
+        case 230:;
           if (m == j___1 * k___6) {
             _1_OBF_FUNC_next = 129UL;
           } else {
             _1_OBF_FUNC_next = 53UL;
           }
           break;
-        case 72UL:;
+        case 72:;
           if (k < m) {
             _1_OBF_FUNC_next = 130UL;
           } else {
             _1_OBF_FUNC_next = 7UL;
           }
           break;
-        case 99UL:;
+        case 99:;
           if (isPrime___1) {
             _1_OBF_FUNC_next = 230UL;
           } else {
             _1_OBF_FUNC_next = 222UL;
           }
           break;
-        case 114UL:;
+        case 114:;
           if (isPrime___0) {
             _1_OBF_FUNC_next = 247UL;
           } else {
             _1_OBF_FUNC_next = 142UL;
           }
           break;
-        case 33UL:;
+        case 33:;
           if (isPrime___1) {
             _1_OBF_FUNC_next = 85UL;
           } else {
             _1_OBF_FUNC_next = 94UL;
           }
           break;
-        case 37UL:;
+        case 37:;
           if (k___4 < m) {
             _1_OBF_FUNC_next = 191UL;
           } else {
             _1_OBF_FUNC_next = 42UL;
           }
           break;
-        case 93UL:
+        case 93:
           isPrime___1 = (_Bool)0;
           _1_OBF_FUNC_next = 228UL;
           break;
-        case 175UL:;
+        case 175:;
           if (isPrime) {
             _1_OBF_FUNC_next = 82UL;
           } else {
             _1_OBF_FUNC_next = 126UL;
           }
           break;
-        case 248UL:;
+        case 248:;
           if (k___5 < m) {
             _1_OBF_FUNC_next = 144UL;
           } else {
             _1_OBF_FUNC_next = 197UL;
           }
           break;
-        case 41UL:;
+        case 41:;
           if (isPrime___0) {
             _1_OBF_FUNC_next = 18UL;
           } else {
             _1_OBF_FUNC_next = 190UL;
           }
           break;
-        case 233UL:;
+        case 233:;
           if (isPrime___1) {
             _1_OBF_FUNC_next = 29UL;
           } else {
             _1_OBF_FUNC_next = 143UL;
           }
           break;
-        case 95UL:;
+        case 95:;
           return (m);
           break;
-        case 149UL:
+        case 149:
           j___0++;
           _1_OBF_FUNC_next = 216UL;
           break;
-        case 198UL:
+        case 198:
           k___4++;
           _1_OBF_FUNC_next = 133UL;
           break;
-        case 115UL:;
+        case 115:;
           if (m == j___0 * k___3) {
             _1_OBF_FUNC_next = 185UL;
           } else {
             _1_OBF_FUNC_next = 176UL;
           }
           break;
-        case 10UL:;
+        case 10:;
           if (m == j___0 * k___2) {
             _1_OBF_FUNC_next = 83UL;
           } else {
             _1_OBF_FUNC_next = 184UL;
           }
           break;
-        case 42UL:;
+        case 42:;
           if (k___4 < m) {
             _1_OBF_FUNC_next = 154UL;
           } else {
             _1_OBF_FUNC_next = 133UL;
           }
           break;
-        case 253UL:;
+        case 253:;
           if (m == j * k) {
             _1_OBF_FUNC_next = 39UL;
           } else {
             _1_OBF_FUNC_next = 80UL;
           }
           break;
-        case 0UL:;
+        case 0:;
           if (m == j * k___0) {
             _1_OBF_FUNC_next = 224UL;
           } else {
             _1_OBF_FUNC_next = 40UL;
           }
           break;
-        case 224UL:
+        case 224:
           isPrime = (_Bool)0;
           _1_OBF_FUNC_next = 40UL;
           break;
-        case 136UL:;
+        case 136:;
           if (isPrime) {
             _1_OBF_FUNC_next = 118UL;
           } else {
             _1_OBF_FUNC_next = 156UL;
           }
           break;
-        case 229UL:;
+        case 229:;
           if (m > 1) {
             _1_OBF_FUNC_next = 223UL;
           } else {
             _1_OBF_FUNC_next = 52UL;
           }
           break;
-        case 46UL:;
+        case 46:;
           if (isPrime___0) {
             _1_OBF_FUNC_next = 115UL;
           } else {
             _1_OBF_FUNC_next = 127UL;
           }
           break;
-        case 153UL:
+        case 153:
           k___1 = 2;
           _1_OBF_FUNC_next = 215UL;
           break;
-        case 39UL:
+        case 39:
           isPrime = (_Bool)0;
           _1_OBF_FUNC_next = 80UL;
           break;
-        case 66UL:
+        case 66:
           k___4++;
           _1_OBF_FUNC_next = 42UL;
           break;
-        case 83UL:
+        case 83:
           isPrime___0 = (_Bool)0;
           _1_OBF_FUNC_next = 184UL;
-          {
-            if (_2_OBF_FUNC_2_opaque_ptr_1 != _2_OBF_FUNC_2_opaque_ptr_2) {
-              break;
-            } else {
-            }
-          }
-        case 7UL:
+          break;
+        case 7:
           j++;
           _1_OBF_FUNC_next = 30UL;
           break;
-        case 88UL:;
+        case 88:;
           if (j < m) {
             _1_OBF_FUNC_next = 148UL;
           } else {
             _1_OBF_FUNC_next = 30UL;
           }
           break;
-        case 35UL:
+        case 35:
           isPrime___1 = (_Bool)0;
           _1_OBF_FUNC_next = 244UL;
           break;
-        case 174UL:;
+        case 174:;
           if (m == j * k) {
             _1_OBF_FUNC_next = 195UL;
           } else {
             _1_OBF_FUNC_next = 249UL;
           }
           break;
-        case 29UL:
+        case 29:
           k___7 = 2;
           _1_OBF_FUNC_next = 117UL;
           break;
-        case 126UL:
+        case 126:
           m--;
           _1_OBF_FUNC_next = 52UL;
           break;
-        case 179UL:;
+        case 179:;
           if (isPrime___1) {
             _1_OBF_FUNC_next = 97UL;
           } else {
             _1_OBF_FUNC_next = 48UL;
           }
           break;
-        case 43UL:;
+        case 43:;
           if (m == j___0 * k___4) {
             _1_OBF_FUNC_next = 163UL;
           } else {
             _1_OBF_FUNC_next = 159UL;
           }
           break;
-        case 86UL:;
+        case 86:;
           if (k___0 < m) {
             _1_OBF_FUNC_next = 158UL;
           } else {
             _1_OBF_FUNC_next = 89UL;
           }
           break;
-        case 2UL:;
+        case 2:;
           if (isPrime___1) {
             _1_OBF_FUNC_next = 217UL;
           } else {
             _1_OBF_FUNC_next = 199UL;
           }
           break;
-        case 20UL:
+        case 20:
           k___7++;
           _1_OBF_FUNC_next = 155UL;
           break;
@@ -1819,38 +1820,25 @@ int main(int argc, char **argv, char **_formal_envp) {
   int tmp;
   int tmp___0;
   int _BARRIER_0;
-  int _BARRIER_0___0;
   {
     {
       {
         {
-          { goto _global_envp_i$nit_INLINE__global_envp_i$nit___0; }
-        _global_envp_i$nit_INLINE__global_envp_i$nit___0:;
+          { goto _global_envp_i$nit_INLINE__global_envp_i$nit; }
+        _global_envp_i$nit_INLINE__global_envp_i$nit:;
         }
         {
-          { goto _global_argv_i$nit_INLINE__global_argv_i$nit___0; }
-        _global_argv_i$nit_INLINE__global_argv_i$nit___0:;
+          { goto _global_argv_i$nit_INLINE__global_argv_i$nit; }
+        _global_argv_i$nit_INLINE__global_argv_i$nit:;
         }
         {
-          { goto _global_argc_i$nit_INLINE__global_argc_i$nit___0; }
-        _global_argc_i$nit_INLINE__global_argc_i$nit___0:;
+          { goto _global_argc_i$nit_INLINE__global_argc_i$nit; }
+        _global_argc_i$nit_INLINE__global_argc_i$nit:;
         }
-        goto megaInit_INLINE_megaInit___0;
+        goto megaInit_INLINE_megaInit;
       }
-    megaInit_INLINE_megaInit___0:;
+    megaInit_INLINE_megaInit:;
     }
-    _global_argc = argc;
-    _global_argv = argv;
-    _global_envp = _formal_envp;
-    _BARRIER_0___0 = 1;
-    goto _global_envp_i$nit_INLINE__global_envp_i$nit;
-  _global_envp_i$nit_INLINE__global_envp_i$nit:;
-    goto _global_argv_i$nit_INLINE__global_argv_i$nit;
-  _global_argv_i$nit_INLINE__global_argv_i$nit:;
-    goto _global_argc_i$nit_INLINE__global_argc_i$nit;
-  _global_argc_i$nit_INLINE__global_argc_i$nit:;
-    goto megaInit_INLINE_megaInit;
-  megaInit_INLINE_megaInit:
     _global_argc = argc;
     _global_argv = argv;
     _global_envp = _formal_envp;
