@@ -10,6 +10,27 @@ args:
   # number of opaque data stuructures per program
   num_opaques: 2
 
+templates:
+  # insert code that we never execute. this is done by introducing if-statements
+  # with condition on boolean and integer expressions that have a known value
+  - name: dead-code-insertion-base
+    procedure:
+      - ["--Transform=InitEntropy", "--Functions={func}", "--InitEntropyKinds=vars",
+          "--Transform=InitOpaque", "--Functions={func}", "--InitOpaqueCount={num_opaques}", "--InitOpaqueStructs={opaque_structs}",
+          # "--Transform=UpdateOpaque", "--Functions={func}",
+          "--Transform=AddOpaque", "--Functions={func}", "--AddOpaqueKinds={opaque_kinds}", "--AddOpaqueCount={num_opaque_per_function}", "--AddOpaqueStructs={opaque_structs}",
+          "--Transform=CleanUp", "--CleanUpKinds={cleanup_kinds}"]
+  # split up basic blocks and rearrange into multiple basic blocks with
+  # opaque predicates and gotos connecting them.
+  # the implementation here is flattening + deadcode insertion
+  - name: block-fission-base
+    procedure:
+      - ["--Transform=Flatten", "--FlattenSplitBasicBlocks=true", "--Functions={func}",
+          "--Transform=InitEntropy", "--Functions={func}", "--InitEntropyKinds=vars",
+          "--Transform=InitOpaque", "--Functions={func}", "--InitOpaqueCount={num_opaques}", "--InitOpaqueStructs={opaque_structs}",
+          "--Transform=AddOpaque", "--Functions={func}", "--AddOpaqueKinds={opaque_kinds}", "--AddOpaqueCount={num_opaque_per_function}", "--AddOpaqueStructs={opaque_structs}",
+          "--Transform=CleanUp", "--CleanUpKinds={cleanup_kinds}"]
+
 variants:
   # removes structured control flow
   - name: flatten
@@ -18,35 +39,60 @@ variants:
           "--Transform=CleanUp", "--CleanUpKinds={cleanup_kinds}"]
     format: true
 
-  # insert code that we never execute. this is done by introducing if-statements
-  # with condition on boolean and integer expressions that have a known value
-  - name: dead-code-insertion
-    procedure:
-      - ["--Transform=InitEntropy", "--Functions={func}", "--InitEntropyKinds=vars",
-          "--Transform=InitOpaque", "--Functions={func}", "--InitOpaqueCount={num_opaques}", "--InitOpaqueStructs={opaque_structs}",
-          # "--Transform=UpdateOpaque", "--Functions={func}",
-          "--Transform=AddOpaque", "--Functions={func}", "--AddOpaqueKinds={opaque_kinds}", "--AddOpaqueCount={num_opaque_per_function}", "--AddOpaqueStructs={opaque_structs}",
-          "--Transform=CleanUp", "--CleanUpKinds={cleanup_kinds}"]
-    args:
-      num_opaque_per_function: 2
-      opaque_structs: env,list # list, array, input, env, *
-      opaque_kinds: call,bug,true,junk,question # call, bug, true, junk, fake, question, *
-  
-  # split up basic blocks and rearrange into multiple basic blocks with
-  # opaque predicates and gotos connecting them.
-  # the implementation here is flattening + deadcode insertion
-  - name: block-fission
-    procedure:
-      - ["--Transform=Flatten", "--FlattenSplitBasicBlocks=true", "--Functions={func}",
-          "--Transform=InitEntropy", "--Functions={func}", "--InitEntropyKinds=vars",
-          "--Transform=InitOpaque", "--Functions={func}", "--InitOpaqueCount={num_opaques}", "--InitOpaqueStructs={opaque_structs}",
-          "--Transform=AddOpaque", "--Functions={func}", "--AddOpaqueKinds={opaque_kinds}", "--AddOpaqueCount={num_opaque_per_function}", "--AddOpaqueStructs={opaque_structs}",
-          "--Transform=CleanUp", "--CleanUpKinds={cleanup_kinds}"]
+  - name: dead-code-insertion-call
+    use:
+      - template: dead-code-insertion-base
+        args:
+          num_opaque_per_function: 2
+          opaque_structs: env,list # list, array, input, env, *
+          opaque_kinds: call
     format: true
-    args:
-      num_opaque_per_function: 2
-      opaque_structs: env,list
-      opaque_kinds: call,bug,true,junk,question # call, bug, true, junk, fake, question, *
+  
+  - name: dead-code-insertion-bug
+    use:
+      - template: dead-code-insertion-base
+        args:
+          num_opaque_per_function: 2
+          opaque_structs: env,list # list, array, input, env, *
+          opaque_kinds: bug
+    format: true
+
+  - name: dead-code-insertion-true
+    use:
+      - template: dead-code-insertion-base
+        args:
+          num_opaque_per_function: 2
+          opaque_structs: env,list # list, array, input, env, *
+          opaque_kinds: true,true
+    format: true
+
+  - name: dead-code-insertion-junk
+    use:
+      - template: dead-code-insertion-base
+        args:
+          num_opaque_per_function: 2
+          opaque_structs: env,list # list, array, input, env, *
+          opaque_kinds: junk
+    format: true
+
+  - name: dead-code-insertion-question
+    use:
+      - template: dead-code-insertion-base
+        args:
+          num_opaque_per_function: 2
+          opaque_structs: env,list # list, array, input, env, *
+          opaque_kinds: question
+    format: true
+  
+
+  - name: block-fission
+    use:
+      - template: block-fission-base
+        args:
+          num_opaque_per_function: 2
+          opaque_structs: env,list
+          opaque_kinds: call,bug,true,junk,question # call, bug, true, junk, fake, question, *
+    format: true
 
   - name: loop-unrolling
     # not supported

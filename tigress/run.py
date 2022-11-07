@@ -13,9 +13,16 @@ TIGRESS_PARAMS = [f"--Environment={TIGRESS_ENV}"]
 
 
 @dataclass(frozen=True)
+class TigressTemplateCall:
+    template: str
+    args: dict[str, str] = field(default_factory=dict)
+
+
+@dataclass(frozen=True)
 class TigressVariant:
     name: str
     procedure: list[list[str]] = field(default_factory=list)
+    use: list[TigressTemplateCall] = field(default_factory=list)
     args: dict[str, str] = field(default_factory=dict)
     format: bool = True
 
@@ -25,6 +32,7 @@ class TigressConfig:
     description: str
     params: list[str]
     variants: list[TigressVariant]
+    templates: dict[str, TigressVariant] = field(default_factory=dict)
     args: dict[str, str] = field(default_factory=dict)
 
 
@@ -72,8 +80,12 @@ def run_tigress(config: TigressConfig, source_dir: Path, output_dir: Path) -> No
 
     for variant in config.variants:
 
-        if not variant.procedure:
+        if not variant.procedure and not variant.use:
             continue
+
+        assert bool(variant.procedure) != bool(
+            variant.use
+        ), "procedure and use cannot both have value"
 
         # ensure dir exists
         out_dir = output_dir / config.description / variant.name
@@ -91,19 +103,38 @@ def run_tigress(config: TigressConfig, source_dir: Path, output_dir: Path) -> No
                 copy(header_file, out_dir)
             copy(src_file, src_in_file)
 
-            # sequentially apply transformation to C file
-            for proc in variant.procedure:
-                proc = [p.format(**{**config.args, **variant.args}) for p in proc]
+            procedure_with_args = None
+            if variant.procedure:
+                procedure_with_args = [(variant.procedure, variant.args)]
+            elif variant.use:
+                assert all(
+                    call.template in config.templates for call in variant.use
+                ), f"cannot find template in {variant}"
+                procedure_with_args = [
+                    (
+                        config.templates[call.template].procedure,
+                        {**config.templates[call.template].args, **call.args},
+                    )
+                    for call in variant.use
+                ]
+            assert procedure_with_args is not None
 
-                out = call_tigress(
-                    TIGRESS_HOME,
-                    config.params + proc,
-                    str(src_in_file),
-                    str(src_out_file),
-                )
-                if out:
-                    print(f"===== {variant.name} ({src_name}): ===== {out}\n")
-                copy(src_out_file, src_in_file)
+            # sequentially apply transformation to C file
+            for procs, args in procedure_with_args:
+                for proc in procs:
+                    args = {**config.args, **variant.args, **args}
+                    print(args)
+                    proc = [p.format(**args) for p in proc]
+
+                    out = call_tigress(
+                        TIGRESS_HOME,
+                        config.params + proc,
+                        str(src_in_file),
+                        str(src_out_file),
+                    )
+                    if out:
+                        print(f"===== {variant.name} ({src_name}): ===== \n{out}\n")
+                    copy(src_out_file, src_in_file)
 
             os.remove(src_in_file)
 
@@ -150,12 +181,36 @@ typedef void* __builtin_va_list;"""
 
 if __name__ == "__main__":
 
+    def load_variant(variant_dict: dict) -> TigressVariant:
+        if "use" in variant_dict:
+            variant_dict["use"] = [
+                TigressTemplateCall(**v) for v in variant_dict["use"]
+            ]
+        return TigressVariant(**variant_dict)
+
+    def load_templates(config_dict: dict) -> dict[str, TigressVariant]:
+        templates: dict[str, TigressVariant] = {}
+
+        for template_dict in config_dict["templates"]:
+            # template dict = tigress variant
+            name = template_dict["name"]
+            procedure = template_dict.get("procedure", [])
+            use = template_dict.get("use", [])
+            args = template_dict.get("args", {})
+
+            assert bool(procedure) != bool(use), "invalid format"
+            if use:
+                assert use.template in templates, "cannot find template"
+                procedure = templates[use.template].procedure
+            templates[name] = TigressVariant(name, procedure, args=args)
+
+        return templates
+
     args = get_args()
     with open(args.config, "rb") as f:
         config = yaml.safe_load(f.read()) or {}
-        config["variants"] = [
-            TigressVariant(**variant) for variant in config["variants"]
-        ]
+        config["variants"] = [load_variant(variant) for variant in config["variants"]]
+        config["templates"] = load_templates(config)
         config = TigressConfig(**config)
 
     source_dir = Path(args.input_dir).resolve()
