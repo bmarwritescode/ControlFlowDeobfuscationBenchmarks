@@ -123,7 +123,6 @@ def run_tigress(config: TigressConfig, source_dir: Path, output_dir: Path) -> No
             for procs, args in procedure_with_args:
                 for proc in procs:
                     args = {**config.args, **variant.args, **args}
-                    print(args)
                     proc = [p.format(**args) for p in proc]
 
                     out = call_tigress(
