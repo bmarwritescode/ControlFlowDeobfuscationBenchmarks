@@ -2,7 +2,7 @@
     "python.linting.enabled": true,
     "python.linting.mypyEnabled": true,
     "python.linting.pylintEnabled": false,
-    "editor.formatOnSave": true,
+    "editor.formatOnSave": false,
     "python.formatting.provider": "black",
     "python.languageServer": "Default",
     "python.testing.pytestEnabled": true,

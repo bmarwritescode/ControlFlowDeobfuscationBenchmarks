@@ -31,14 +31,49 @@ templates:
           "--Transform=InitOpaque", "--Functions={func}", "--InitOpaqueCount={num_opaques}", "--InitOpaqueStructs={opaque_structs}",
           "--Transform=AddOpaque", "--Functions={func}", "--AddOpaqueKinds={opaque_kinds}", "--AddOpaqueCount={num_opaque_per_function}", "--AddOpaqueStructs={opaque_structs}",
           "--Transform=CleanUp", "--CleanUpKinds={cleanup_kinds}"]
-
-variants:
+  
   # removes structured control flow
-  - name: flatten
+  - name: flatten-base
     procedure:
-      - ["--Transform=Flatten", "--FlattenSplitBasicBlocks=true", "--Functions={func}",
+      - ["--Transform=Flatten", "--FlattenSplitBasicBlocks={split_basic_blocks}", "--Functions={func}",
+                                "--FlattenDispatch={dispatch}", "--FlattenNumberOfBlocksPerFunction={num_block_per_func}",
           "--Transform=CleanUp", "--CleanUpKinds={cleanup_kinds}"]
     format: true
+
+variants:
+  - name: flatten-switch
+    use:
+      - template: flatten-base
+        args:
+          dispatch: switch
+          num_block_per_func: 1
+          split_basic_blocks: true
+  
+  - name: flatten-goto
+    use:
+      - template: flatten-base
+        args:
+          dispatch: goto
+          num_block_per_func: 1
+          split_basic_blocks: true
+
+  - name: flatten-indirect-goto
+    use:
+      - template: flatten-base
+        args:
+          dispatch: indirect
+          num_block_per_func: 1
+          split_basic_blocks: true
+
+  - name: flatten-call
+    use:
+      - template: flatten-base
+        args:
+          dispatch: call
+          num_block_per_func: 1
+          split_basic_blocks: true
+
+  
 
   - name: dead-code-insertion-call
     use:

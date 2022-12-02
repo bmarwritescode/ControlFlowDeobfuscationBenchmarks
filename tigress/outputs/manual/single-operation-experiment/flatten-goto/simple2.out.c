@@ -9,13 +9,13 @@ union __anonunion_pthread_barrier_t_145707746;
 union __anonunion_pthread_condattr_t_488594145;
 struct __pthread_mutex_s;
 struct __pthread_rwlock_arch_t;
-struct __anonstruct___g1_start32_961093919;
+struct __anonstruct___g1_start32_1030103300;
 struct drand48_data;
 union __anonunion_pthread_mutex_t_335460617;
 struct __anonstruct___sigset_t_973126068;
 struct timespec;
 struct __anonstruct_div_t_773697287;
-union __anonunion____missing_field_name_431277970;
+union __anonunion____missing_field_name_1030103299;
 union pthread_attr_t;
 struct __anonstruct_fd_set_356711149;
 union __anonunion_pthread_rwlockattr_t_145707745;
@@ -24,7 +24,7 @@ struct timeval;
 union __anonunion_pthread_barrierattr_t_951761806;
 enum __anonenum_idtype_t_558242672;
 struct __anonstruct___fsid_t_109580352;
-union __anonunion____missing_field_name_83708231;
+union __anonunion____missing_field_name_698623696;
 struct __pthread_cond_s;
 struct __anonstruct_ldiv_t_790849867;
 struct __anonstruct_lldiv_t_103911545;
@@ -97,6 +97,14 @@ struct __anonstruct_ldiv_t_790849867 {
 extern int(rand_r)(unsigned int *__seed);
 typedef __mode_t mode_t;
 typedef void *__timer_t;
+struct __anonstruct___wseq32_961093918 {
+  unsigned int __low;
+  unsigned int __high;
+};
+union __anonunion____missing_field_name_698623696 {
+  unsigned long long __wseq;
+  struct __anonstruct___wseq32_961093918 __wseq32;
+};
 typedef int wchar_t;
 extern size_t(wcstombs)(char *__s, wchar_t const *__pwcs, size_t __n);
 typedef unsigned long ulong;
@@ -136,14 +144,6 @@ typedef unsigned int __uint32_t;
 static __uint32_t __bswap_32(__uint32_t __bsx);
 static __uint16_t __uint16_identity(__uint16_t __x);
 typedef unsigned char __u_char;
-struct __anonstruct___wseq32_961093918 {
-  unsigned int __low;
-  unsigned int __high;
-};
-union __anonunion____missing_field_name_83708231 {
-  unsigned long long __wseq;
-  struct __anonstruct___wseq32_961093918 __wseq32;
-};
 struct __anonstruct_fd_set_356711149 {
   __fd_mask __fds_bits[1024 / (8 * (int)sizeof(__fd_mask))];
 };
@@ -239,17 +239,17 @@ extern long long(strtoll)(char const *__nptr, char **__endptr, int __base);
 typedef long __off_t;
 typedef __off_t off_t;
 char **_global_argv;
-struct __anonstruct___g1_start32_961093919 {
+struct __anonstruct___g1_start32_1030103300 {
   unsigned int __low;
   unsigned int __high;
 };
-union __anonunion____missing_field_name_431277970 {
+union __anonunion____missing_field_name_1030103299 {
   unsigned long long __g1_start;
-  struct __anonstruct___g1_start32_961093919 __g1_start32;
+  struct __anonstruct___g1_start32_1030103300 __g1_start32;
 };
 struct __pthread_cond_s {
-  union __anonunion____missing_field_name_83708231 __annonCompField1;
-  union __anonunion____missing_field_name_431277970 __annonCompField2;
+  union __anonunion____missing_field_name_698623696 __annonCompField1;
+  union __anonunion____missing_field_name_1030103299 __annonCompField2;
   unsigned int __g_refs[2];
   unsigned int __g_size[2];
   unsigned int __g1_orig_size;
@@ -434,38 +434,30 @@ int OBF_FUNC(int i) {
   int sum;
   int k;
   unsigned long _1_OBF_FUNC_next;
+  void *_1_OBF_FUNC_jumpTab[6] = {&&_1_OBF_FUNC_lab0, &&_1_OBF_FUNC_lab1,
+                                  &&_1_OBF_FUNC_lab2, &&_1_OBF_FUNC_lab3,
+                                  &&_1_OBF_FUNC_lab4, &&_1_OBF_FUNC_lab5};
   {
     { _1_OBF_FUNC_next = 2UL; }
-    while (1) {
-      switch (_1_OBF_FUNC_next) {
-        case 4:;
-          if (k <= i) {
-            { _1_OBF_FUNC_next = 1UL; }
-          } else {
-            { _1_OBF_FUNC_next = 3UL; }
-          }
-          break;
-        case 1:
-          sum += k;
-          { _1_OBF_FUNC_next = 0UL; }
-          break;
-        case 3:;
-          return (sum);
-          break;
-        case 5:
-          k = 0;
-          { _1_OBF_FUNC_next = 4UL; }
-          break;
-        case 0:
-          k++;
-          { _1_OBF_FUNC_next = 4UL; }
-          break;
-        case 2:
-          sum = 0;
-          { _1_OBF_FUNC_next = 5UL; }
-          break;
-      }
+    { goto *(_1_OBF_FUNC_jumpTab[_1_OBF_FUNC_next - 0]); }
+  _1_OBF_FUNC_lab4:;
+    if (!(k <= i)) {
+      goto _1_OBF_FUNC_lab3;
     }
+  _1_OBF_FUNC_lab1:
+    sum += k;
+    goto _1_OBF_FUNC_lab0;
+  _1_OBF_FUNC_lab3:;
+    return (sum);
+  _1_OBF_FUNC_lab5:
+    k = 0;
+    goto _1_OBF_FUNC_lab4;
+  _1_OBF_FUNC_lab0:
+    k++;
+    goto _1_OBF_FUNC_lab4;
+  _1_OBF_FUNC_lab2:
+    sum = 0;
+    goto _1_OBF_FUNC_lab5;
   }
 }
 int main(int argc, char **argv, char **_formal_envp) {

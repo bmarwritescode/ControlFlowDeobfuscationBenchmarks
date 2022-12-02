@@ -1,3 +1,4 @@
+from typing import Any
 from pathlib import Path
 from shutil import copy, which
 from dataclasses import dataclass, field
@@ -34,6 +35,11 @@ class TigressConfig:
     variants: list[TigressVariant]
     templates: dict[str, TigressVariant] = field(default_factory=dict)
     args: dict[str, str] = field(default_factory=dict)
+
+def _format_arg(x: Any) -> str:
+    if isinstance(x, bool):
+        return str(x).lower()
+    return str(x)
 
 
 def get_args() -> Namespace:
@@ -123,6 +129,7 @@ def run_tigress(config: TigressConfig, source_dir: Path, output_dir: Path) -> No
             for procs, args in procedure_with_args:
                 for proc in procs:
                     args = {**config.args, **variant.args, **args}
+                    args = {k: _format_arg(v) for k, v in args.items()}
                     proc = [p.format(**args) for p in proc]
 
                     out = call_tigress(
