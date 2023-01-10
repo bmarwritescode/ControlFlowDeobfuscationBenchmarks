@@ -1,0 +1,29 @@
+# python run.py --config ./configs/special.yml --input-dir ../benchmarks/C/special --output outputs/special
+description: special-experiment
+params: ["--Seed=1"]
+args:
+  # single or multiple (separated by colon) function to obfuscate
+  func: OBF_FUNC
+
+  # options to postprocess obfuscated code
+  cleanup_kinds: removeUnusedFunctions
+
+  # number of opaque data stuructures per program
+  num_opaques: 2
+
+templates:
+  - name: flatten-base
+    procedure:
+      - ["--Transform=Flatten", "--FlattenSplitBasicBlocks={split_basic_blocks}", "--Functions={func}",
+                                "--FlattenDispatch={dispatch}", "--FlattenNumberOfBlocksPerFunction={num_block_per_func}",
+          "--Transform=CleanUp", "--CleanUpKinds={cleanup_kinds}"]
+    format: true
+
+variants:
+  - name: flatten-switch
+    use:
+      - template: flatten-base
+        args:
+          dispatch: switch
+          num_block_per_func: 1
+          split_basic_blocks: true
