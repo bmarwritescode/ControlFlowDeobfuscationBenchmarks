@@ -436,16 +436,6 @@ int OBF_FUNC(int x) {
   int rem;
   int num;
   unsigned long _1_OBF_FUNC_next;
-  unsigned long _1_OBF_FUNC_then7;
-  unsigned long _1_OBF_FUNC_else8;
-  int r9;
-  int notr10;
-  void *addr11;
-  unsigned long _1_OBF_FUNC_then12;
-  unsigned long _1_OBF_FUNC_else13;
-  int r14;
-  int notr15;
-  void *addr16;
   {
     { _1_OBF_FUNC_next = 10UL; }
     while (1) {
@@ -471,25 +461,21 @@ int OBF_FUNC(int x) {
           { _1_OBF_FUNC_next = 11UL; }
           break;
         case 9:;
-          r9 = (num == n) != 0;
-          notr10 = !r9;
-          _1_OBF_FUNC_then7 = 3UL;
-          _1_OBF_FUNC_else8 = 6UL;
-          addr11 =
-              (void *)(r9 * _1_OBF_FUNC_then7 + notr10 * _1_OBF_FUNC_else8);
-          { _1_OBF_FUNC_next = addr11; }
+          if (num == n) {
+            { _1_OBF_FUNC_next = 3UL; }
+          } else {
+            { _1_OBF_FUNC_next = 6UL; }
+          }
           break;
         case 3:;
           return (1);
           break;
         case 1:;
-          r14 = (n1 != 0) != 0;
-          notr15 = !r14;
-          _1_OBF_FUNC_then12 = 7UL;
-          _1_OBF_FUNC_else13 = 9UL;
-          addr16 =
-              (void *)(r14 * _1_OBF_FUNC_then12 + notr15 * _1_OBF_FUNC_else13);
-          { _1_OBF_FUNC_next = addr16; }
+          if (n1 != 0) {
+            { _1_OBF_FUNC_next = 7UL; }
+          } else {
+            { _1_OBF_FUNC_next = 9UL; }
+          }
           break;
         case 7:
           rem = n1 % 10;

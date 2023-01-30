@@ -467,41 +467,23 @@ int main(int argc, char **argv, char **_formal_envp) {
 int OBF_FUNC(int num1, int num2) {
   int max;
   unsigned long _1_OBF_FUNC_next;
-  unsigned long _1_OBF_FUNC_then5;
-  unsigned long _1_OBF_FUNC_else6;
-  int r7;
-  int notr8;
-  void *addr9;
-  unsigned long _1_OBF_FUNC_then10;
-  unsigned long _1_OBF_FUNC_else11;
-  int r12;
-  int notr13;
-  void *addr14;
-  unsigned long _1_OBF_FUNC_then15;
-  unsigned long _1_OBF_FUNC_else16;
-  int r17;
-  int notr18;
-  void *addr19;
   {
     { _1_OBF_FUNC_next = 1UL; }
     while (1) {
       switch (_1_OBF_FUNC_next) {
         case 2:;
-          r7 = (max % num2 == 0) != 0;
-          notr8 = !r7;
-          _1_OBF_FUNC_then5 = 7UL;
-          _1_OBF_FUNC_else6 = 9UL;
-          addr9 = (void *)(r7 * _1_OBF_FUNC_then5 + notr8 * _1_OBF_FUNC_else6);
-          { _1_OBF_FUNC_next = addr9; }
+          if (max % num2 == 0) {
+            { _1_OBF_FUNC_next = 7UL; }
+          } else {
+            { _1_OBF_FUNC_next = 9UL; }
+          }
           break;
         case 1:;
-          r12 = (num1 > num2) != 0;
-          notr13 = !r12;
-          _1_OBF_FUNC_then10 = 5UL;
-          _1_OBF_FUNC_else11 = 3UL;
-          addr14 =
-              (void *)(r12 * _1_OBF_FUNC_then10 + notr13 * _1_OBF_FUNC_else11);
-          { _1_OBF_FUNC_next = addr14; }
+          if (num1 > num2) {
+            { _1_OBF_FUNC_next = 5UL; }
+          } else {
+            { _1_OBF_FUNC_next = 3UL; }
+          }
           break;
         case 7:;
           return (max);
@@ -511,13 +493,11 @@ int OBF_FUNC(int num1, int num2) {
           { _1_OBF_FUNC_next = 0UL; }
           break;
         case 0:;
-          r17 = (max % num1 == 0) != 0;
-          notr18 = !r17;
-          _1_OBF_FUNC_then15 = 2UL;
-          _1_OBF_FUNC_else16 = 9UL;
-          addr19 =
-              (void *)(r17 * _1_OBF_FUNC_then15 + notr18 * _1_OBF_FUNC_else16);
-          { _1_OBF_FUNC_next = addr19; }
+          if (max % num1 == 0) {
+            { _1_OBF_FUNC_next = 2UL; }
+          } else {
+            { _1_OBF_FUNC_next = 9UL; }
+          }
           break;
         case 5:
           max = num1;

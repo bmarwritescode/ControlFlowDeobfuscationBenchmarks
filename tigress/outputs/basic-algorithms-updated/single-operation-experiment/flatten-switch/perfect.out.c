@@ -434,32 +434,16 @@ int OBF_FUNC(int n) {
   int i;
   int sum;
   unsigned long _1_OBF_FUNC_next;
-  unsigned long _1_OBF_FUNC_then5;
-  unsigned long _1_OBF_FUNC_else6;
-  int r7;
-  int notr8;
-  void *addr9;
-  unsigned long _1_OBF_FUNC_then10;
-  unsigned long _1_OBF_FUNC_else11;
-  int r12;
-  int notr13;
-  void *addr14;
-  unsigned long _1_OBF_FUNC_then15;
-  unsigned long _1_OBF_FUNC_else16;
-  int r17;
-  int notr18;
-  void *addr19;
   {
     { _1_OBF_FUNC_next = 7UL; }
     while (1) {
       switch (_1_OBF_FUNC_next) {
         case 10:;
-          r7 = (sum == n) != 0;
-          notr8 = !r7;
-          _1_OBF_FUNC_then5 = 11UL;
-          _1_OBF_FUNC_else6 = 0UL;
-          addr9 = (void *)(r7 * _1_OBF_FUNC_then5 + notr8 * _1_OBF_FUNC_else6);
-          { _1_OBF_FUNC_next = addr9; }
+          if (sum == n) {
+            { _1_OBF_FUNC_next = 11UL; }
+          } else {
+            { _1_OBF_FUNC_next = 0UL; }
+          }
           break;
         case 6:
           i++;
@@ -470,22 +454,18 @@ int OBF_FUNC(int n) {
           { _1_OBF_FUNC_next = 6UL; }
           break;
         case 8:;
-          r12 = (i < n) != 0;
-          notr13 = !r12;
-          _1_OBF_FUNC_then10 = 2UL;
-          _1_OBF_FUNC_else11 = 10UL;
-          addr14 =
-              (void *)(r12 * _1_OBF_FUNC_then10 + notr13 * _1_OBF_FUNC_else11);
-          { _1_OBF_FUNC_next = addr14; }
+          if (i < n) {
+            { _1_OBF_FUNC_next = 2UL; }
+          } else {
+            { _1_OBF_FUNC_next = 10UL; }
+          }
           break;
         case 2:;
-          r17 = (n % i == 0) != 0;
-          notr18 = !r17;
-          _1_OBF_FUNC_then15 = 1UL;
-          _1_OBF_FUNC_else16 = 6UL;
-          addr19 =
-              (void *)(r17 * _1_OBF_FUNC_then15 + notr18 * _1_OBF_FUNC_else16);
-          { _1_OBF_FUNC_next = addr19; }
+          if (n % i == 0) {
+            { _1_OBF_FUNC_next = 1UL; }
+          } else {
+            { _1_OBF_FUNC_next = 6UL; }
+          }
           break;
         case 11:;
           return (1);

@@ -54,7 +54,7 @@ variants:
           split_basic_blocks: true
           randomize_blocks: true
           obfuscate_next: false
-          conditional_kinds: compute
+          conditional_kinds: branch
   
   - name: flatten-goto
     use:
@@ -65,7 +65,7 @@ variants:
           split_basic_blocks: true
           randomize_blocks: true
           obfuscate_next: false
-          conditional_kinds: flag
+          conditional_kinds: branch
 
   - name: flatten-indirect-goto
     use:

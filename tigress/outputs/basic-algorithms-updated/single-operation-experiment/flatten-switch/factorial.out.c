@@ -466,16 +466,6 @@ long long OBF_FUNC(int n) {
   int count;
   long long factorial;
   unsigned long _1_OBF_FUNC_next;
-  unsigned long _1_OBF_FUNC_then5;
-  unsigned long _1_OBF_FUNC_else6;
-  int r7;
-  int notr8;
-  void *addr9;
-  unsigned long _1_OBF_FUNC_then10;
-  unsigned long _1_OBF_FUNC_else11;
-  int r12;
-  int notr13;
-  void *addr14;
   {
     { _1_OBF_FUNC_next = 4UL; }
     while (1) {
@@ -496,25 +486,22 @@ long long OBF_FUNC(int n) {
           return (factorial);
           break;
         case 4:;
-          r7 = (n <= 0) != 0;
-          notr8 = !r7;
-          _1_OBF_FUNC_then5 = 7UL;
-          _1_OBF_FUNC_else6 = 9UL;
-          addr9 = (void *)(r7 * _1_OBF_FUNC_then5 + notr8 * _1_OBF_FUNC_else6);
-          { _1_OBF_FUNC_next = addr9; }
+          if (n <= 0) {
+            { _1_OBF_FUNC_next = 7UL; }
+          } else {
+            { _1_OBF_FUNC_next = 9UL; }
+          }
           break;
         case 8:
           factorial *= (long long)count;
           { _1_OBF_FUNC_next = 0UL; }
           break;
         case 2:;
-          r12 = (count <= n) != 0;
-          notr13 = !r12;
-          _1_OBF_FUNC_then10 = 8UL;
-          _1_OBF_FUNC_else11 = 6UL;
-          addr14 =
-              (void *)(r12 * _1_OBF_FUNC_then10 + notr13 * _1_OBF_FUNC_else11);
-          { _1_OBF_FUNC_next = addr14; }
+          if (count <= n) {
+            { _1_OBF_FUNC_next = 8UL; }
+          } else {
+            { _1_OBF_FUNC_next = 6UL; }
+          }
           break;
         case 7:;
           return (1LL);

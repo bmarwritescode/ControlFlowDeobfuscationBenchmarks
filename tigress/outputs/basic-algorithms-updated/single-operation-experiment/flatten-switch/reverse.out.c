@@ -466,22 +466,16 @@ int OBF_FUNC(int n) {
   int r;
   int reverse;
   unsigned long _1_OBF_FUNC_next;
-  unsigned long _1_OBF_FUNC_then5;
-  unsigned long _1_OBF_FUNC_else6;
-  int r7;
-  int notr8;
-  void *addr9;
   {
     { _1_OBF_FUNC_next = 3UL; }
     while (1) {
       switch (_1_OBF_FUNC_next) {
         case 5:;
-          r7 = n != 0;
-          notr8 = !r7;
-          _1_OBF_FUNC_then5 = 1UL;
-          _1_OBF_FUNC_else6 = 4UL;
-          addr9 = (void *)(r7 * _1_OBF_FUNC_then5 + notr8 * _1_OBF_FUNC_else6);
-          { _1_OBF_FUNC_next = addr9; }
+          if (n) {
+            { _1_OBF_FUNC_next = 1UL; }
+          } else {
+            { _1_OBF_FUNC_next = 4UL; }
+          }
           break;
         case 0:
           n /= 10;

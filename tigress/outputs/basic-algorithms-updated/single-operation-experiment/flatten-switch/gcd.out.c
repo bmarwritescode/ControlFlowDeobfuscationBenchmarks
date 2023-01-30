@@ -434,37 +434,16 @@ int OBF_FUNC(int num1, int num2) {
   int i;
   int hcf;
   unsigned long _1_OBF_FUNC_next;
-  unsigned long _1_OBF_FUNC_then6;
-  unsigned long _1_OBF_FUNC_else7;
-  int r8;
-  int notr9;
-  void *addr10;
-  unsigned long _1_OBF_FUNC_then11;
-  unsigned long _1_OBF_FUNC_else12;
-  int r13;
-  int notr14;
-  void *addr15;
-  unsigned long _1_OBF_FUNC_then16;
-  unsigned long _1_OBF_FUNC_else17;
-  int r18;
-  int notr19;
-  void *addr20;
-  unsigned long _1_OBF_FUNC_then21;
-  unsigned long _1_OBF_FUNC_else22;
-  int r23;
-  int notr24;
-  void *addr25;
   {
     { _1_OBF_FUNC_next = 1UL; }
     while (1) {
       switch (_1_OBF_FUNC_next) {
         case 5:;
-          r8 = (i <= num2) != 0;
-          notr9 = !r8;
-          _1_OBF_FUNC_then6 = 2UL;
-          _1_OBF_FUNC_else7 = 4UL;
-          addr10 = (void *)(r8 * _1_OBF_FUNC_then6 + notr9 * _1_OBF_FUNC_else7);
-          { _1_OBF_FUNC_next = addr10; }
+          if (i <= num2) {
+            { _1_OBF_FUNC_next = 2UL; }
+          } else {
+            { _1_OBF_FUNC_next = 4UL; }
+          }
           break;
         case 9:
           i++;
@@ -475,13 +454,11 @@ int OBF_FUNC(int num1, int num2) {
           { _1_OBF_FUNC_next = 3UL; }
           break;
         case 3:;
-          r13 = (i <= num1) != 0;
-          notr14 = !r13;
-          _1_OBF_FUNC_then11 = 2UL;
-          _1_OBF_FUNC_else12 = 5UL;
-          addr15 =
-              (void *)(r13 * _1_OBF_FUNC_then11 + notr14 * _1_OBF_FUNC_else12);
-          { _1_OBF_FUNC_next = addr15; }
+          if (i <= num1) {
+            { _1_OBF_FUNC_next = 2UL; }
+          } else {
+            { _1_OBF_FUNC_next = 5UL; }
+          }
           break;
         case 4:;
           return (hcf);
@@ -491,22 +468,18 @@ int OBF_FUNC(int num1, int num2) {
           { _1_OBF_FUNC_next = 9UL; }
           break;
         case 2:;
-          r18 = (num1 % i == 0) != 0;
-          notr19 = !r18;
-          _1_OBF_FUNC_then16 = 7UL;
-          _1_OBF_FUNC_else17 = 9UL;
-          addr20 =
-              (void *)(r18 * _1_OBF_FUNC_then16 + notr19 * _1_OBF_FUNC_else17);
-          { _1_OBF_FUNC_next = addr20; }
+          if (num1 % i == 0) {
+            { _1_OBF_FUNC_next = 7UL; }
+          } else {
+            { _1_OBF_FUNC_next = 9UL; }
+          }
           break;
         case 7:;
-          r23 = (num2 % i == 0) != 0;
-          notr24 = !r23;
-          _1_OBF_FUNC_then21 = 8UL;
-          _1_OBF_FUNC_else22 = 9UL;
-          addr25 =
-              (void *)(r23 * _1_OBF_FUNC_then21 + notr24 * _1_OBF_FUNC_else22);
-          { _1_OBF_FUNC_next = addr25; }
+          if (num2 % i == 0) {
+            { _1_OBF_FUNC_next = 8UL; }
+          } else {
+            { _1_OBF_FUNC_next = 9UL; }
+          }
           break;
       }
     }
