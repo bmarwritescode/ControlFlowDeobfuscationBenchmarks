@@ -1,39 +1,39 @@
 typedef void *__builtin_va_list;
-struct random_data;
-union __anonunion____missing_field_name_27658097;
-union __anonunion_pthread_rwlockattr_t_145707745;
-struct __pthread_cond_s;
-struct __anonstruct___wseq32_961093918;
-union __anonunion____missing_field_name_130585785;
-struct __anonstruct_ldiv_t_790849867;
-struct __anonstruct_lldiv_t_103911545;
-struct __anonstruct_fd_set_356711149;
+union __anonunion_pthread_condattr_t_488594145;
 union __anonunion_pthread_mutexattr_t_488594144;
+union __anonunion_pthread_cond_t_951761805;
+struct __anonstruct___wseq32_961093918;
+union __anonunion____missing_field_name_27658097;
+struct __pthread_mutex_s;
+union pthread_attr_t;
+struct __anonstruct___sigset_t_973126068;
+struct __anonstruct_lldiv_t_103911545;
+struct __anonstruct_ldiv_t_790849867;
+struct __pthread_internal_slist;
+union __anonunion_pthread_rwlockattr_t_145707745;
+union __anonunion____missing_field_name_130585785;
+struct __anonstruct_fd_set_356711149;
 union __anonunion_pthread_mutex_t_335460617;
+struct timespec;
 struct __anonstruct___g1_start32_961093919;
-union __anonunion_pthread_rwlock_t_656928968;
+struct timeval;
+struct __pthread_cond_s;
+struct __pthread_internal_list;
+union __anonunion_pthread_barrierattr_t_951761806;
 union __anonunion_pthread_barrier_t_145707746;
 enum __anonenum_idtype_t_558242672;
-struct timespec;
-union __anonunion_pthread_condattr_t_488594145;
-union pthread_attr_t;
-union __anonunion_pthread_barrierattr_t_951761806;
-struct __pthread_mutex_s;
-struct timeval;
-struct __pthread_internal_slist;
-struct __pthread_internal_list;
+union __anonunion_pthread_rwlock_t_656928968;
 struct drand48_data;
+struct random_data;
+struct __anonstruct___fsid_t_109580352;
 struct __pthread_rwlock_arch_t;
 struct __anonstruct_div_t_773697287;
-struct __anonstruct___fsid_t_109580352;
-struct __anonstruct___sigset_t_973126068;
-union __anonunion_pthread_cond_t_951761805;
-typedef unsigned short __uint16_t;
-typedef __uint16_t __uint_least16_t;
 typedef unsigned int __u_int;
 typedef __u_int u_int;
 typedef unsigned int __mode_t;
 typedef unsigned long __u_quad_t;
+typedef unsigned short __uint16_t;
+typedef __uint16_t __uint_least16_t;
 extern long(mrand48)(void);
 typedef unsigned long __ino_t;
 typedef __ino_t ino_t;
@@ -70,10 +70,10 @@ union __anonunion_pthread_barrierattr_t_951761806 {
   int __align;
 };
 extern int(getloadavg)(double *__loadavg, int __nelem);
-typedef long __off64_t;
 typedef unsigned char __uint8_t;
 typedef __uint8_t __uint_least8_t;
 typedef long __fd_mask;
+typedef long __off64_t;
 typedef long __blkcnt_t;
 extern int(setenv)(char const *__name, char const *__value, int __replace);
 extern int(at_quick_exit)(void (*__func)(void));
@@ -88,8 +88,8 @@ extern long long(strtoq)(char const *__nptr, char **__endptr, int __base);
 extern int(unsetenv)(char const *__name);
 typedef unsigned long __fsblkcnt_t;
 typedef __fsblkcnt_t fsblkcnt_t;
-typedef struct __anonstruct_fd_set_356711149 fd_set;
 typedef int volatile pthread_spinlock_t;
+typedef struct __anonstruct_fd_set_356711149 fd_set;
 struct __anonstruct_ldiv_t_790849867 {
   long quot;
   long rem;
@@ -99,10 +99,10 @@ typedef __mode_t mode_t;
 typedef void *__timer_t;
 typedef int wchar_t;
 extern size_t(wcstombs)(char *__s, wchar_t const *__pwcs, size_t __n);
-typedef unsigned long ulong;
 typedef union __anonunion_pthread_condattr_t_488594145 pthread_condattr_t;
-extern int(srand48_r)(long __seedval, struct drand48_data *__buffer);
+typedef unsigned long ulong;
 extern long(atol)(char const *__nptr);
+extern int(srand48_r)(long __seedval, struct drand48_data *__buffer);
 typedef __fd_mask fd_mask;
 extern size_t(mbstowcs)(wchar_t *__pwcs, char const *__s, size_t __n);
 extern void *(malloc)(size_t __size);
@@ -149,9 +149,9 @@ struct __anonstruct_fd_set_356711149 {
 };
 typedef unsigned int __id_t;
 extern char *(ecvt)(double __value, int __ndigit, int *__decpt, int *__sign);
+typedef union __anonunion_pthread_mutexattr_t_488594144 pthread_mutexattr_t;
 typedef short __int16_t;
 typedef __int16_t int16_t;
-typedef union __anonunion_pthread_mutexattr_t_488594144 pthread_mutexattr_t;
 extern void *(realloc)(void *__ptr, size_t __size);
 typedef signed char __int8_t;
 extern int(clearenv)(void);
@@ -168,8 +168,8 @@ extern int(fcvt_r)(double __value, int __ndigit, int *__decpt, int *__sign,
 typedef __int32_t int32_t;
 typedef __loff_t loff_t;
 typedef __int16_t __int_least16_t;
-extern int(abs)(int __x);
 extern int(mbtowc)(wchar_t *__pwc, char const *__s, size_t __n);
+extern int(abs)(int __x);
 typedef struct __anonstruct___sigset_t_973126068 __sigset_t;
 typedef long __ssize_t;
 typedef __ssize_t ssize_t;
@@ -179,6 +179,7 @@ extern int(nrand48_r)(unsigned short *__xsubi, struct drand48_data *__buffer,
 extern void(srand)(unsigned int __seed);
 typedef unsigned long __rlim64_t;
 typedef __int32_t __int_least32_t;
+typedef long __blkcnt64_t;
 struct __pthread_internal_list {
   struct __pthread_internal_list *__prev;
   struct __pthread_internal_list *__next;
@@ -199,7 +200,6 @@ union __anonunion_pthread_mutex_t_335460617 {
   char __size[40];
   long __align;
 };
-typedef long __blkcnt64_t;
 extern int(atexit)(void (*__func)(void));
 extern int(setstate_r)(char *__statebuf, struct random_data *__buf);
 typedef __u_quad_t u_quad_t;
@@ -212,12 +212,12 @@ union pthread_attr_t {
   long __align;
 };
 extern float(strtof)(char const *__nptr, char **__endptr);
+typedef unsigned int __useconds_t;
 typedef long __suseconds_t;
 struct timeval {
   __time_t tv_sec;
   __suseconds_t tv_usec;
 };
-typedef unsigned int __useconds_t;
 extern char *(fcvt)(double __value, int __ndigit, int *__decpt, int *__sign);
 extern void(qsort)(void *__base, size_t __nmemb, size_t __size,
                    int (*__compar)(void const *, void const *));
@@ -238,8 +238,8 @@ union __anonunion____missing_field_name_27658097 {
   unsigned long long __g1_start;
   struct __anonstruct___g1_start32_961093919 __g1_start32;
 };
-typedef int pthread_once_t;
 typedef unsigned long __fsblkcnt64_t;
+typedef int pthread_once_t;
 extern double(atof)(char const *__nptr);
 typedef __sigset_t sigset_t;
 typedef __u_char u_char;
@@ -263,8 +263,8 @@ union __anonunion_pthread_cond_t_951761805 {
 };
 static __uint32_t __uint32_identity(__uint32_t __x);
 extern int(posix_memalign)(void **__memptr, size_t __alignment, size_t __size);
-typedef unsigned int __socklen_t;
 typedef union __anonunion_pthread_rwlockattr_t_145707745 pthread_rwlockattr_t;
+typedef unsigned int __socklen_t;
 extern long(random)(void);
 typedef __uint16_t u_int16_t;
 static __uint16_t __bswap_16(__uint16_t __bsx);
@@ -325,15 +325,15 @@ struct __pthread_internal_slist {
 };
 extern unsigned long long(strtoull)(char const *__nptr, char **__endptr,
                                     int __base);
-typedef union __anonunion_pthread_cond_t_951761805 pthread_cond_t;
 typedef __uint64_t __uint_least64_t;
+typedef union __anonunion_pthread_cond_t_951761805 pthread_cond_t;
 extern char *(gcvt)(double __value, int __ndigit, char *__buf);
 typedef __time_t time_t;
 extern lldiv_t(lldiv)(long long __numer, long long __denom);
 typedef enum __anonenum_idtype_t_558242672 idtype_t;
 static __uint64_t __bswap_64(__uint64_t __bsx);
-typedef __suseconds_t suseconds_t;
 typedef __int64_t __int_least64_t;
+typedef __suseconds_t suseconds_t;
 typedef __int8_t int8_t;
 extern int(srandom_r)(unsigned int __seed, struct random_data *__buf);
 extern int(lcong48_r)(unsigned short *__param, struct drand48_data *__buffer);
@@ -357,12 +357,12 @@ union __anonunion_pthread_rwlockattr_t_145707745 {
   char __size[8];
   long __align;
 };
-typedef unsigned long __u_long;
-typedef __u_long u_long;
 union __anonunion_pthread_barrier_t_145707746 {
   char __size[32];
   long __align;
 };
+typedef unsigned long __u_long;
+typedef __u_long u_long;
 extern void *(calloc)(size_t __nmemb, size_t __size);
 extern int(drand48_r)(struct drand48_data *__buffer, double *__result);
 char **_global_envp;
@@ -393,15 +393,15 @@ typedef long __intptr_t;
 extern char *(initstate)(unsigned int __seed, char *__statebuf,
                          size_t __statelen);
 int OBF_FUNC(int i);
-typedef __pid_t pid_t;
 typedef struct __pthread_internal_slist __pthread_slist_t;
-struct __anonstruct_lldiv_t_103911545 {
-  long long quot;
-  long long rem;
-};
+typedef __pid_t pid_t;
 union __anonunion_pthread_condattr_t_488594145 {
   char __size[4];
   int __align;
+};
+struct __anonstruct_lldiv_t_103911545 {
+  long long quot;
+  long long rem;
 };
 typedef long __fsword_t;
 extern void(quick_exit)(int __status);
@@ -430,6 +430,173 @@ struct __anonstruct_div_t_773697287 {
   int quot;
   int rem;
 };
+int OBF_FUNC(int i) {
+  int m;
+  _Bool isPrime;
+  int j;
+  int k;
+  unsigned long _1_OBF_FUNC_next;
+  unsigned long _1_OBF_FUNC_then7;
+  unsigned long _1_OBF_FUNC_else8;
+  int r9;
+  int notr10;
+  void *addr11;
+  unsigned long _1_OBF_FUNC_then12;
+  unsigned long _1_OBF_FUNC_else13;
+  int r14;
+  int notr15;
+  void *addr16;
+  unsigned long _1_OBF_FUNC_then17;
+  unsigned long _1_OBF_FUNC_else18;
+  int r19;
+  int notr20;
+  void *addr21;
+  unsigned long _1_OBF_FUNC_then22;
+  unsigned long _1_OBF_FUNC_else23;
+  int r24;
+  int notr25;
+  void *addr26;
+  unsigned long _1_OBF_FUNC_then27;
+  unsigned long _1_OBF_FUNC_else28;
+  int r29;
+  int notr30;
+  void *addr31;
+  unsigned long _1_OBF_FUNC_then32;
+  unsigned long _1_OBF_FUNC_else33;
+  int r34;
+  int notr35;
+  void *addr36;
+  unsigned long _1_OBF_FUNC_then37;
+  unsigned long _1_OBF_FUNC_else38;
+  int r39;
+  int notr40;
+  void *addr41;
+  unsigned long _1_OBF_FUNC_then42;
+  unsigned long _1_OBF_FUNC_else43;
+  int r44;
+  int notr45;
+  void *addr46;
+  {
+    { _1_OBF_FUNC_next = 22UL; }
+    while (1) {
+      switch (_1_OBF_FUNC_next) {
+        case 3:;
+          r9 = (m > 1) != 0;
+          notr10 = !r9;
+          _1_OBF_FUNC_then7 = 2UL;
+          _1_OBF_FUNC_else8 = 11UL;
+          addr11 =
+              (void *)(r9 * _1_OBF_FUNC_then7 + notr10 * _1_OBF_FUNC_else8);
+          { _1_OBF_FUNC_next = addr11; }
+          break;
+        case 18:;
+          r14 = isPrime != 0;
+          notr15 = !r14;
+          _1_OBF_FUNC_then12 = 14UL;
+          _1_OBF_FUNC_else13 = 0UL;
+          addr16 =
+              (void *)(r14 * _1_OBF_FUNC_then12 + notr15 * _1_OBF_FUNC_else13);
+          { _1_OBF_FUNC_next = addr16; }
+          break;
+        case 2:
+          isPrime = (_Bool)1;
+          { _1_OBF_FUNC_next = 24UL; }
+          break;
+        case 12:;
+          return (m);
+          break;
+        case 24:
+          j = 2;
+          { _1_OBF_FUNC_next = 21UL; }
+          break;
+        case 15:
+          m--;
+          { _1_OBF_FUNC_next = 3UL; }
+          break;
+        case 9:
+          k = 2;
+          { _1_OBF_FUNC_next = 20UL; }
+          break;
+        case 16:
+          isPrime = (_Bool)0;
+          { _1_OBF_FUNC_next = 5UL; }
+          break;
+        case 20:;
+          r19 = (k < m) != 0;
+          notr20 = !r19;
+          _1_OBF_FUNC_then17 = 18UL;
+          _1_OBF_FUNC_else18 = 0UL;
+          addr21 =
+              (void *)(r19 * _1_OBF_FUNC_then17 + notr20 * _1_OBF_FUNC_else18);
+          { _1_OBF_FUNC_next = addr21; }
+          break;
+        case 14:;
+          r24 = (m == j * k) != 0;
+          notr25 = !r24;
+          _1_OBF_FUNC_then22 = 16UL;
+          _1_OBF_FUNC_else23 = 5UL;
+          addr26 =
+              (void *)(r24 * _1_OBF_FUNC_then22 + notr25 * _1_OBF_FUNC_else23);
+          { _1_OBF_FUNC_next = addr26; }
+          break;
+        case 6:;
+          return (-1);
+          break;
+        case 22:;
+          r29 = (i <= 0) != 0;
+          notr30 = !r29;
+          _1_OBF_FUNC_then27 = 6UL;
+          _1_OBF_FUNC_else28 = 26UL;
+          addr31 =
+              (void *)(r29 * _1_OBF_FUNC_then27 + notr30 * _1_OBF_FUNC_else28);
+          { _1_OBF_FUNC_next = addr31; }
+          break;
+        case 25:;
+          r34 = isPrime != 0;
+          notr35 = !r34;
+          _1_OBF_FUNC_then32 = 12UL;
+          _1_OBF_FUNC_else33 = 15UL;
+          addr36 =
+              (void *)(r34 * _1_OBF_FUNC_then32 + notr35 * _1_OBF_FUNC_else33);
+          { _1_OBF_FUNC_next = addr36; }
+          break;
+        case 17:;
+          r39 = isPrime != 0;
+          notr40 = !r39;
+          _1_OBF_FUNC_then37 = 9UL;
+          _1_OBF_FUNC_else38 = 25UL;
+          addr41 =
+              (void *)(r39 * _1_OBF_FUNC_then37 + notr40 * _1_OBF_FUNC_else38);
+          { _1_OBF_FUNC_next = addr41; }
+          break;
+        case 0:
+          j++;
+          { _1_OBF_FUNC_next = 21UL; }
+          break;
+        case 21:;
+          r44 = (j < m) != 0;
+          notr45 = !r44;
+          _1_OBF_FUNC_then42 = 17UL;
+          _1_OBF_FUNC_else43 = 25UL;
+          addr46 =
+              (void *)(r44 * _1_OBF_FUNC_then42 + notr45 * _1_OBF_FUNC_else43);
+          { _1_OBF_FUNC_next = addr46; }
+          break;
+        case 11:;
+          return (-1);
+          break;
+        case 5:
+          k++;
+          { _1_OBF_FUNC_next = 20UL; }
+          break;
+        case 26:
+          m = i;
+          { _1_OBF_FUNC_next = 3UL; }
+          break;
+      }
+    }
+  }
+}
 int main(int argc, char **argv, char **_formal_envp) {
   int tmp;
   int tmp___0;
@@ -460,116 +627,5 @@ int main(int argc, char **argv, char **_formal_envp) {
     tmp = atoi((char const *)*(argv + 1));
     tmp___0 = OBF_FUNC(tmp);
     return (tmp___0);
-  }
-}
-int OBF_FUNC(int i) {
-  int m;
-  _Bool isPrime;
-  int j;
-  int k;
-  unsigned long _1_OBF_FUNC_next;
-  {
-    { _1_OBF_FUNC_next = 22UL; }
-    while (1) {
-      switch (_1_OBF_FUNC_next) {
-        case 18:;
-          if (isPrime) {
-            { _1_OBF_FUNC_next = 14UL; }
-          } else {
-            { _1_OBF_FUNC_next = 0UL; }
-          }
-          break;
-        case 25:;
-          if (isPrime) {
-            { _1_OBF_FUNC_next = 12UL; }
-          } else {
-            { _1_OBF_FUNC_next = 15UL; }
-          }
-          break;
-        case 14:;
-          if (m == j * k) {
-            { _1_OBF_FUNC_next = 16UL; }
-          } else {
-            { _1_OBF_FUNC_next = 5UL; }
-          }
-          break;
-        case 15:
-          m--;
-          { _1_OBF_FUNC_next = 3UL; }
-          break;
-        case 12:;
-          return (m);
-          break;
-        case 3:;
-          if (m > 1) {
-            { _1_OBF_FUNC_next = 2UL; }
-          } else {
-            { _1_OBF_FUNC_next = 11UL; }
-          }
-          break;
-        case 16:
-          isPrime = (_Bool)0;
-          { _1_OBF_FUNC_next = 5UL; }
-          break;
-        case 24:
-          j = 2;
-          { _1_OBF_FUNC_next = 21UL; }
-          break;
-        case 21:;
-          if (j < m) {
-            { _1_OBF_FUNC_next = 17UL; }
-          } else {
-            { _1_OBF_FUNC_next = 25UL; }
-          }
-          break;
-        case 26:
-          m = i;
-          { _1_OBF_FUNC_next = 3UL; }
-          break;
-        case 11:;
-          return (-1);
-          break;
-        case 9:
-          k = 2;
-          { _1_OBF_FUNC_next = 20UL; }
-          break;
-        case 17:;
-          if (isPrime) {
-            { _1_OBF_FUNC_next = 9UL; }
-          } else {
-            { _1_OBF_FUNC_next = 25UL; }
-          }
-          break;
-        case 6:;
-          return (-1);
-          break;
-        case 22:;
-          if (i <= 0) {
-            { _1_OBF_FUNC_next = 6UL; }
-          } else {
-            { _1_OBF_FUNC_next = 26UL; }
-          }
-          break;
-        case 5:
-          k++;
-          { _1_OBF_FUNC_next = 20UL; }
-          break;
-        case 0:
-          j++;
-          { _1_OBF_FUNC_next = 21UL; }
-          break;
-        case 2:
-          isPrime = (_Bool)1;
-          { _1_OBF_FUNC_next = 24UL; }
-          break;
-        case 20:;
-          if (k < m) {
-            { _1_OBF_FUNC_next = 18UL; }
-          } else {
-            { _1_OBF_FUNC_next = 0UL; }
-          }
-          break;
-      }
-    }
   }
 }

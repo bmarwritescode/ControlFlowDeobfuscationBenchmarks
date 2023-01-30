@@ -1,39 +1,39 @@
 typedef void *__builtin_va_list;
-struct random_data;
-union __anonunion____missing_field_name_447894901;
-union __anonunion_pthread_rwlockattr_t_145707745;
-struct __pthread_cond_s;
-struct __anonstruct___wseq32_961093918;
-union __anonunion____missing_field_name_373734707;
-struct __anonstruct_ldiv_t_790849867;
-struct __anonstruct_lldiv_t_103911545;
-struct __anonstruct_fd_set_356711149;
+union __anonunion_pthread_condattr_t_488594145;
 union __anonunion_pthread_mutexattr_t_488594144;
+union __anonunion_pthread_cond_t_951761805;
+struct __anonstruct___wseq32_961093918;
+union __anonunion____missing_field_name_447894901;
+struct __pthread_mutex_s;
+union pthread_attr_t;
+struct __anonstruct___sigset_t_973126068;
+struct __anonstruct_lldiv_t_103911545;
+struct __anonstruct_ldiv_t_790849867;
+struct __pthread_internal_slist;
+union __anonunion_pthread_rwlockattr_t_145707745;
+union __anonunion____missing_field_name_373734707;
+struct __anonstruct_fd_set_356711149;
 union __anonunion_pthread_mutex_t_335460617;
+struct timespec;
 struct __anonstruct___g1_start32_961093919;
-union __anonunion_pthread_rwlock_t_656928968;
+struct timeval;
+struct __pthread_cond_s;
+struct __pthread_internal_list;
+union __anonunion_pthread_barrierattr_t_951761806;
 union __anonunion_pthread_barrier_t_145707746;
 enum __anonenum_idtype_t_558242672;
-struct timespec;
-union __anonunion_pthread_condattr_t_488594145;
-union pthread_attr_t;
-union __anonunion_pthread_barrierattr_t_951761806;
-struct __pthread_mutex_s;
-struct timeval;
-struct __pthread_internal_slist;
-struct __pthread_internal_list;
+union __anonunion_pthread_rwlock_t_656928968;
 struct drand48_data;
+struct random_data;
+struct __anonstruct___fsid_t_109580352;
 struct __pthread_rwlock_arch_t;
 struct __anonstruct_div_t_773697287;
-struct __anonstruct___fsid_t_109580352;
-struct __anonstruct___sigset_t_973126068;
-union __anonunion_pthread_cond_t_951761805;
-typedef unsigned short __uint16_t;
-typedef __uint16_t __uint_least16_t;
 typedef unsigned int __u_int;
 typedef __u_int u_int;
 typedef unsigned int __mode_t;
 typedef unsigned long __u_quad_t;
+typedef unsigned short __uint16_t;
+typedef __uint16_t __uint_least16_t;
 extern long(mrand48)(void);
 typedef unsigned long __ino_t;
 typedef __ino_t ino_t;
@@ -70,10 +70,10 @@ union __anonunion_pthread_barrierattr_t_951761806 {
   int __align;
 };
 extern int(getloadavg)(double *__loadavg, int __nelem);
-typedef long __off64_t;
 typedef unsigned char __uint8_t;
 typedef __uint8_t __uint_least8_t;
 typedef long __fd_mask;
+typedef long __off64_t;
 typedef long __blkcnt_t;
 extern int(setenv)(char const *__name, char const *__value, int __replace);
 extern int(at_quick_exit)(void (*__func)(void));
@@ -88,6 +88,7 @@ extern long long(strtoq)(char const *__nptr, char **__endptr, int __base);
 extern int(unsetenv)(char const *__name);
 typedef unsigned long __fsblkcnt_t;
 typedef __fsblkcnt_t fsblkcnt_t;
+typedef int volatile pthread_spinlock_t;
 typedef struct __anonstruct_fd_set_356711149 fd_set;
 struct __anonstruct___wseq32_961093918 {
   unsigned int __low;
@@ -97,7 +98,6 @@ union __anonunion____missing_field_name_373734707 {
   unsigned long long __wseq;
   struct __anonstruct___wseq32_961093918 __wseq32;
 };
-typedef int volatile pthread_spinlock_t;
 struct __anonstruct_ldiv_t_790849867 {
   long quot;
   long rem;
@@ -107,10 +107,10 @@ typedef __mode_t mode_t;
 typedef void *__timer_t;
 typedef int wchar_t;
 extern size_t(wcstombs)(char *__s, wchar_t const *__pwcs, size_t __n);
-typedef unsigned long ulong;
 typedef union __anonunion_pthread_condattr_t_488594145 pthread_condattr_t;
-extern int(srand48_r)(long __seedval, struct drand48_data *__buffer);
+typedef unsigned long ulong;
 extern long(atol)(char const *__nptr);
+extern int(srand48_r)(long __seedval, struct drand48_data *__buffer);
 typedef __fd_mask fd_mask;
 extern size_t(mbstowcs)(wchar_t *__pwcs, char const *__s, size_t __n);
 extern void *(malloc)(size_t __size);
@@ -149,9 +149,9 @@ struct __anonstruct_fd_set_356711149 {
 };
 typedef unsigned int __id_t;
 extern char *(ecvt)(double __value, int __ndigit, int *__decpt, int *__sign);
+typedef union __anonunion_pthread_mutexattr_t_488594144 pthread_mutexattr_t;
 typedef short __int16_t;
 typedef __int16_t int16_t;
-typedef union __anonunion_pthread_mutexattr_t_488594144 pthread_mutexattr_t;
 extern void *(realloc)(void *__ptr, size_t __size);
 typedef signed char __int8_t;
 extern int(clearenv)(void);
@@ -168,8 +168,8 @@ extern int(fcvt_r)(double __value, int __ndigit, int *__decpt, int *__sign,
 typedef __int32_t int32_t;
 typedef __loff_t loff_t;
 typedef __int16_t __int_least16_t;
-extern int(abs)(int __x);
 extern int(mbtowc)(wchar_t *__pwc, char const *__s, size_t __n);
+extern int(abs)(int __x);
 typedef struct __anonstruct___sigset_t_973126068 __sigset_t;
 typedef long __ssize_t;
 typedef __ssize_t ssize_t;
@@ -179,6 +179,7 @@ extern int(nrand48_r)(unsigned short *__xsubi, struct drand48_data *__buffer,
 extern void(srand)(unsigned int __seed);
 typedef unsigned long __rlim64_t;
 typedef __int32_t __int_least32_t;
+typedef long __blkcnt64_t;
 struct __pthread_internal_list {
   struct __pthread_internal_list *__prev;
   struct __pthread_internal_list *__next;
@@ -199,7 +200,6 @@ union __anonunion_pthread_mutex_t_335460617 {
   char __size[40];
   long __align;
 };
-typedef long __blkcnt64_t;
 extern int(atexit)(void (*__func)(void));
 extern int(setstate_r)(char *__statebuf, struct random_data *__buf);
 typedef __u_quad_t u_quad_t;
@@ -212,12 +212,12 @@ union pthread_attr_t {
   long __align;
 };
 extern float(strtof)(char const *__nptr, char **__endptr);
+typedef unsigned int __useconds_t;
 typedef long __suseconds_t;
 struct timeval {
   __time_t tv_sec;
   __suseconds_t tv_usec;
 };
-typedef unsigned int __useconds_t;
 extern char *(fcvt)(double __value, int __ndigit, int *__decpt, int *__sign);
 extern void(qsort)(void *__base, size_t __nmemb, size_t __size,
                    int (*__compar)(void const *, void const *));
@@ -230,8 +230,8 @@ typedef __uint32_t u_int32_t;
 typedef unsigned short __u_short;
 extern char *(mkdtemp)(char *__template);
 extern long(strtol)(char const *__nptr, char **__endptr, int __base);
-typedef int pthread_once_t;
 typedef unsigned long __fsblkcnt64_t;
+typedef int pthread_once_t;
 extern double(atof)(char const *__nptr);
 typedef __sigset_t sigset_t;
 typedef __u_char u_char;
@@ -263,8 +263,8 @@ union __anonunion_pthread_cond_t_951761805 {
 };
 static __uint32_t __uint32_identity(__uint32_t __x);
 extern int(posix_memalign)(void **__memptr, size_t __alignment, size_t __size);
-typedef unsigned int __socklen_t;
 typedef union __anonunion_pthread_rwlockattr_t_145707745 pthread_rwlockattr_t;
+typedef unsigned int __socklen_t;
 extern long(random)(void);
 typedef __uint16_t u_int16_t;
 static __uint16_t __bswap_16(__uint16_t __bsx);
@@ -325,15 +325,15 @@ struct __pthread_internal_slist {
 };
 extern unsigned long long(strtoull)(char const *__nptr, char **__endptr,
                                     int __base);
-typedef union __anonunion_pthread_cond_t_951761805 pthread_cond_t;
 typedef __uint64_t __uint_least64_t;
+typedef union __anonunion_pthread_cond_t_951761805 pthread_cond_t;
 extern char *(gcvt)(double __value, int __ndigit, char *__buf);
 typedef __time_t time_t;
 extern lldiv_t(lldiv)(long long __numer, long long __denom);
 typedef enum __anonenum_idtype_t_558242672 idtype_t;
 static __uint64_t __bswap_64(__uint64_t __bsx);
-typedef __suseconds_t suseconds_t;
 typedef __int64_t __int_least64_t;
+typedef __suseconds_t suseconds_t;
 typedef __int8_t int8_t;
 extern int(srandom_r)(unsigned int __seed, struct random_data *__buf);
 extern int(lcong48_r)(unsigned short *__param, struct drand48_data *__buffer);
@@ -357,12 +357,12 @@ union __anonunion_pthread_rwlockattr_t_145707745 {
   char __size[8];
   long __align;
 };
-typedef unsigned long __u_long;
-typedef __u_long u_long;
 union __anonunion_pthread_barrier_t_145707746 {
   char __size[32];
   long __align;
 };
+typedef unsigned long __u_long;
+typedef __u_long u_long;
 extern void *(calloc)(size_t __nmemb, size_t __size);
 extern int(drand48_r)(struct drand48_data *__buffer, double *__result);
 char **_global_envp;
@@ -393,15 +393,15 @@ typedef long __intptr_t;
 extern char *(initstate)(unsigned int __seed, char *__statebuf,
                          size_t __statelen);
 int OBF_FUNC(int i);
-typedef __pid_t pid_t;
 typedef struct __pthread_internal_slist __pthread_slist_t;
-struct __anonstruct_lldiv_t_103911545 {
-  long long quot;
-  long long rem;
-};
+typedef __pid_t pid_t;
 union __anonunion_pthread_condattr_t_488594145 {
   char __size[4];
   int __align;
+};
+struct __anonstruct_lldiv_t_103911545 {
+  long long quot;
+  long long rem;
 };
 typedef long __fsword_t;
 extern void(quick_exit)(int __status);
@@ -430,6 +430,124 @@ struct __anonstruct_div_t_773697287 {
   int quot;
   int rem;
 };
+int OBF_FUNC(int i) {
+  int m;
+  _Bool isPrime;
+  int j;
+  int k;
+  unsigned long _1_OBF_FUNC_next;
+  void *_1_OBF_FUNC_jumpTab[27] = {
+      &&_1_OBF_FUNC_lab0,  &&_1_OBF_FUNC_lab0,  &&_1_OBF_FUNC_lab2,
+      &&_1_OBF_FUNC_lab3,  &&_1_OBF_FUNC_lab0,  &&_1_OBF_FUNC_lab5,
+      &&_1_OBF_FUNC_lab6,  &&_1_OBF_FUNC_lab0,  &&_1_OBF_FUNC_lab0,
+      &&_1_OBF_FUNC_lab9,  &&_1_OBF_FUNC_lab0,  &&_1_OBF_FUNC_lab11,
+      &&_1_OBF_FUNC_lab12, &&_1_OBF_FUNC_lab0,  &&_1_OBF_FUNC_lab14,
+      &&_1_OBF_FUNC_lab15, &&_1_OBF_FUNC_lab16, &&_1_OBF_FUNC_lab17,
+      &&_1_OBF_FUNC_lab18, &&_1_OBF_FUNC_lab0,  &&_1_OBF_FUNC_lab20,
+      &&_1_OBF_FUNC_lab21, &&_1_OBF_FUNC_lab22, &&_1_OBF_FUNC_lab0,
+      &&_1_OBF_FUNC_lab24, &&_1_OBF_FUNC_lab25, &&_1_OBF_FUNC_lab26};
+  {
+    { _1_OBF_FUNC_next = 22UL; }
+    { goto *(_1_OBF_FUNC_jumpTab[_1_OBF_FUNC_next - 0]); }
+  _1_OBF_FUNC_lab3:;
+    if (m > 1) {
+      { _1_OBF_FUNC_next = 2UL; }
+    } else {
+      { _1_OBF_FUNC_next = 11UL; }
+    }
+    { goto *(_1_OBF_FUNC_jumpTab[_1_OBF_FUNC_next - 0]); }
+  _1_OBF_FUNC_lab18:;
+    if (isPrime) {
+      { _1_OBF_FUNC_next = 14UL; }
+    } else {
+      { _1_OBF_FUNC_next = 0UL; }
+    }
+    { goto *(_1_OBF_FUNC_jumpTab[_1_OBF_FUNC_next - 0]); }
+  _1_OBF_FUNC_lab2:
+    isPrime = (_Bool)1;
+    { _1_OBF_FUNC_next = 24UL; }
+    { goto *(_1_OBF_FUNC_jumpTab[_1_OBF_FUNC_next - 0]); }
+  _1_OBF_FUNC_lab12:;
+    return (m);
+    { goto *(_1_OBF_FUNC_jumpTab[_1_OBF_FUNC_next - 0]); }
+  _1_OBF_FUNC_lab24:
+    j = 2;
+    { _1_OBF_FUNC_next = 21UL; }
+    { goto *(_1_OBF_FUNC_jumpTab[_1_OBF_FUNC_next - 0]); }
+  _1_OBF_FUNC_lab15:
+    m--;
+    { _1_OBF_FUNC_next = 3UL; }
+    { goto *(_1_OBF_FUNC_jumpTab[_1_OBF_FUNC_next - 0]); }
+  _1_OBF_FUNC_lab9:
+    k = 2;
+    { _1_OBF_FUNC_next = 20UL; }
+    { goto *(_1_OBF_FUNC_jumpTab[_1_OBF_FUNC_next - 0]); }
+  _1_OBF_FUNC_lab16:
+    isPrime = (_Bool)0;
+    { _1_OBF_FUNC_next = 5UL; }
+    { goto *(_1_OBF_FUNC_jumpTab[_1_OBF_FUNC_next - 0]); }
+  _1_OBF_FUNC_lab20:;
+    if (k < m) {
+      { _1_OBF_FUNC_next = 18UL; }
+    } else {
+      { _1_OBF_FUNC_next = 0UL; }
+    }
+    { goto *(_1_OBF_FUNC_jumpTab[_1_OBF_FUNC_next - 0]); }
+  _1_OBF_FUNC_lab14:;
+    if (m == j * k) {
+      { _1_OBF_FUNC_next = 16UL; }
+    } else {
+      { _1_OBF_FUNC_next = 5UL; }
+    }
+    { goto *(_1_OBF_FUNC_jumpTab[_1_OBF_FUNC_next - 0]); }
+  _1_OBF_FUNC_lab6:;
+    return (-1);
+    { goto *(_1_OBF_FUNC_jumpTab[_1_OBF_FUNC_next - 0]); }
+  _1_OBF_FUNC_lab22:;
+    if (i <= 0) {
+      { _1_OBF_FUNC_next = 6UL; }
+    } else {
+      { _1_OBF_FUNC_next = 26UL; }
+    }
+    { goto *(_1_OBF_FUNC_jumpTab[_1_OBF_FUNC_next - 0]); }
+  _1_OBF_FUNC_lab25:;
+    if (isPrime) {
+      { _1_OBF_FUNC_next = 12UL; }
+    } else {
+      { _1_OBF_FUNC_next = 15UL; }
+    }
+    { goto *(_1_OBF_FUNC_jumpTab[_1_OBF_FUNC_next - 0]); }
+  _1_OBF_FUNC_lab17:;
+    if (isPrime) {
+      { _1_OBF_FUNC_next = 9UL; }
+    } else {
+      { _1_OBF_FUNC_next = 25UL; }
+    }
+    { goto *(_1_OBF_FUNC_jumpTab[_1_OBF_FUNC_next - 0]); }
+  _1_OBF_FUNC_lab0:
+    j++;
+    { _1_OBF_FUNC_next = 21UL; }
+    { goto *(_1_OBF_FUNC_jumpTab[_1_OBF_FUNC_next - 0]); }
+  _1_OBF_FUNC_lab21:;
+    if (j < m) {
+      { _1_OBF_FUNC_next = 17UL; }
+    } else {
+      { _1_OBF_FUNC_next = 25UL; }
+    }
+    { goto *(_1_OBF_FUNC_jumpTab[_1_OBF_FUNC_next - 0]); }
+  _1_OBF_FUNC_lab11:;
+    return (-1);
+    { goto *(_1_OBF_FUNC_jumpTab[_1_OBF_FUNC_next - 0]); }
+  _1_OBF_FUNC_lab5:
+    k++;
+    { _1_OBF_FUNC_next = 20UL; }
+    { goto *(_1_OBF_FUNC_jumpTab[_1_OBF_FUNC_next - 0]); }
+  _1_OBF_FUNC_lab26:
+    m = i;
+    { _1_OBF_FUNC_next = 3UL; }
+    { goto *(_1_OBF_FUNC_jumpTab[_1_OBF_FUNC_next - 0]); }
+  }
+}
 int main(int argc, char **argv, char **_formal_envp) {
   int tmp;
   int tmp___0;
@@ -460,123 +578,5 @@ int main(int argc, char **argv, char **_formal_envp) {
     tmp = atoi((char const *)*(argv + 1));
     tmp___0 = OBF_FUNC(tmp);
     return (tmp___0);
-  }
-}
-int OBF_FUNC(int i) {
-  int m;
-  _Bool isPrime;
-  int j;
-  int k;
-  unsigned long _1_OBF_FUNC_next;
-  void *_1_OBF_FUNC_jumpTab[27] = {
-      &&_1_OBF_FUNC_lab0,  &&_1_OBF_FUNC_lab0,  &&_1_OBF_FUNC_lab2,
-      &&_1_OBF_FUNC_lab3,  &&_1_OBF_FUNC_lab0,  &&_1_OBF_FUNC_lab5,
-      &&_1_OBF_FUNC_lab6,  &&_1_OBF_FUNC_lab0,  &&_1_OBF_FUNC_lab0,
-      &&_1_OBF_FUNC_lab9,  &&_1_OBF_FUNC_lab0,  &&_1_OBF_FUNC_lab11,
-      &&_1_OBF_FUNC_lab12, &&_1_OBF_FUNC_lab0,  &&_1_OBF_FUNC_lab14,
-      &&_1_OBF_FUNC_lab15, &&_1_OBF_FUNC_lab16, &&_1_OBF_FUNC_lab17,
-      &&_1_OBF_FUNC_lab18, &&_1_OBF_FUNC_lab0,  &&_1_OBF_FUNC_lab20,
-      &&_1_OBF_FUNC_lab21, &&_1_OBF_FUNC_lab22, &&_1_OBF_FUNC_lab0,
-      &&_1_OBF_FUNC_lab24, &&_1_OBF_FUNC_lab25, &&_1_OBF_FUNC_lab26};
-  {
-    { _1_OBF_FUNC_next = 22UL; }
-    { goto *(_1_OBF_FUNC_jumpTab[_1_OBF_FUNC_next - 0]); }
-  _1_OBF_FUNC_lab18:;
-    if (isPrime) {
-      { _1_OBF_FUNC_next = 14UL; }
-    } else {
-      { _1_OBF_FUNC_next = 0UL; }
-    }
-    { goto *(_1_OBF_FUNC_jumpTab[_1_OBF_FUNC_next - 0]); }
-  _1_OBF_FUNC_lab25:;
-    if (isPrime) {
-      { _1_OBF_FUNC_next = 12UL; }
-    } else {
-      { _1_OBF_FUNC_next = 15UL; }
-    }
-    { goto *(_1_OBF_FUNC_jumpTab[_1_OBF_FUNC_next - 0]); }
-  _1_OBF_FUNC_lab14:;
-    if (m == j * k) {
-      { _1_OBF_FUNC_next = 16UL; }
-    } else {
-      { _1_OBF_FUNC_next = 5UL; }
-    }
-    { goto *(_1_OBF_FUNC_jumpTab[_1_OBF_FUNC_next - 0]); }
-  _1_OBF_FUNC_lab15:
-    m--;
-    { _1_OBF_FUNC_next = 3UL; }
-    { goto *(_1_OBF_FUNC_jumpTab[_1_OBF_FUNC_next - 0]); }
-  _1_OBF_FUNC_lab12:;
-    return (m);
-    { goto *(_1_OBF_FUNC_jumpTab[_1_OBF_FUNC_next - 0]); }
-  _1_OBF_FUNC_lab3:;
-    if (m > 1) {
-      { _1_OBF_FUNC_next = 2UL; }
-    } else {
-      { _1_OBF_FUNC_next = 11UL; }
-    }
-    { goto *(_1_OBF_FUNC_jumpTab[_1_OBF_FUNC_next - 0]); }
-  _1_OBF_FUNC_lab16:
-    isPrime = (_Bool)0;
-    { _1_OBF_FUNC_next = 5UL; }
-    { goto *(_1_OBF_FUNC_jumpTab[_1_OBF_FUNC_next - 0]); }
-  _1_OBF_FUNC_lab24:
-    j = 2;
-    { _1_OBF_FUNC_next = 21UL; }
-    { goto *(_1_OBF_FUNC_jumpTab[_1_OBF_FUNC_next - 0]); }
-  _1_OBF_FUNC_lab21:;
-    if (j < m) {
-      { _1_OBF_FUNC_next = 17UL; }
-    } else {
-      { _1_OBF_FUNC_next = 25UL; }
-    }
-    { goto *(_1_OBF_FUNC_jumpTab[_1_OBF_FUNC_next - 0]); }
-  _1_OBF_FUNC_lab26:
-    m = i;
-    { _1_OBF_FUNC_next = 3UL; }
-    { goto *(_1_OBF_FUNC_jumpTab[_1_OBF_FUNC_next - 0]); }
-  _1_OBF_FUNC_lab11:;
-    return (-1);
-    { goto *(_1_OBF_FUNC_jumpTab[_1_OBF_FUNC_next - 0]); }
-  _1_OBF_FUNC_lab9:
-    k = 2;
-    { _1_OBF_FUNC_next = 20UL; }
-    { goto *(_1_OBF_FUNC_jumpTab[_1_OBF_FUNC_next - 0]); }
-  _1_OBF_FUNC_lab17:;
-    if (isPrime) {
-      { _1_OBF_FUNC_next = 9UL; }
-    } else {
-      { _1_OBF_FUNC_next = 25UL; }
-    }
-    { goto *(_1_OBF_FUNC_jumpTab[_1_OBF_FUNC_next - 0]); }
-  _1_OBF_FUNC_lab6:;
-    return (-1);
-    { goto *(_1_OBF_FUNC_jumpTab[_1_OBF_FUNC_next - 0]); }
-  _1_OBF_FUNC_lab22:;
-    if (i <= 0) {
-      { _1_OBF_FUNC_next = 6UL; }
-    } else {
-      { _1_OBF_FUNC_next = 26UL; }
-    }
-    { goto *(_1_OBF_FUNC_jumpTab[_1_OBF_FUNC_next - 0]); }
-  _1_OBF_FUNC_lab5:
-    k++;
-    { _1_OBF_FUNC_next = 20UL; }
-    { goto *(_1_OBF_FUNC_jumpTab[_1_OBF_FUNC_next - 0]); }
-  _1_OBF_FUNC_lab0:
-    j++;
-    { _1_OBF_FUNC_next = 21UL; }
-    { goto *(_1_OBF_FUNC_jumpTab[_1_OBF_FUNC_next - 0]); }
-  _1_OBF_FUNC_lab2:
-    isPrime = (_Bool)1;
-    { _1_OBF_FUNC_next = 24UL; }
-    { goto *(_1_OBF_FUNC_jumpTab[_1_OBF_FUNC_next - 0]); }
-  _1_OBF_FUNC_lab20:;
-    if (k < m) {
-      { _1_OBF_FUNC_next = 18UL; }
-    } else {
-      { _1_OBF_FUNC_next = 0UL; }
-    }
-    { goto *(_1_OBF_FUNC_jumpTab[_1_OBF_FUNC_next - 0]); }
   }
 }

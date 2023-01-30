@@ -36,7 +36,11 @@ templates:
   - name: flatten-base
     procedure:
       - ["--Transform=Flatten", "--FlattenSplitBasicBlocks={split_basic_blocks}", "--Functions={func}",
-                                "--FlattenDispatch={dispatch}", "--FlattenNumberOfBlocksPerFunction={num_block_per_func}",
+                                "--FlattenDispatch={dispatch}",
+                                "--FlattenNumberOfBlocksPerFunction={num_block_per_func}",
+                                "--FlattenConditionalKinds={conditional_kinds}",
+                                "--FlattenRandomizeBlocks={randomize_blocks}",
+                                "--FlattenObfuscateNext={obfuscate_next}",
           "--Transform=CleanUp", "--CleanUpKinds={cleanup_kinds}"]
     format: true
 
@@ -48,6 +52,9 @@ variants:
           dispatch: switch
           num_block_per_func: 1
           split_basic_blocks: true
+          randomize_blocks: true
+          obfuscate_next: false
+          conditional_kinds: compute
   
   - name: flatten-goto
     use:
@@ -56,6 +63,9 @@ variants:
           dispatch: goto
           num_block_per_func: 1
           split_basic_blocks: true
+          randomize_blocks: true
+          obfuscate_next: false
+          conditional_kinds: flag
 
   - name: flatten-indirect-goto
     use:
@@ -64,6 +74,9 @@ variants:
           dispatch: indirect
           num_block_per_func: 1
           split_basic_blocks: true
+          randomize_blocks: true
+          obfuscate_next: false
+          conditional_kinds: branch
 
   - name: flatten-call
     use:
@@ -72,6 +85,9 @@ variants:
           dispatch: call
           num_block_per_func: 1
           split_basic_blocks: true
+          randomize_blocks: true
+          obfuscate_next: false
+          conditional_kinds: branch
 
   
 

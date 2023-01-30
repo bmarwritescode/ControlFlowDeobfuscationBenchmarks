@@ -6,4 +6,7 @@
     "python.formatting.provider": "black",
     "python.languageServer": "Default",
     "python.testing.pytestEnabled": true,
+    "files.associations": {
+        "stdlib.h": "c"
+    },
 }
