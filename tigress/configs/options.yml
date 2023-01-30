@@ -1,0 +1,81 @@
+global_params:
+  - "--Seed=1"
+
+options:
+  - name: flatten
+    transform: Flatten
+    params:
+      FlattenDumpBlocks: ["true", "false"]
+      FlattenSplitBasicBlocks: ["true", "false"]
+      FlattenRandomizeBlocks: ["true", "false"]
+      FlattenDispatch: ["switch", "goto", "indirect", "call", "*"]
+      FlattenNumberOfBlocksPerFunction: ["1", "2"]
+      FlattenConditionalKinds: ["branch"] # compute and flag violates our problem setting
+
+      FlattenObfuscateNext: ["true", "false"]
+      FlattenOpaqueStructs: ["list", "array", "*"]
+      FlattenImplicitFlowNext: ["false"] # need to investigate the next as well
+      FlattenImplicitFlow: ["none"] # not sure
+  
+  - name: init_entropy
+    transform: InitEntropy
+    params:
+      InitEntropyKinds: ["thread", "vars"]
+  
+  - name: update_entropy
+    transform: UpdateEntropy
+    params:
+      UpdateEntropyKinds: ["thread", "vars"]
+  
+  - name: init_opaque
+    transform: InitOpaque
+    params:
+      # can be a comma-separated list of opaque kinds
+      # another option is to use `input`- which needs invariants
+      InitOpaqueStructs: ["list", "array", "env"]
+      InitOpaqueCount: ["1", "2"]
+      InitOpaqueSize: ["30"]
+
+  - name: update_opaque
+    transform: UpdateOpaque
+    params:
+      UpdateOpaqueCount: ["1", "2"]
+      UpdateOpaqueAllowAddNodes: ["false"]
+
+  - name: add_opaque
+    transform: AddOpaque
+    params:
+      # can be a comma-separated list of opaque kinds
+      # fake is unsupported because we need to specify bogus functions
+      AddOpaqueKinds: ["call", "bug", "true", "junk", "question", "*"]
+      AddOpaqueCount: ["1", "2", "3"]
+      AddOpaqueObfuscate: ["true", "false"]
+      AddOpaqueSplitKinds: ["top", "block", "deep", "recursive"] # "level", "inside"
+      AddOpaqueSplitLevel: ["1"]
+
+      # can be a comma-separated list of opaque structs
+      AddOpaqueStructs: ["list", "array"] # "input", "env", "*"
+  
+  - name: cleanup
+    transform: CleanUp
+    params:
+      CleanUpKinds: ["annotations", "randomize", "compress", "removeUnusedFunctions"]
+
+operations:
+  - flatten-base:
+    - flatten
+  
+  - dead-code-insertion-base:
+    - add_opaque
+    - update_opaque
+  
+  - block-fission-base:
+    - flatten
+    - add_opaque
+    - update_opaque
+
+prelude:
+  - init_opaque
+  - init_entropy
+postlude:
+  - cleanup
