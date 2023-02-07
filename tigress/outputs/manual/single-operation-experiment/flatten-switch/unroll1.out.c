@@ -434,36 +434,6 @@ int OBF_FUNC(int i) {
   int sum;
   int k;
   unsigned long _1_OBF_FUNC_next;
-  unsigned long _1_OBF_FUNC_then5;
-  unsigned long _1_OBF_FUNC_else6;
-  int r7;
-  int notr8;
-  void *addr9;
-  unsigned long _1_OBF_FUNC_then10;
-  unsigned long _1_OBF_FUNC_else11;
-  int r12;
-  int notr13;
-  void *addr14;
-  unsigned long _1_OBF_FUNC_then15;
-  unsigned long _1_OBF_FUNC_else16;
-  int r17;
-  int notr18;
-  void *addr19;
-  unsigned long _1_OBF_FUNC_then20;
-  unsigned long _1_OBF_FUNC_else21;
-  int r22;
-  int notr23;
-  void *addr24;
-  unsigned long _1_OBF_FUNC_then25;
-  unsigned long _1_OBF_FUNC_else26;
-  int r27;
-  int notr28;
-  void *addr29;
-  unsigned long _1_OBF_FUNC_then30;
-  unsigned long _1_OBF_FUNC_else31;
-  int r32;
-  int notr33;
-  void *addr34;
   {
     { _1_OBF_FUNC_next = 7UL; }
     while (1) {
@@ -496,25 +466,22 @@ int OBF_FUNC(int i) {
           { _1_OBF_FUNC_next = 3UL; }
           break;
         case 20:;
-          r7 = (k <= i) != 0;
-          notr8 = !r7;
-          _1_OBF_FUNC_then5 = 18UL;
-          _1_OBF_FUNC_else6 = 15UL;
-          addr9 = (void *)(r7 * _1_OBF_FUNC_then5 + notr8 * _1_OBF_FUNC_else6);
-          { _1_OBF_FUNC_next = addr9; }
+          if (k <= i) {
+            { _1_OBF_FUNC_next = 18UL; }
+          } else {
+            { _1_OBF_FUNC_next = 15UL; }
+          }
           break;
         case 5:
           k++;
           { _1_OBF_FUNC_next = 6UL; }
           break;
         case 11:;
-          r12 = (k <= i) != 0;
-          notr13 = !r12;
-          _1_OBF_FUNC_then10 = 9UL;
-          _1_OBF_FUNC_else11 = 10UL;
-          addr14 =
-              (void *)(r12 * _1_OBF_FUNC_then10 + notr13 * _1_OBF_FUNC_else11);
-          { _1_OBF_FUNC_next = addr14; }
+          if (k <= i) {
+            { _1_OBF_FUNC_next = 9UL; }
+          } else {
+            { _1_OBF_FUNC_next = 10UL; }
+          }
           break;
         case 14:
           k++;
@@ -525,22 +492,18 @@ int OBF_FUNC(int i) {
           { _1_OBF_FUNC_next = 11UL; }
           break;
         case 6:;
-          r17 = (k <= i) != 0;
-          notr18 = !r17;
-          _1_OBF_FUNC_then15 = 0UL;
-          _1_OBF_FUNC_else16 = 16UL;
-          addr19 =
-              (void *)(r17 * _1_OBF_FUNC_then15 + notr18 * _1_OBF_FUNC_else16);
-          { _1_OBF_FUNC_next = addr19; }
+          if (k <= i) {
+            { _1_OBF_FUNC_next = 0UL; }
+          } else {
+            { _1_OBF_FUNC_next = 16UL; }
+          }
           break;
         case 15:;
-          r22 = (k <= i) != 0;
-          notr23 = !r22;
-          _1_OBF_FUNC_then20 = 1UL;
-          _1_OBF_FUNC_else21 = 6UL;
-          addr24 =
-              (void *)(r22 * _1_OBF_FUNC_then20 + notr23 * _1_OBF_FUNC_else21);
-          { _1_OBF_FUNC_next = addr24; }
+          if (k <= i) {
+            { _1_OBF_FUNC_next = 1UL; }
+          } else {
+            { _1_OBF_FUNC_next = 6UL; }
+          }
           break;
         case 21:
           sum += k;
@@ -551,13 +514,11 @@ int OBF_FUNC(int i) {
           { _1_OBF_FUNC_next = 19UL; }
           break;
         case 17:;
-          r27 = (k <= i) != 0;
-          notr28 = !r27;
-          _1_OBF_FUNC_then25 = 4UL;
-          _1_OBF_FUNC_else26 = 20UL;
-          addr29 =
-              (void *)(r27 * _1_OBF_FUNC_then25 + notr28 * _1_OBF_FUNC_else26);
-          { _1_OBF_FUNC_next = addr29; }
+          if (k <= i) {
+            { _1_OBF_FUNC_next = 4UL; }
+          } else {
+            { _1_OBF_FUNC_next = 20UL; }
+          }
           break;
         case 18:
           sum += k;
@@ -568,13 +529,11 @@ int OBF_FUNC(int i) {
           { _1_OBF_FUNC_next = 10UL; }
           break;
         case 10:;
-          r32 = (k <= i) != 0;
-          notr33 = !r32;
-          _1_OBF_FUNC_then30 = 21UL;
-          _1_OBF_FUNC_else31 = 17UL;
-          addr34 =
-              (void *)(r32 * _1_OBF_FUNC_then30 + notr33 * _1_OBF_FUNC_else31);
-          { _1_OBF_FUNC_next = addr34; }
+          if (k <= i) {
+            { _1_OBF_FUNC_next = 21UL; }
+          } else {
+            { _1_OBF_FUNC_next = 17UL; }
+          }
           break;
         case 8:
           k++;

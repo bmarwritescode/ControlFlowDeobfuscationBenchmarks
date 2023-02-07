@@ -466,11 +466,6 @@ int OBF_FUNC(int i) {
   int sum;
   int k;
   unsigned long _1_OBF_FUNC_next;
-  unsigned long _1_OBF_FUNC_then5;
-  unsigned long _1_OBF_FUNC_else6;
-  int r7;
-  int notr8;
-  void *addr9;
   {
     { _1_OBF_FUNC_next = 2UL; }
     while (1) {
@@ -484,12 +479,11 @@ int OBF_FUNC(int i) {
           { _1_OBF_FUNC_next = 4UL; }
           break;
         case 4:;
-          r7 = (k <= i) != 0;
-          notr8 = !r7;
-          _1_OBF_FUNC_then5 = 1UL;
-          _1_OBF_FUNC_else6 = 3UL;
-          addr9 = (void *)(r7 * _1_OBF_FUNC_then5 + notr8 * _1_OBF_FUNC_else6);
-          { _1_OBF_FUNC_next = addr9; }
+          if (k <= i) {
+            { _1_OBF_FUNC_next = 1UL; }
+          } else {
+            { _1_OBF_FUNC_next = 3UL; }
+          }
           break;
         case 3:;
           return (sum);
