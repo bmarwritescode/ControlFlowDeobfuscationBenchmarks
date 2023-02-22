@@ -22,7 +22,7 @@ int main(int argc, char* argv[]) {
   
   //printf("%x\n", hash);
   
-  if (hash == 0x5bfaf2f9)
+  if (hash == 809267)
 		printf("You win!\n");
   return 0;
 }

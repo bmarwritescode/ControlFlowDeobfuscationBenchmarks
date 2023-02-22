@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-bool binarysearch(int a[], int n, int m)
+bool OBF_FUNC(int a[], int n, int m)
 {
     int l, u, mid;
     l = 0, u = n - 1;
@@ -20,4 +20,9 @@ bool binarysearch(int a[], int n, int m)
             l = mid + 1;
     }
     return false;
+}
+
+int main(int argc, char* argv[]) {
+
+    return 0;
 }

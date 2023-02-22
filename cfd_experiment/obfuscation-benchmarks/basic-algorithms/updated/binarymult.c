@@ -46,3 +46,11 @@ int binaryAddition(int binary1, int binary2)
 
      return binarySum;
 }
+
+int main(int argc, char* argv[]) {
+    long int binary1, binary2;
+    binary1 = atoi(argv[1]);
+    binary2 = atoi(argv[2]);
+    printf("%ld", OBF_FUNC(binary1, binary2));
+    return 0;
+}
