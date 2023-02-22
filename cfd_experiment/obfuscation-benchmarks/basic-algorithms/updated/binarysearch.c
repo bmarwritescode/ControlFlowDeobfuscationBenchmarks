@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include<stdlib.h>
 #include <stdbool.h>
 
 bool OBF_FUNC(int a[], int n, int m)

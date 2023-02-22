@@ -1,4 +1,18 @@
 #include<stdio.h>
+#include<stdlib.h>
+
+void OBF_FUNC(int a[],int n){
+  int temp,i,j;
+  for(i=n-2;i>=0;i--){
+      for(j=0;j<=i;j++){
+           if(a[j]>a[j+1]){
+               temp=a[j];
+              a[j]=a[j+1];
+              a[j+1]=temp;
+           }
+      }
+  }
+}
 int main(int argc, char* argv[]){
 
   int temp,i,j,a[10];
@@ -15,15 +29,4 @@ int main(int argc, char* argv[]){
   return 0;
 }
 
-void OBF_FUNC(int a[],int n){
-  int temp,i,j;
-  for(i=n-2;i>=0;i--){
-      for(j=0;j<=i;j++){
-           if(a[j]>a[j+1]){
-               temp=a[j];
-              a[j]=a[j+1];
-              a[j+1]=temp;
-           }
-      }
-  }
-}
+

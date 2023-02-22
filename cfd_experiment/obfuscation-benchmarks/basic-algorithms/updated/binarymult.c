@@ -1,28 +1,5 @@
 #include <stdio.h>
-
-int binaryAddition(int, int);
-long int binaryMultiply(long int, long int);
-
-long int binaryMultiply(long int binary1, long int binary2)
-{
-     long int multiply = 0;
-     int digit, factor = 1;
-     while (binary2 != 0)
-     {
-          digit = binary2 % 10;
-
-          if (digit == 1)
-          {
-               binary1 = binary1 * factor;
-               multiply = binaryAddition(binary1, multiply);
-          }
-          else
-               binary1 = binary1 * factor;
-
-          binary2 = binary2 / 10;
-          factor = 10;
-     }
-}
+#include<stdlib.h>
 
 int binaryAddition(int binary1, int binary2)
 {
@@ -45,6 +22,27 @@ int binaryAddition(int binary1, int binary2)
           binarySum = binarySum * 10 + sum[i--];
 
      return binarySum;
+}
+
+long int OBF_FUNC(long int binary1, long int binary2)
+{
+     long int multiply = 0;
+     int digit, factor = 1;
+     while (binary2 != 0)
+     {
+          digit = binary2 % 10;
+
+          if (digit == 1)
+          {
+               binary1 = binary1 * factor;
+               multiply = binaryAddition(binary1, multiply);
+          }
+          else
+               binary1 = binary1 * factor;
+
+          binary2 = binary2 / 10;
+          factor = 10;
+     }
 }
 
 int main(int argc, char* argv[]) {

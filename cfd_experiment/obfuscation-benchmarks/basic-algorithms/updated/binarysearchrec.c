@@ -1,4 +1,25 @@
 #include<stdio.h>
+#include<stdlib.h>
+
+int OBF_FUNC(int a[],int n,int m,int l,int u){
+
+     int mid,c=0;
+
+     if(l<=u){
+          mid=(l+u)/2;
+          if(m==a[mid]){
+              c=1;
+          }
+          else if(m<a[mid]){
+              return OBF_FUNC(a,n,m,l,mid-1);
+          }
+          else
+              return OBF_FUNC(a,n,m,mid+1,u);
+     }
+     else
+       return c;
+}
+
 int main(int argc, char* argv[]){
 
     if (argc < 12) return 1;
@@ -18,22 +39,3 @@ int main(int argc, char* argv[]){
 
     return 0;
  }
-
-int OBF_FUNC(int a[],int n,int m,int l,int u){
-
-     int mid,c=0;
-
-     if(l<=u){
-          mid=(l+u)/2;
-          if(m==a[mid]){
-              c=1;
-          }
-          else if(m<a[mid]){
-              return OBF_FUNC(a,n,m,l,mid-1);
-          }
-          else
-              return binary(a,n,m,mid+1,u);
-     }
-     else
-       return c;
-}

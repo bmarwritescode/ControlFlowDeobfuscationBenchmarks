@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include<stdlib.h>
 
 int OBF_FUNC(int x) {
   int n, n1, rem, num=0;

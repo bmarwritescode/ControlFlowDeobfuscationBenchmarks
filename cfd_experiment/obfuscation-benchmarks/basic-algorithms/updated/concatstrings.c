@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<stdlib.h>
 
 void OBF_FUNC(char str1[],char str2[]){
     int i=0,j=0;

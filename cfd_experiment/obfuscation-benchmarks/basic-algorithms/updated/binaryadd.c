@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include<stdlib.h>
 
 long int OBF_FUNC(long int binary1, long int binary2)
 {
