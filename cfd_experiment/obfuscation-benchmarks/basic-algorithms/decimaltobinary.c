@@ -1,36 +1,31 @@
 #include<stdio.h>
+#include<stdlib.h>
 
-int main(int argc, char* argv[]){
+void OBF_FUNC(int n) {
+    int binaryNumber[100];
+    int i = 1;
+    int j;
 
-    if (argc < 2) return 1;
-    long int decimalNumber,remainder,quotient;
+    long int quotient;
 
-    int binaryNumber[100],i=1,j;
-
-
-//    printf("Enter any decimal number: ");
-
-//    scanf("%ld",&decimalNumber);
-    decimalNumber = (int) argv[1][0];
-
-    quotient = decimalNumber;
-
-
-    while(quotient!=0){
-
-         binaryNumber[i++]= quotient % 2;
-
-         quotient = quotient / 2;
-
+    long int decimal = n;
+    quotient = decimal;
+    while (quotient != 0) {
+        binaryNumber[i] = quotient % 2;
+        quotient = quotient / 2;
+        i++;
     }
 
+    printf("Equivalent binary value of decimal number %d: \n", decimal);
 
-    printf("Equivalent binary value of decimal number %d: \n",decimalNumber);
+    j = i -1;
+    for( ;j> 0;) {
+        printf("%d",binaryNumber[j]);
+        j--;
+    }
+}
 
-    for(j = i -1 ;j> 0;j--)
-
-         printf("%d",binaryNumber[j]);
-
+int main(int argc, char* argv[]){
 
     return 0;
 

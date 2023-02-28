@@ -1,31 +1,11 @@
 #include<stdio.h>
+#include<stdlib.h>
 
-void quicksort(int [10],int,int);
-
-int main(int argc, char* argv[]){
-  if (argc < 11) return 1;
-  int x[10],i;
-
-//  printf("Enter size of the array: ");
-//  scanf("%d",&size);
-
-//  printf("Enter %d elements: ",size);
-//  for(i=0;i<size;i++)
-//    scanf("%d",&x[i]);
-  for (i=1;i<argc;i++)
-     x[i-1] = argv[i][0];
-
-  quicksort(x,0,argc-2);
-
-  printf("Sorted elements: ");
-  for(i=0;i<argc-2;i++)
-    printf(" %d",x[i]);
-
-  return 0;
-}
-
-void quicksort(int x[10],int first,int last){
-    int pivot,j,temp,i;
+void OBF_FUNC(int x[10],int first,int last){
+    int pivot;
+    int j;
+    int temp;
+    int i;
 
      if(first<last){
          pivot=first;
@@ -47,8 +27,31 @@ void quicksort(int x[10],int first,int last){
          temp=x[pivot];
          x[pivot]=x[j];
          x[j]=temp;
-         quicksort(x,first,j-1);
-         quicksort(x,j+1,last);
+         OBF_FUNC(x,first,j-1);
+         OBF_FUNC(x,j+1,last);
 
     }
+}
+
+int main(int argc, char* argv[]){
+  if (argc < 11)
+    return 1;
+  int x[10];
+  int i;
+
+  i=1;
+  for (;i<argc;) {
+    x[i-1] = argv[i][0];
+    i++;
+  }
+
+  quicksort(x,0,argc-2);
+
+  printf("Sorted elements: ");
+  i=0;
+  for(;i<argc-2;) {
+    printf(" %d",x[i]);
+    i++;
+  }
+  return 0;
 }

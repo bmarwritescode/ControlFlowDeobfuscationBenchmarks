@@ -1,28 +1,24 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
-y
- 
-int main(int argc, char* argv[])
-{
-  if (argc < 2) return 1;
-  int n, i,  c, a = 1;
- 
-//  printf("Enter the number of rows of Floyd's triangle to print\n");
-//  scanf("%d", &n);
-  time_t t;
-  srand((unsigned) time(&t)); // seed rand()
-  n = (int) argv[1][0];//rand() % 50;
- 
-  for (i = 1; i <= n; i++)
+
+void OBF_FUNC(int n) {
+  int a = 0;
+  int i = 1;
+  for (; i <= n;)
   {
-    for (c = 1; c <= i; c++)
+    int c = 1;
+    for (; c <= i;)
     {
       printf("%d ",a);
       a++;
+      c++;
     }
     printf("\n");
+    i++;
   }
+}
  
+int main(int argc, char* argv[])
+{
   return 0;
 }

@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<stdlib.h>
 int main(int argc, char* argv[]){
   if (argc < 3) return 1;
   int n1,n2,gcd;

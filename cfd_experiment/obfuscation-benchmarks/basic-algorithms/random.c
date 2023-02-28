@@ -1,19 +1,19 @@
 #include <stdio.h>
 #include <stdlib.h>
- 
-int main(int argc, char* argv[]) {
-  if (argc < 2) return 1;
-  int x = argv[1][0];
-  int c, n;
-   
-   
 
+void OBF_FUNC(int x) {
+  int c;
+  int n;
+  
   printf("%d random numbers in [1,100]\n", x);
- 
-  for (c = 1; c <= x; c++) {
+  c = 1;
+  for (; c <= x;) {
     n = rand() % 100 + 1;
     printf("%d\n", n);
+    c++;
   }
+}
  
+int main(int argc, char* argv[]) {
   return 0;
 }

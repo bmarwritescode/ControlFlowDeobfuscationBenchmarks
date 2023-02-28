@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<stdlib.h>
 #define MAX 50
 
 void mergeSort(int arr[],int low,int mid,int high);

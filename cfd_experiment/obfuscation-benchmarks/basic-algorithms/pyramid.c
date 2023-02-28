@@ -2,23 +2,26 @@
 #include <stdlib.h>
 #include <time.h>
 
-int main(int argc, char* argv[])
+void OBF_FUNC(int rows)
 {
-    if(argc < 2) return 1;
-    int i,j,rows;
-//    printf("Enter the number of rows: ");
-//    scanf("%d",&rows);
-    time_t t;
-    srand((unsigned) time(&t)); // seed rand()
-    rows = argv[1][0];//6;//rand() % 10;
+    int i;
+    int j;
 
-    for(i=1;i<=rows;++i)
+    i = 1;
+    for(;i<=rows;)
     {
-        for(j=1;j<=i;++j)
+        j = 1;
+        for(;j<=i;)
         {
            printf("* ");
+           ++j;
         }
         printf("\n");
+        ++i;
     }
+}
+
+int main(int argc, char* argv[])
+{
     return 0;
 }

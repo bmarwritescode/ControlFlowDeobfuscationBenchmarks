@@ -3,19 +3,17 @@
 #include <stdlib.h>
 #include <time.h>
 
-int main(int argc, char* argv[])
+void OBF_FUNC(int n)
 {
-    if (argc < 2) return 1;
-    int n, i;
-//    printf("Enter an integer to find multiplication table: ");
-//    scanf("%d",&n);
-    time_t t;
-    srand((unsigned) time(&t)); // seed rand()
-    n = argv[1][0];//4;//rand() % 50;
-
-    for(i=1;i<=10;++i)
+    int i = 1;
+    for(;i<=10;)
     {
         printf("%d * %d = %d\n", n, i, n*i);
+        ++i;
     }
+}
+
+int main(int argc, char* argv[])
+{
     return 0;
 }

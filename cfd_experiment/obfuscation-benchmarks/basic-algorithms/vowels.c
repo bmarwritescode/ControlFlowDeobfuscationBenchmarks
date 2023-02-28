@@ -1,19 +1,18 @@
 #include<stdio.h>
 #include <stdlib.h>
-#include <time.h>
 
-char *rand_string(char*, size_t);
-int main(int argc, char* argv[]){
-    if (argc<2) return 1;
-    char* line=argv[1];//[50]="grsxvbqwwirgygiikmmixflwibcasyewaqaqbxpkhycsrmwcfm";
-    int i,v,c,ch,d,s,o;
-    time_t t;
+void OBF_FUNC(char line[]) {
+    int i;
+    int v;
+    int c;
+    int ch;
+    int d;
+    int s;
+    int o;
+
     o=v=c=ch=d=s=0;
-//    printf("Enter a line of string:\n");
-//    gets(line);
-    srand((unsigned) time(&t));
-    //rand_string(line, 50);
-    for(i=0;line[i]!='\0';++i)
+    i=0;
+    for(;line[i]!='\0';)
     {
         if(line[i]=='a' || line[i]=='e' || line[i]=='i' || line[i]=='o' || line[i]=='u' || line[i]=='A' || line[i]=='E' || line[i]=='I' || line[i]=='O' || line[i]=='U')
             ++v;
@@ -23,25 +22,18 @@ int main(int argc, char* argv[]){
             ++d;
         else if (line[i]==' ')
             ++s;
+        ++i;
     }
     printf("Vowels: %d",v);
     printf("\nConsonants: %d",c);
     printf("\nDigits: %d",d);
     printf("\nWhite spaces: %d",s);
+}
+
+int main(int argc, char* argv[]){
+
     return 0;
 }
 
-char *rand_string(char *str, size_t size)
-{
-    const char charset[] = "abcdefghijklmnopqrstuvwxyz1234567890";
-    if (size) {
-        --size;
-        for (size_t n = 0; n < size; n++) {
-            int key = rand() % (int) (sizeof charset - 1);
-            str[n] = charset[key];
-        }
-        str[size] = '\0';
-    }
-    return str;
-}
+
 

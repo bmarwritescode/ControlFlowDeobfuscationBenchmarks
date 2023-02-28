@@ -1,16 +1,16 @@
 #include<stdio.h>
-int main(int argc, char* argv[]){
-    if (argc < 2 ) return 1;
-    long int decimalNumber,remainder,quotient;
-    int i=1,j,temp;
+#include<stdlib.h>
+
+void OBF_FUNC(int n) {
     char hexadecimalNumber[100];
+    int i = 1;
+    int j;
+    int temp;
 
-//    printf("Enter any decimal number: ");
-//    scanf("%ld",&decimalNumber);
-    decimalNumber = (int) argv[1][0];
+    long int remainder;
+    long int quotient;
 
-    quotient = decimalNumber;
-
+    quotient = n;
     while(quotient!=0){
          temp = quotient % 16;
 
@@ -24,9 +24,16 @@ int main(int argc, char* argv[]){
       quotient = quotient / 16;
   }
 
-    printf("Equivalent hexadecimal value of decimal number %d: \n",decimalNumber);
-    for(j = i -1 ;j> 0;j--)
+    printf("Equivalent hexadecimal value of decimal number %d: \n",n);
+    j = i -1;
+    for(;j> 0;) {
       printf("%c",hexadecimalNumber[j]);
+      j--;
+    }
+        
+    return;
+}
 
+int main(int argc, char* argv[]){
     return 0;
 }

@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<stdlib.h>
 
 void predigits(char c1,char c2);
 void postdigits(char c,int n);
@@ -6,15 +7,8 @@ void postdigits(char c,int n);
 char roman_Number[1000];
 int i=0;
 
-int main(int argc, char* argv[]){
-    if(argc < 2) return 1;
-    int j;
-    long int number;
-   
-//    printf("Enter any natural number: ");
-//    scanf("%d",&number);
-    number = argv[1][0];
-   
+int OBF_FUNC(int number) {
+
     if(number <= 0){
          printf("Invalid number");
          return 0;
@@ -89,9 +83,17 @@ int main(int argc, char* argv[]){
     }
 
     printf("Roman number will be: ");
-    for(j=0;j<i;j++)
-         printf("%c",roman_Number[j]);
+    int j=0;
+    for(;j<i;) {
+        printf("%c",roman_Number[j]);
+        j++;
+    }
     printf("\n");
+    return 0;
+}
+
+int main(int argc, char* argv[]){
+
     return 0;
 
 }
@@ -102,8 +104,10 @@ void predigits(char c1,char c2){
 }
 
 void postdigits(char c,int n){
-    int j;
-    for(j=0;j<n;j++)
-         roman_Number[i++] = c;
+    int j = 0;
+    while( j < n ) {
+        roman_Number[i++] = c;
+        j++;
+    }
    
 }
