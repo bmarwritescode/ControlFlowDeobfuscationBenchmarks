@@ -31,13 +31,13 @@ int* OBF_FUNC(int a[],int n){
 }
 int main(int argc, char* argv[]){
 
-  // int temp,i,j,a[10];
+  int temp,i,j,a[10];
 
-  // for(i=1;i<argc;i++){
-  //     a[i-1] = argv[i][0];
-  // }
+  for(i=1;i<argc;i++){
+      a[i-1] = argv[i][0];
+  }
   
-  // OBF_FUNC(a,argc-1);
+  OBF_FUNC(a,argc-1);
 
   return 0;
 }

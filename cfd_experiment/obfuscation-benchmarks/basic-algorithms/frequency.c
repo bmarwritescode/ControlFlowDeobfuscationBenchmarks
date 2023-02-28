@@ -23,5 +23,6 @@ void OBF_FUNC1(char *c, char ch)
 
 int main(int argc, char *argv[])
 {
+    OBF_FUNC(argv[1], argv[2][0]);
     return 0;
 }

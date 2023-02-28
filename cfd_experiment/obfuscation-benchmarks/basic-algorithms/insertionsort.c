@@ -28,6 +28,7 @@ void OBF_FUNC(int a[],int n){
 
 
 int main(int argc, char* argv[]){
-
+  int a[10] = { 10, 9, 7, 101, 23, 44, 12, 78, 34, 23 };
+  OBF_FUNC(a,10);
   return 0;
 }

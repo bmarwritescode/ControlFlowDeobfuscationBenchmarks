@@ -20,5 +20,6 @@ void OBF_FUNC(int n) {
  
 int main(int argc, char* argv[])
 {
+      OBF_FUNC(atoi(argv[1]));
   return 0;
 }

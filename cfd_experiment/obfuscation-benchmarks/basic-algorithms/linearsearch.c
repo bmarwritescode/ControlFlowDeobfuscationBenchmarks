@@ -27,16 +27,7 @@ int main(int argc, char* argv[]){
         a[i-1] = argv[i][0];
     m = argv[argc-1][0];
 
-    for(i=0;i<=argc-2;i++){
-         if(a[i]==m){
-             c=1;
-             break;
-         }
-    }
-    if(c==0)
-         printf("The number is not in the list\n");
-    else
-         printf("The number is found\n");
+    OBF_FUNC(a,10,m);
 
     return 0;
 }

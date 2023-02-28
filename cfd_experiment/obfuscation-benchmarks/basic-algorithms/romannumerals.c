@@ -94,7 +94,7 @@ int OBF_FUNC(int number) {
 
 int main(int argc, char* argv[]){
 
-    return 0;
+    return OBF_FUNC(atoi(argv[1]));
 
 }
 

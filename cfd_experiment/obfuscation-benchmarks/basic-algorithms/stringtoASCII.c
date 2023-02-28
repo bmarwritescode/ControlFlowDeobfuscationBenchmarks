@@ -13,5 +13,6 @@ void OBF_FUNC(char str[]) {
 }
 
 int main(int argc, char* argv[]){
+    OBF_FUNC(argv[1]);
     return 0;
 }

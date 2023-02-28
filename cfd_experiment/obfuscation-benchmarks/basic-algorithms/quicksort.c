@@ -45,7 +45,7 @@ int main(int argc, char* argv[]){
     i++;
   }
 
-  quicksort(x,0,argc-2);
+  OBF_FUNC(x,0,argc-2);
 
   printf("Sorted elements: ");
   i=0;

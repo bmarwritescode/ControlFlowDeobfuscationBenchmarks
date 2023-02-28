@@ -15,5 +15,6 @@ void OBF_FUNC(char* str) {
 }
 
 int main(int argc, char* argv[]){
+   OBF_FUNC("Hello World");
    return 0;
 }

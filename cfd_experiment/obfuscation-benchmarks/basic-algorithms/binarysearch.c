@@ -28,5 +28,7 @@ bool OBF_FUNC(int a[], int n, int m)
 
 int main(int argc, char* argv[]) {
 
+    int x[10] = {1,2,3,4,5,6,7,8,9,10};
+    OBF_FUNC(x, 10, 5);
     return 0;
 }
