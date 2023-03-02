@@ -1,1 +1,0 @@
-typedef void* __builtin_va_list;
