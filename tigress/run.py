@@ -11,6 +11,7 @@ import yaml
 TIGRESS_HOME = "./tigress/3.3.2"
 TIGRESS_ENV = "x86_64:Linux:Gcc:4.6"
 TIGRESS_PARAMS = [f"--Environment={TIGRESS_ENV}"]
+CLANG_FORMAT_STYLE_FILE = os.path.abspath(os.path.dirname(__file__)) + "/style.yml"
 
 
 @dataclass(frozen=True)
@@ -149,7 +150,7 @@ def run_tigress(config: TigressConfig, source_dir: Path, output_dir: Path) -> No
 
 
 def format_c_source(src_path: str) -> None:
-    FORMAT_COMMAND = ["clang-format", "--style=Google", "-i", src_path]
+    FORMAT_COMMAND = ["clang-format", f"-style=file:{CLANG_FORMAT_STYLE_FILE}", "-i", src_path]
     PREPROCESS_COMMAND = [
         "gcc",
         "-E",
