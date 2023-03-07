@@ -5,7 +5,7 @@ void OBF_FUNC(char str[]) {
     int i=0;
 
     printf("ASCII values of each characters of given string: ");
-    while(str[i]) {
+    while(str[i] != '\0' && str[i] != 0xff) {
         printf("%d ",str[i++]);
     }
 
@@ -13,6 +13,5 @@ void OBF_FUNC(char str[]) {
 }
 
 int main(int argc, char* argv[]){
-    OBF_FUNC(argv[1]);
     return 0;
 }

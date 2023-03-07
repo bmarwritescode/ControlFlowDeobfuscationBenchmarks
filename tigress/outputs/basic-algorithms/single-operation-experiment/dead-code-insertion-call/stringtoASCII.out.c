@@ -588,86 +588,6 @@ struct __anonstruct_div_t_773697287 {
   int quot;
   int rem;
 };
-void OBF_FUNC(char *str) {
-  int i;
-  int tmp;
-  struct _2_OBF_FUNC_1_opaque_NodeStruct *p4;
-  int i5;
-  struct _2_OBF_FUNC_1_opaque_NodeStruct *p6;
-  int _2_OBF_FUNC__BEGIN_1;
-  int _2_OBF_FUNC__END_1;
-  int _2_OBF_FUNC__BARRIER_2;
-  struct _2_OBF_FUNC_2_opaque_NodeStruct *p10;
-  int i11;
-  struct _2_OBF_FUNC_2_opaque_NodeStruct *p12;
-  int _2_OBF_FUNC__BEGIN_3;
-  int _2_OBF_FUNC__END_3;
-  int _2_OBF_FUNC__BARRIER_4;
-  {
-    {
-      _2_OBF_FUNC__BEGIN_3 = 1;
-      p10 = (struct _2_OBF_FUNC_2_opaque_NodeStruct *)malloc(sizeof(struct _2_OBF_FUNC_2_opaque_NodeStruct));
-      p10->next = p10;
-      p10->prev = p10;
-      _2_OBF_FUNC_2_opaque_list_1 = p10;
-      i11 = 0;
-      while (i11 < 3) {
-        p12 = (struct _2_OBF_FUNC_2_opaque_NodeStruct *)malloc(sizeof(struct _2_OBF_FUNC_2_opaque_NodeStruct));
-        p12->data = i11 * (((_1_entropy & ~2) << 1UL) - (_1_entropy ^ 2));
-        p12->next = _2_OBF_FUNC_2_opaque_list_1->next;
-        p12->prev = _2_OBF_FUNC_2_opaque_list_1;
-        (_2_OBF_FUNC_2_opaque_list_1->next)->prev = p12;
-        _2_OBF_FUNC_2_opaque_list_1->next = p12;
-        i11++;
-      }
-      _2_OBF_FUNC_2_opaque_ptr_1 = _2_OBF_FUNC_2_opaque_list_1->next;
-      _2_OBF_FUNC_2_opaque_ptr_2 = _2_OBF_FUNC_2_opaque_ptr_1;
-      _2_OBF_FUNC_2_opaque_ptr_2 = _2_OBF_FUNC_2_opaque_ptr_2->next;
-      _2_OBF_FUNC__END_3 = 1;
-    }
-    _2_OBF_FUNC__BARRIER_4 = 1;
-    {
-      _2_OBF_FUNC__BEGIN_1 = 1;
-      p4 = (struct _2_OBF_FUNC_1_opaque_NodeStruct *)malloc(sizeof(struct _2_OBF_FUNC_1_opaque_NodeStruct));
-      p4->next = p4;
-      p4->prev = p4;
-      _2_OBF_FUNC_1_opaque_list_1 = p4;
-      i5 = 0;
-      while (i5 < 3) {
-        p6 = (struct _2_OBF_FUNC_1_opaque_NodeStruct *)malloc(sizeof(struct _2_OBF_FUNC_1_opaque_NodeStruct));
-        p6->data = i5 * (((_1_entropy & ~1) << 1UL) - (_1_entropy ^ 1));
-        p6->next = _2_OBF_FUNC_1_opaque_list_1->next;
-        p6->prev = _2_OBF_FUNC_1_opaque_list_1;
-        (_2_OBF_FUNC_1_opaque_list_1->next)->prev = p6;
-        _2_OBF_FUNC_1_opaque_list_1->next = p6;
-        i5++;
-      }
-      _2_OBF_FUNC_1_opaque_ptr_1 = _2_OBF_FUNC_1_opaque_list_1->next;
-      _2_OBF_FUNC_1_opaque_ptr_2 = _2_OBF_FUNC_1_opaque_ptr_1;
-      _2_OBF_FUNC__END_1 = 1;
-    }
-    _2_OBF_FUNC__BARRIER_2 = 1;
-    i = 0;
-    printf((char const *)"ASCII values of each characters of given string: ");
-    while (*(str + i)) {
-      tmp = i;
-      i++;
-      printf((char const *)"%d ", (int)*(str + tmp));
-    }
-    if (((((_1_alwaysZero & ((_1_entropy | 4) - (_1_entropy & 4))) * (_1_alwaysZero | ((_1_entropy | 4) - (_1_entropy & 4))) + (_1_alwaysZero & ~((_1_entropy | 4) - (_1_entropy & 4))) * (~_1_alwaysZero & ((_1_entropy | 4) - (_1_entropy & 4)))) ^ ~1) + ((((_1_alwaysZero & ((_1_entropy | 4) - (_1_entropy & 4))) * (_1_alwaysZero | ((_1_entropy | 4) - (_1_entropy & 4))) + (_1_alwaysZero & ~((_1_entropy | 4) - (_1_entropy & 4))) * (~_1_alwaysZero & ((_1_entropy | 4) - (_1_entropy & 4)))) | 1) << 1UL)) + 1UL) {
-    } else {
-      {
-        if (_2_OBF_FUNC_2_opaque_ptr_1 != _2_OBF_FUNC_2_opaque_ptr_2) {
-        } else {
-          tmp = main(i, 0, 0);
-        }
-        i = main(i11, 0, 0);
-      }
-    }
-    printf((char const *)"\n");
-    return;
-  }
-}
 int main(int argc, char **argv, char **_formal_envp) {
   int _BARRIER_0;
   {
@@ -693,7 +613,6 @@ int main(int argc, char **argv, char **_formal_envp) {
     _global_argv = argv;
     _global_envp = _formal_envp;
     _BARRIER_0 = 1;
-    OBF_FUNC(*(argv + 1));
     return (0);
   }
 }
