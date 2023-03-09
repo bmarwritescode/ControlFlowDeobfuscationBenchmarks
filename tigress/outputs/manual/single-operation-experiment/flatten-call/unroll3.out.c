@@ -165,8 +165,7 @@ void OBF_FUNC_FLATTEN_SPLIT_44(struct _1_OBF_FUNC_argStruct *_1_OBF_FUNC_arg);
 typedef long __ssize_t;
 typedef __ssize_t ssize_t;
 extern long(labs)(long __x);
-extern int(nrand48_r)(unsigned short *__xsubi, struct drand48_data *__buffer,
-                      long *__result);
+extern int(nrand48_r)(unsigned short *__xsubi, struct drand48_data *__buffer, long *__result);
 typedef unsigned long __rlim64_t;
 void OBF_FUNC_FLATTEN_SPLIT_200(struct _1_OBF_FUNC_argStruct *_1_OBF_FUNC_arg);
 struct __pthread_internal_list {
@@ -192,8 +191,7 @@ union __anonunion_pthread_mutex_t_335460617 {
 typedef long __blkcnt64_t;
 extern int(setstate_r)(char *__statebuf, struct random_data *__buf);
 void OBF_FUNC_FLATTEN_SPLIT_93(struct _1_OBF_FUNC_argStruct *_1_OBF_FUNC_arg);
-extern char *(qfcvt)(long double __value, int __ndigit, int *__decpt,
-                     int *__sign);
+extern char *(qfcvt)(long double __value, int __ndigit, int *__decpt, int *__sign);
 void OBF_FUNC_FLATTEN_SPLIT_26(struct _1_OBF_FUNC_argStruct *_1_OBF_FUNC_arg);
 extern char *(qgcvt)(long double __value, int __ndigit, char *__buf);
 extern int system(char const *__command);
@@ -211,9 +209,7 @@ struct timeval {
   __suseconds_t tv_usec;
 };
 extern char *(fcvt)(double __value, int __ndigit, int *__decpt, int *__sign);
-extern int pselect(int __nfds, fd_set *__readfds, fd_set *__writefds,
-                   fd_set *__exceptfds, struct timespec const *__timeout,
-                   __sigset_t const *__sigmask);
+extern int pselect(int __nfds, fd_set *__readfds, fd_set *__writefds, fd_set *__exceptfds, struct timespec const *__timeout, __sigset_t const *__sigmask);
 typedef long __int64_t;
 typedef __int64_t int64_t;
 void OBF_FUNC_FLATTEN_SPLIT_65(struct _1_OBF_FUNC_argStruct *_1_OBF_FUNC_arg);
@@ -267,8 +263,7 @@ union __anonunion____missing_field_name_1030103299 {
   unsigned long long __g1_start;
   struct __anonstruct___g1_start32_1030103300 __g1_start32;
 };
-extern int(qfcvt_r)(long double __value, int __ndigit, int *__decpt,
-                    int *__sign, char *__buf, size_t __len);
+extern int(qfcvt_r)(long double __value, int __ndigit, int *__decpt, int *__sign, char *__buf, size_t __len);
 void OBF_FUNC_FLATTEN_SPLIT_5(struct _1_OBF_FUNC_argStruct *_1_OBF_FUNC_arg);
 void OBF_FUNC_FLATTEN_SPLIT_198(struct _1_OBF_FUNC_argStruct *_1_OBF_FUNC_arg);
 void OBF_FUNC_FLATTEN_SPLIT_37(struct _1_OBF_FUNC_argStruct *_1_OBF_FUNC_arg);
@@ -311,8 +306,7 @@ struct __pthread_internal_slist {
   struct __pthread_internal_slist *__next;
 };
 void OBF_FUNC_FLATTEN_SPLIT_55(struct _1_OBF_FUNC_argStruct *_1_OBF_FUNC_arg);
-extern unsigned long long(strtoull)(char const *__nptr, char **__endptr,
-                                    int __base);
+extern unsigned long long(strtoull)(char const *__nptr, char **__endptr, int __base);
 void OBF_FUNC_FLATTEN_SPLIT_215(struct _1_OBF_FUNC_argStruct *_1_OBF_FUNC_arg);
 typedef union __anonunion_pthread_cond_t_951761805 pthread_cond_t;
 struct __pthread_cond_s {
@@ -370,8 +364,7 @@ void OBF_FUNC_FLATTEN_SPLIT_168(struct _1_OBF_FUNC_argStruct *_1_OBF_FUNC_arg);
 extern long(nrand48)(unsigned short *__xsubi);
 void OBF_FUNC_FLATTEN_SPLIT_216(struct _1_OBF_FUNC_argStruct *_1_OBF_FUNC_arg);
 void OBF_FUNC_FLATTEN_SPLIT_131(struct _1_OBF_FUNC_argStruct *_1_OBF_FUNC_arg);
-extern char *(initstate)(unsigned int __seed, char *__statebuf,
-                         size_t __statelen);
+extern char *(initstate)(unsigned int __seed, char *__statebuf, size_t __statelen);
 int OBF_FUNC(int i);
 typedef struct __pthread_internal_slist __pthread_slist_t;
 void OBF_FUNC_FLATTEN_SPLIT_99(struct _1_OBF_FUNC_argStruct *_1_OBF_FUNC_arg);
@@ -396,8 +389,7 @@ union __anonunion_pthread_mutexattr_t_488594144 {
   int __align;
 };
 void OBF_FUNC_FLATTEN_SPLIT_130(struct _1_OBF_FUNC_argStruct *_1_OBF_FUNC_arg);
-extern int(initstate_r)(unsigned int __seed, char *__statebuf,
-                        size_t __statelen, struct random_data *__buf);
+extern int(initstate_r)(unsigned int __seed, char *__statebuf, size_t __statelen, struct random_data *__buf);
 void OBF_FUNC_FLATTEN_SPLIT_209(struct _1_OBF_FUNC_argStruct *_1_OBF_FUNC_arg);
 void OBF_FUNC_FLATTEN_SPLIT_182(struct _1_OBF_FUNC_argStruct *_1_OBF_FUNC_arg);
 void OBF_FUNC_FLATTEN_SPLIT_72(struct _1_OBF_FUNC_argStruct *_1_OBF_FUNC_arg);
@@ -419,8 +411,7 @@ static __uint64_t __uint64_identity(__uint64_t __x);
 void OBF_FUNC_FLATTEN_SPLIT_179(struct _1_OBF_FUNC_argStruct *_1_OBF_FUNC_arg);
 void OBF_FUNC_FLATTEN_SPLIT_14(struct _1_OBF_FUNC_argStruct *_1_OBF_FUNC_arg);
 extern int(mkstemp)(char *__template);
-extern char *(qecvt)(long double __value, int __ndigit, int *__decpt,
-                     int *__sign);
+extern char *(qecvt)(long double __value, int __ndigit, int *__decpt, int *__sign);
 void OBF_FUNC_FLATTEN_SPLIT_3(struct _1_OBF_FUNC_argStruct *_1_OBF_FUNC_arg);
 void OBF_FUNC_FLATTEN_SPLIT_197(struct _1_OBF_FUNC_argStruct *_1_OBF_FUNC_arg);
 extern long(a64l)(char const *__s);
@@ -462,8 +453,7 @@ struct __anonstruct___sigset_t_973126068 {
   unsigned long __val[1024UL / (8UL * sizeof(unsigned long))];
 };
 void OBF_FUNC_FLATTEN_SPLIT_82(struct _1_OBF_FUNC_argStruct *_1_OBF_FUNC_arg);
-extern int(qecvt_r)(long double __value, int __ndigit, int *__decpt,
-                    int *__sign, char *__buf, size_t __len);
+extern int(qecvt_r)(long double __value, int __ndigit, int *__decpt, int *__sign, char *__buf, size_t __len);
 void OBF_FUNC_FLATTEN_SPLIT_81(struct _1_OBF_FUNC_argStruct *_1_OBF_FUNC_arg);
 void OBF_FUNC_FLATTEN_SPLIT_119(struct _1_OBF_FUNC_argStruct *_1_OBF_FUNC_arg);
 void OBF_FUNC_FLATTEN_SPLIT_10(struct _1_OBF_FUNC_argStruct *_1_OBF_FUNC_arg);
@@ -492,8 +482,7 @@ typedef union __anonunion_pthread_barrier_t_145707746 pthread_barrier_t;
 void OBF_FUNC_FLATTEN_SPLIT_164(struct _1_OBF_FUNC_argStruct *_1_OBF_FUNC_arg);
 extern long(jrand48)(unsigned short *__xsubi);
 void OBF_FUNC_FLATTEN_SPLIT_20(struct _1_OBF_FUNC_argStruct *_1_OBF_FUNC_arg);
-extern int(fcvt_r)(double __value, int __ndigit, int *__decpt, int *__sign,
-                   char *__buf, size_t __len);
+extern int(fcvt_r)(double __value, int __ndigit, int *__decpt, int *__sign, char *__buf, size_t __len);
 typedef __loff_t loff_t;
 void OBF_FUNC_FLATTEN_SPLIT_106(struct _1_OBF_FUNC_argStruct *_1_OBF_FUNC_arg);
 void OBF_FUNC_FLATTEN_SPLIT_67(struct _1_OBF_FUNC_argStruct *_1_OBF_FUNC_arg);
@@ -514,8 +503,7 @@ union pthread_attr_t {
 void OBF_FUNC_FLATTEN_SPLIT_103(struct _1_OBF_FUNC_argStruct *_1_OBF_FUNC_arg);
 void OBF_FUNC_FLATTEN_SPLIT_189(struct _1_OBF_FUNC_argStruct *_1_OBF_FUNC_arg);
 typedef unsigned int __useconds_t;
-extern void(qsort)(void *__base, size_t __nmemb, size_t __size,
-                   int (*__compar)(void const *, void const *));
+extern void(qsort)(void *__base, size_t __nmemb, size_t __size, int (*__compar)(void const *, void const *));
 void OBF_FUNC_FLATTEN_SPLIT_17(struct _1_OBF_FUNC_argStruct *_1_OBF_FUNC_arg);
 typedef __uint32_t u_int32_t;
 void OBF_FUNC_FLATTEN_SPLIT_163(struct _1_OBF_FUNC_argStruct *_1_OBF_FUNC_arg);
@@ -561,9 +549,7 @@ void OBF_FUNC_FLATTEN_SPLIT_97(struct _1_OBF_FUNC_argStruct *_1_OBF_FUNC_arg);
 extern long double(strtold)(char const *__nptr, char **__endptr);
 void OBF_FUNC_FLATTEN_SPLIT_172(struct _1_OBF_FUNC_argStruct *_1_OBF_FUNC_arg);
 extern div_t(div)(int __numer, int __denom);
-extern void *(bsearch)(void const *__key, void const *__base, size_t __nmemb,
-                       size_t __size,
-                       int (*__compar)(void const *, void const *));
+extern void *(bsearch)(void const *__key, void const *__base, size_t __nmemb, size_t __size, int (*__compar)(void const *, void const *));
 void OBF_FUNC_FLATTEN_SPLIT_96(struct _1_OBF_FUNC_argStruct *_1_OBF_FUNC_arg);
 void OBF_FUNC_FLATTEN_SPLIT_147(struct _1_OBF_FUNC_argStruct *_1_OBF_FUNC_arg);
 void OBF_FUNC_FLATTEN_SPLIT_114(struct _1_OBF_FUNC_argStruct *_1_OBF_FUNC_arg);
@@ -612,22 +598,18 @@ void OBF_FUNC_FLATTEN_SPLIT_115(struct _1_OBF_FUNC_argStruct *_1_OBF_FUNC_arg);
 void OBF_FUNC_FLATTEN_SPLIT_201(struct _1_OBF_FUNC_argStruct *_1_OBF_FUNC_arg);
 extern void *(valloc)(size_t __size);
 extern int(random_r)(struct random_data *__buf, int32_t *__result);
-extern int select(int __nfds, fd_set *__readfds, fd_set *__writefds,
-                  fd_set *__exceptfds, struct timeval *__timeout);
+extern int select(int __nfds, fd_set *__readfds, fd_set *__writefds, fd_set *__exceptfds, struct timeval *__timeout);
 typedef unsigned long __syscall_ulong_t;
-extern int(ecvt_r)(double __value, int __ndigit, int *__decpt, int *__sign,
-                   char *__buf, size_t __len);
+extern int(ecvt_r)(double __value, int __ndigit, int *__decpt, int *__sign, char *__buf, size_t __len);
 typedef __int8_t __int_least8_t;
 extern void(free)(void *__ptr);
 void OBF_FUNC_FLATTEN_SPLIT_203(struct _1_OBF_FUNC_argStruct *_1_OBF_FUNC_arg);
 extern void *(alloca)(size_t __size);
 extern int(lrand48_r)(struct drand48_data *__buffer, long *__result);
 int main(int argc, char **argv, char **_formal_envp);
-extern int(jrand48_r)(unsigned short *__xsubi, struct drand48_data *__buffer,
-                      long *__result);
+extern int(jrand48_r)(unsigned short *__xsubi, struct drand48_data *__buffer, long *__result);
 extern int(wctomb)(char *__s, wchar_t __wchar);
-extern int(erand48_r)(unsigned short *__xsubi, struct drand48_data *__buffer,
-                      double *__result);
+extern int(erand48_r)(unsigned short *__xsubi, struct drand48_data *__buffer, double *__result);
 typedef long __intptr_t;
 void OBF_FUNC_FLATTEN_SPLIT_171(struct _1_OBF_FUNC_argStruct *_1_OBF_FUNC_arg);
 void OBF_FUNC_FLATTEN_SPLIT_170(struct _1_OBF_FUNC_argStruct *_1_OBF_FUNC_arg);
@@ -662,8 +644,7 @@ void OBF_FUNC_FLATTEN_SPLIT_7(struct _1_OBF_FUNC_argStruct *_1_OBF_FUNC_arg);
 extern int(on_exit)(void (*__func)(int __status, void *__arg), void *__arg);
 extern double(drand48)(void);
 void OBF_FUNC_FLATTEN_SPLIT_136(struct _1_OBF_FUNC_argStruct *_1_OBF_FUNC_arg);
-extern unsigned long long(strtouq)(char const *__nptr, char **__endptr,
-                                   int __base);
+extern unsigned long long(strtouq)(char const *__nptr, char **__endptr, int __base);
 void OBF_FUNC_FLATTEN_SPLIT_213(struct _1_OBF_FUNC_argStruct *_1_OBF_FUNC_arg);
 void OBF_FUNC_FLATTEN_SPLIT_117(struct _1_OBF_FUNC_argStruct *_1_OBF_FUNC_arg);
 struct __anonstruct_div_t_773697287 {
@@ -1870,136 +1851,7 @@ void OBF_FUNC_FLATTEN_SPLIT_122(struct _1_OBF_FUNC_argStruct *_1_OBF_FUNC_arg) {
 }
 int OBF_FUNC(int i) {
   struct _1_OBF_FUNC_argStruct _1_OBF_FUNC_arg;
-  void (*_1_OBF_FUNC_jumpTab[256])(struct _1_OBF_FUNC_argStruct *
-                                   _1_OBF_FUNC_arg) = {
-      &OBF_FUNC_FLATTEN_SPLIT_75,  &OBF_FUNC_FLATTEN_SPLIT_35,
-      &OBF_FUNC_FLATTEN_SPLIT_13,  &OBF_FUNC_FLATTEN_SPLIT_55,
-      &OBF_FUNC_FLATTEN_SPLIT_175, &OBF_FUNC_FLATTEN_SPLIT_11,
-      &OBF_FUNC_FLATTEN_SPLIT_89,  &OBF_FUNC_FLATTEN_SPLIT_160,
-      &OBF_FUNC_FLATTEN_SPLIT_211, &OBF_FUNC_FLATTEN_SPLIT_137,
-      &OBF_FUNC_FLATTEN_SPLIT_147, &OBF_FUNC_FLATTEN_SPLIT_18,
-      &OBF_FUNC_FLATTEN_SPLIT_91,  &OBF_FUNC_FLATTEN_SPLIT_26,
-      &OBF_FUNC_FLATTEN_SPLIT_136, &OBF_FUNC_FLATTEN_SPLIT_75,
-      &OBF_FUNC_FLATTEN_SPLIT_167, &OBF_FUNC_FLATTEN_SPLIT_106,
-      &OBF_FUNC_FLATTEN_SPLIT_46,  &OBF_FUNC_FLATTEN_SPLIT_184,
-      &OBF_FUNC_FLATTEN_SPLIT_100, &OBF_FUNC_FLATTEN_SPLIT_75,
-      &OBF_FUNC_FLATTEN_SPLIT_75,  &OBF_FUNC_FLATTEN_SPLIT_75,
-      &OBF_FUNC_FLATTEN_SPLIT_49,  &OBF_FUNC_FLATTEN_SPLIT_38,
-      &OBF_FUNC_FLATTEN_SPLIT_24,  &OBF_FUNC_FLATTEN_SPLIT_75,
-      &OBF_FUNC_FLATTEN_SPLIT_75,  &OBF_FUNC_FLATTEN_SPLIT_6,
-      &OBF_FUNC_FLATTEN_SPLIT_165, &OBF_FUNC_FLATTEN_SPLIT_109,
-      &OBF_FUNC_FLATTEN_SPLIT_58,  &OBF_FUNC_FLATTEN_SPLIT_23,
-      &OBF_FUNC_FLATTEN_SPLIT_51,  &OBF_FUNC_FLATTEN_SPLIT_129,
-      &OBF_FUNC_FLATTEN_SPLIT_75,  &OBF_FUNC_FLATTEN_SPLIT_216,
-      &OBF_FUNC_FLATTEN_SPLIT_118, &OBF_FUNC_FLATTEN_SPLIT_5,
-      &OBF_FUNC_FLATTEN_SPLIT_69,  &OBF_FUNC_FLATTEN_SPLIT_30,
-      &OBF_FUNC_FLATTEN_SPLIT_110, &OBF_FUNC_FLATTEN_SPLIT_166,
-      &OBF_FUNC_FLATTEN_SPLIT_75,  &OBF_FUNC_FLATTEN_SPLIT_54,
-      &OBF_FUNC_FLATTEN_SPLIT_16,  &OBF_FUNC_FLATTEN_SPLIT_75,
-      &OBF_FUNC_FLATTEN_SPLIT_169, &OBF_FUNC_FLATTEN_SPLIT_2,
-      &OBF_FUNC_FLATTEN_SPLIT_87,  &OBF_FUNC_FLATTEN_SPLIT_144,
-      &OBF_FUNC_FLATTEN_SPLIT_119, &OBF_FUNC_FLATTEN_SPLIT_15,
-      &OBF_FUNC_FLATTEN_SPLIT_141, &OBF_FUNC_FLATTEN_SPLIT_148,
-      &OBF_FUNC_FLATTEN_SPLIT_178, &OBF_FUNC_FLATTEN_SPLIT_92,
-      &OBF_FUNC_FLATTEN_SPLIT_12,  &OBF_FUNC_FLATTEN_SPLIT_10,
-      &OBF_FUNC_FLATTEN_SPLIT_149, &OBF_FUNC_FLATTEN_SPLIT_76,
-      &OBF_FUNC_FLATTEN_SPLIT_67,  &OBF_FUNC_FLATTEN_SPLIT_45,
-      &OBF_FUNC_FLATTEN_SPLIT_75,  &OBF_FUNC_FLATTEN_SPLIT_75,
-      &OBF_FUNC_FLATTEN_SPLIT_3,   &OBF_FUNC_FLATTEN_SPLIT_75,
-      &OBF_FUNC_FLATTEN_SPLIT_75,  &OBF_FUNC_FLATTEN_SPLIT_75,
-      &OBF_FUNC_FLATTEN_SPLIT_150, &OBF_FUNC_FLATTEN_SPLIT_14,
-      &OBF_FUNC_FLATTEN_SPLIT_124, &OBF_FUNC_FLATTEN_SPLIT_8,
-      &OBF_FUNC_FLATTEN_SPLIT_156, &OBF_FUNC_FLATTEN_SPLIT_173,
-      &OBF_FUNC_FLATTEN_SPLIT_4,   &OBF_FUNC_FLATTEN_SPLIT_21,
-      &OBF_FUNC_FLATTEN_SPLIT_0,   &OBF_FUNC_FLATTEN_SPLIT_134,
-      &OBF_FUNC_FLATTEN_SPLIT_116, &OBF_FUNC_FLATTEN_SPLIT_157,
-      &OBF_FUNC_FLATTEN_SPLIT_117, &OBF_FUNC_FLATTEN_SPLIT_131,
-      &OBF_FUNC_FLATTEN_SPLIT_139, &OBF_FUNC_FLATTEN_SPLIT_41,
-      &OBF_FUNC_FLATTEN_SPLIT_192, &OBF_FUNC_FLATTEN_SPLIT_189,
-      &OBF_FUNC_FLATTEN_SPLIT_61,  &OBF_FUNC_FLATTEN_SPLIT_102,
-      &OBF_FUNC_FLATTEN_SPLIT_217, &OBF_FUNC_FLATTEN_SPLIT_115,
-      &OBF_FUNC_FLATTEN_SPLIT_75,  &OBF_FUNC_FLATTEN_SPLIT_77,
-      &OBF_FUNC_FLATTEN_SPLIT_152, &OBF_FUNC_FLATTEN_SPLIT_195,
-      &OBF_FUNC_FLATTEN_SPLIT_65,  &OBF_FUNC_FLATTEN_SPLIT_20,
-      &OBF_FUNC_FLATTEN_SPLIT_56,  &OBF_FUNC_FLATTEN_SPLIT_39,
-      &OBF_FUNC_FLATTEN_SPLIT_75,  &OBF_FUNC_FLATTEN_SPLIT_201,
-      &OBF_FUNC_FLATTEN_SPLIT_7,   &OBF_FUNC_FLATTEN_SPLIT_75,
-      &OBF_FUNC_FLATTEN_SPLIT_85,  &OBF_FUNC_FLATTEN_SPLIT_162,
-      &OBF_FUNC_FLATTEN_SPLIT_108, &OBF_FUNC_FLATTEN_SPLIT_146,
-      &OBF_FUNC_FLATTEN_SPLIT_107, &OBF_FUNC_FLATTEN_SPLIT_25,
-      &OBF_FUNC_FLATTEN_SPLIT_181, &OBF_FUNC_FLATTEN_SPLIT_196,
-      &OBF_FUNC_FLATTEN_SPLIT_75,  &OBF_FUNC_FLATTEN_SPLIT_161,
-      &OBF_FUNC_FLATTEN_SPLIT_120, &OBF_FUNC_FLATTEN_SPLIT_53,
-      &OBF_FUNC_FLATTEN_SPLIT_179, &OBF_FUNC_FLATTEN_SPLIT_112,
-      &OBF_FUNC_FLATTEN_SPLIT_135, &OBF_FUNC_FLATTEN_SPLIT_75,
-      &OBF_FUNC_FLATTEN_SPLIT_29,  &OBF_FUNC_FLATTEN_SPLIT_47,
-      &OBF_FUNC_FLATTEN_SPLIT_111, &OBF_FUNC_FLATTEN_SPLIT_163,
-      &OBF_FUNC_FLATTEN_SPLIT_1,   &OBF_FUNC_FLATTEN_SPLIT_70,
-      &OBF_FUNC_FLATTEN_SPLIT_101, &OBF_FUNC_FLATTEN_SPLIT_164,
-      &OBF_FUNC_FLATTEN_SPLIT_133, &OBF_FUNC_FLATTEN_SPLIT_83,
-      &OBF_FUNC_FLATTEN_SPLIT_125, &OBF_FUNC_FLATTEN_SPLIT_27,
-      &OBF_FUNC_FLATTEN_SPLIT_205, &OBF_FUNC_FLATTEN_SPLIT_88,
-      &OBF_FUNC_FLATTEN_SPLIT_214, &OBF_FUNC_FLATTEN_SPLIT_202,
-      &OBF_FUNC_FLATTEN_SPLIT_68,  &OBF_FUNC_FLATTEN_SPLIT_43,
-      &OBF_FUNC_FLATTEN_SPLIT_48,  &OBF_FUNC_FLATTEN_SPLIT_212,
-      &OBF_FUNC_FLATTEN_SPLIT_71,  &OBF_FUNC_FLATTEN_SPLIT_138,
-      &OBF_FUNC_FLATTEN_SPLIT_72,  &OBF_FUNC_FLATTEN_SPLIT_34,
-      &OBF_FUNC_FLATTEN_SPLIT_145, &OBF_FUNC_FLATTEN_SPLIT_75,
-      &OBF_FUNC_FLATTEN_SPLIT_140, &OBF_FUNC_FLATTEN_SPLIT_75,
-      &OBF_FUNC_FLATTEN_SPLIT_204, &OBF_FUNC_FLATTEN_SPLIT_19,
-      &OBF_FUNC_FLATTEN_SPLIT_191, &OBF_FUNC_FLATTEN_SPLIT_22,
-      &OBF_FUNC_FLATTEN_SPLIT_182, &OBF_FUNC_FLATTEN_SPLIT_199,
-      &OBF_FUNC_FLATTEN_SPLIT_208, &OBF_FUNC_FLATTEN_SPLIT_37,
-      &OBF_FUNC_FLATTEN_SPLIT_57,  &OBF_FUNC_FLATTEN_SPLIT_75,
-      &OBF_FUNC_FLATTEN_SPLIT_99,  &OBF_FUNC_FLATTEN_SPLIT_52,
-      &OBF_FUNC_FLATTEN_SPLIT_9,   &OBF_FUNC_FLATTEN_SPLIT_130,
-      &OBF_FUNC_FLATTEN_SPLIT_73,  &OBF_FUNC_FLATTEN_SPLIT_50,
-      &OBF_FUNC_FLATTEN_SPLIT_176, &OBF_FUNC_FLATTEN_SPLIT_75,
-      &OBF_FUNC_FLATTEN_SPLIT_197, &OBF_FUNC_FLATTEN_SPLIT_203,
-      &OBF_FUNC_FLATTEN_SPLIT_75,  &OBF_FUNC_FLATTEN_SPLIT_74,
-      &OBF_FUNC_FLATTEN_SPLIT_200, &OBF_FUNC_FLATTEN_SPLIT_75,
-      &OBF_FUNC_FLATTEN_SPLIT_95,  &OBF_FUNC_FLATTEN_SPLIT_171,
-      &OBF_FUNC_FLATTEN_SPLIT_126, &OBF_FUNC_FLATTEN_SPLIT_177,
-      &OBF_FUNC_FLATTEN_SPLIT_170, &OBF_FUNC_FLATTEN_SPLIT_75,
-      &OBF_FUNC_FLATTEN_SPLIT_86,  &OBF_FUNC_FLATTEN_SPLIT_153,
-      &OBF_FUNC_FLATTEN_SPLIT_193, &OBF_FUNC_FLATTEN_SPLIT_168,
-      &OBF_FUNC_FLATTEN_SPLIT_180, &OBF_FUNC_FLATTEN_SPLIT_114,
-      &OBF_FUNC_FLATTEN_SPLIT_128, &OBF_FUNC_FLATTEN_SPLIT_215,
-      &OBF_FUNC_FLATTEN_SPLIT_185, &OBF_FUNC_FLATTEN_SPLIT_90,
-      &OBF_FUNC_FLATTEN_SPLIT_98,  &OBF_FUNC_FLATTEN_SPLIT_63,
-      &OBF_FUNC_FLATTEN_SPLIT_96,  &OBF_FUNC_FLATTEN_SPLIT_123,
-      &OBF_FUNC_FLATTEN_SPLIT_80,  &OBF_FUNC_FLATTEN_SPLIT_155,
-      &OBF_FUNC_FLATTEN_SPLIT_66,  &OBF_FUNC_FLATTEN_SPLIT_172,
-      &OBF_FUNC_FLATTEN_SPLIT_75,  &OBF_FUNC_FLATTEN_SPLIT_40,
-      &OBF_FUNC_FLATTEN_SPLIT_143, &OBF_FUNC_FLATTEN_SPLIT_210,
-      &OBF_FUNC_FLATTEN_SPLIT_142, &OBF_FUNC_FLATTEN_SPLIT_207,
-      &OBF_FUNC_FLATTEN_SPLIT_31,  &OBF_FUNC_FLATTEN_SPLIT_60,
-      &OBF_FUNC_FLATTEN_SPLIT_75,  &OBF_FUNC_FLATTEN_SPLIT_206,
-      &OBF_FUNC_FLATTEN_SPLIT_75,  &OBF_FUNC_FLATTEN_SPLIT_75,
-      &OBF_FUNC_FLATTEN_SPLIT_198, &OBF_FUNC_FLATTEN_SPLIT_122,
-      &OBF_FUNC_FLATTEN_SPLIT_174, &OBF_FUNC_FLATTEN_SPLIT_75,
-      &OBF_FUNC_FLATTEN_SPLIT_42,  &OBF_FUNC_FLATTEN_SPLIT_121,
-      &OBF_FUNC_FLATTEN_SPLIT_213, &OBF_FUNC_FLATTEN_SPLIT_104,
-      &OBF_FUNC_FLATTEN_SPLIT_84,  &OBF_FUNC_FLATTEN_SPLIT_187,
-      &OBF_FUNC_FLATTEN_SPLIT_190, &OBF_FUNC_FLATTEN_SPLIT_194,
-      &OBF_FUNC_FLATTEN_SPLIT_75,  &OBF_FUNC_FLATTEN_SPLIT_62,
-      &OBF_FUNC_FLATTEN_SPLIT_64,  &OBF_FUNC_FLATTEN_SPLIT_17,
-      &OBF_FUNC_FLATTEN_SPLIT_59,  &OBF_FUNC_FLATTEN_SPLIT_209,
-      &OBF_FUNC_FLATTEN_SPLIT_93,  &OBF_FUNC_FLATTEN_SPLIT_159,
-      &OBF_FUNC_FLATTEN_SPLIT_97,  &OBF_FUNC_FLATTEN_SPLIT_33,
-      &OBF_FUNC_FLATTEN_SPLIT_151, &OBF_FUNC_FLATTEN_SPLIT_127,
-      &OBF_FUNC_FLATTEN_SPLIT_75,  &OBF_FUNC_FLATTEN_SPLIT_183,
-      &OBF_FUNC_FLATTEN_SPLIT_103, &OBF_FUNC_FLATTEN_SPLIT_113,
-      &OBF_FUNC_FLATTEN_SPLIT_36,  &OBF_FUNC_FLATTEN_SPLIT_154,
-      &OBF_FUNC_FLATTEN_SPLIT_75,  &OBF_FUNC_FLATTEN_SPLIT_79,
-      &OBF_FUNC_FLATTEN_SPLIT_78,  &OBF_FUNC_FLATTEN_SPLIT_75,
-      &OBF_FUNC_FLATTEN_SPLIT_186, &OBF_FUNC_FLATTEN_SPLIT_44,
-      &OBF_FUNC_FLATTEN_SPLIT_105, &OBF_FUNC_FLATTEN_SPLIT_75,
-      &OBF_FUNC_FLATTEN_SPLIT_188, &OBF_FUNC_FLATTEN_SPLIT_82,
-      &OBF_FUNC_FLATTEN_SPLIT_132, &OBF_FUNC_FLATTEN_SPLIT_32,
-      &OBF_FUNC_FLATTEN_SPLIT_158, &OBF_FUNC_FLATTEN_SPLIT_94,
-      &OBF_FUNC_FLATTEN_SPLIT_75,  &OBF_FUNC_FLATTEN_SPLIT_28,
-      &OBF_FUNC_FLATTEN_SPLIT_75,  &OBF_FUNC_FLATTEN_SPLIT_81};
+  void (*_1_OBF_FUNC_jumpTab[256])(struct _1_OBF_FUNC_argStruct * _1_OBF_FUNC_arg) = {&OBF_FUNC_FLATTEN_SPLIT_75, &OBF_FUNC_FLATTEN_SPLIT_35, &OBF_FUNC_FLATTEN_SPLIT_13, &OBF_FUNC_FLATTEN_SPLIT_55, &OBF_FUNC_FLATTEN_SPLIT_175, &OBF_FUNC_FLATTEN_SPLIT_11, &OBF_FUNC_FLATTEN_SPLIT_89, &OBF_FUNC_FLATTEN_SPLIT_160, &OBF_FUNC_FLATTEN_SPLIT_211, &OBF_FUNC_FLATTEN_SPLIT_137, &OBF_FUNC_FLATTEN_SPLIT_147, &OBF_FUNC_FLATTEN_SPLIT_18, &OBF_FUNC_FLATTEN_SPLIT_91, &OBF_FUNC_FLATTEN_SPLIT_26, &OBF_FUNC_FLATTEN_SPLIT_136, &OBF_FUNC_FLATTEN_SPLIT_75, &OBF_FUNC_FLATTEN_SPLIT_167, &OBF_FUNC_FLATTEN_SPLIT_106, &OBF_FUNC_FLATTEN_SPLIT_46, &OBF_FUNC_FLATTEN_SPLIT_184, &OBF_FUNC_FLATTEN_SPLIT_100, &OBF_FUNC_FLATTEN_SPLIT_75, &OBF_FUNC_FLATTEN_SPLIT_75, &OBF_FUNC_FLATTEN_SPLIT_75, &OBF_FUNC_FLATTEN_SPLIT_49, &OBF_FUNC_FLATTEN_SPLIT_38, &OBF_FUNC_FLATTEN_SPLIT_24, &OBF_FUNC_FLATTEN_SPLIT_75, &OBF_FUNC_FLATTEN_SPLIT_75, &OBF_FUNC_FLATTEN_SPLIT_6, &OBF_FUNC_FLATTEN_SPLIT_165, &OBF_FUNC_FLATTEN_SPLIT_109, &OBF_FUNC_FLATTEN_SPLIT_58, &OBF_FUNC_FLATTEN_SPLIT_23, &OBF_FUNC_FLATTEN_SPLIT_51, &OBF_FUNC_FLATTEN_SPLIT_129, &OBF_FUNC_FLATTEN_SPLIT_75, &OBF_FUNC_FLATTEN_SPLIT_216, &OBF_FUNC_FLATTEN_SPLIT_118, &OBF_FUNC_FLATTEN_SPLIT_5, &OBF_FUNC_FLATTEN_SPLIT_69, &OBF_FUNC_FLATTEN_SPLIT_30, &OBF_FUNC_FLATTEN_SPLIT_110, &OBF_FUNC_FLATTEN_SPLIT_166, &OBF_FUNC_FLATTEN_SPLIT_75, &OBF_FUNC_FLATTEN_SPLIT_54, &OBF_FUNC_FLATTEN_SPLIT_16, &OBF_FUNC_FLATTEN_SPLIT_75, &OBF_FUNC_FLATTEN_SPLIT_169, &OBF_FUNC_FLATTEN_SPLIT_2, &OBF_FUNC_FLATTEN_SPLIT_87, &OBF_FUNC_FLATTEN_SPLIT_144, &OBF_FUNC_FLATTEN_SPLIT_119, &OBF_FUNC_FLATTEN_SPLIT_15, &OBF_FUNC_FLATTEN_SPLIT_141, &OBF_FUNC_FLATTEN_SPLIT_148, &OBF_FUNC_FLATTEN_SPLIT_178, &OBF_FUNC_FLATTEN_SPLIT_92, &OBF_FUNC_FLATTEN_SPLIT_12, &OBF_FUNC_FLATTEN_SPLIT_10, &OBF_FUNC_FLATTEN_SPLIT_149, &OBF_FUNC_FLATTEN_SPLIT_76, &OBF_FUNC_FLATTEN_SPLIT_67, &OBF_FUNC_FLATTEN_SPLIT_45, &OBF_FUNC_FLATTEN_SPLIT_75, &OBF_FUNC_FLATTEN_SPLIT_75, &OBF_FUNC_FLATTEN_SPLIT_3, &OBF_FUNC_FLATTEN_SPLIT_75, &OBF_FUNC_FLATTEN_SPLIT_75, &OBF_FUNC_FLATTEN_SPLIT_75, &OBF_FUNC_FLATTEN_SPLIT_150, &OBF_FUNC_FLATTEN_SPLIT_14, &OBF_FUNC_FLATTEN_SPLIT_124, &OBF_FUNC_FLATTEN_SPLIT_8, &OBF_FUNC_FLATTEN_SPLIT_156, &OBF_FUNC_FLATTEN_SPLIT_173, &OBF_FUNC_FLATTEN_SPLIT_4, &OBF_FUNC_FLATTEN_SPLIT_21, &OBF_FUNC_FLATTEN_SPLIT_0, &OBF_FUNC_FLATTEN_SPLIT_134, &OBF_FUNC_FLATTEN_SPLIT_116, &OBF_FUNC_FLATTEN_SPLIT_157, &OBF_FUNC_FLATTEN_SPLIT_117, &OBF_FUNC_FLATTEN_SPLIT_131, &OBF_FUNC_FLATTEN_SPLIT_139, &OBF_FUNC_FLATTEN_SPLIT_41, &OBF_FUNC_FLATTEN_SPLIT_192, &OBF_FUNC_FLATTEN_SPLIT_189, &OBF_FUNC_FLATTEN_SPLIT_61, &OBF_FUNC_FLATTEN_SPLIT_102, &OBF_FUNC_FLATTEN_SPLIT_217, &OBF_FUNC_FLATTEN_SPLIT_115, &OBF_FUNC_FLATTEN_SPLIT_75, &OBF_FUNC_FLATTEN_SPLIT_77, &OBF_FUNC_FLATTEN_SPLIT_152, &OBF_FUNC_FLATTEN_SPLIT_195, &OBF_FUNC_FLATTEN_SPLIT_65, &OBF_FUNC_FLATTEN_SPLIT_20, &OBF_FUNC_FLATTEN_SPLIT_56, &OBF_FUNC_FLATTEN_SPLIT_39, &OBF_FUNC_FLATTEN_SPLIT_75, &OBF_FUNC_FLATTEN_SPLIT_201, &OBF_FUNC_FLATTEN_SPLIT_7, &OBF_FUNC_FLATTEN_SPLIT_75, &OBF_FUNC_FLATTEN_SPLIT_85, &OBF_FUNC_FLATTEN_SPLIT_162, &OBF_FUNC_FLATTEN_SPLIT_108, &OBF_FUNC_FLATTEN_SPLIT_146, &OBF_FUNC_FLATTEN_SPLIT_107, &OBF_FUNC_FLATTEN_SPLIT_25, &OBF_FUNC_FLATTEN_SPLIT_181, &OBF_FUNC_FLATTEN_SPLIT_196, &OBF_FUNC_FLATTEN_SPLIT_75, &OBF_FUNC_FLATTEN_SPLIT_161, &OBF_FUNC_FLATTEN_SPLIT_120, &OBF_FUNC_FLATTEN_SPLIT_53, &OBF_FUNC_FLATTEN_SPLIT_179, &OBF_FUNC_FLATTEN_SPLIT_112, &OBF_FUNC_FLATTEN_SPLIT_135, &OBF_FUNC_FLATTEN_SPLIT_75, &OBF_FUNC_FLATTEN_SPLIT_29, &OBF_FUNC_FLATTEN_SPLIT_47, &OBF_FUNC_FLATTEN_SPLIT_111, &OBF_FUNC_FLATTEN_SPLIT_163, &OBF_FUNC_FLATTEN_SPLIT_1, &OBF_FUNC_FLATTEN_SPLIT_70, &OBF_FUNC_FLATTEN_SPLIT_101, &OBF_FUNC_FLATTEN_SPLIT_164, &OBF_FUNC_FLATTEN_SPLIT_133, &OBF_FUNC_FLATTEN_SPLIT_83, &OBF_FUNC_FLATTEN_SPLIT_125, &OBF_FUNC_FLATTEN_SPLIT_27, &OBF_FUNC_FLATTEN_SPLIT_205, &OBF_FUNC_FLATTEN_SPLIT_88, &OBF_FUNC_FLATTEN_SPLIT_214, &OBF_FUNC_FLATTEN_SPLIT_202, &OBF_FUNC_FLATTEN_SPLIT_68, &OBF_FUNC_FLATTEN_SPLIT_43, &OBF_FUNC_FLATTEN_SPLIT_48, &OBF_FUNC_FLATTEN_SPLIT_212, &OBF_FUNC_FLATTEN_SPLIT_71, &OBF_FUNC_FLATTEN_SPLIT_138, &OBF_FUNC_FLATTEN_SPLIT_72, &OBF_FUNC_FLATTEN_SPLIT_34, &OBF_FUNC_FLATTEN_SPLIT_145, &OBF_FUNC_FLATTEN_SPLIT_75, &OBF_FUNC_FLATTEN_SPLIT_140, &OBF_FUNC_FLATTEN_SPLIT_75, &OBF_FUNC_FLATTEN_SPLIT_204, &OBF_FUNC_FLATTEN_SPLIT_19, &OBF_FUNC_FLATTEN_SPLIT_191, &OBF_FUNC_FLATTEN_SPLIT_22, &OBF_FUNC_FLATTEN_SPLIT_182, &OBF_FUNC_FLATTEN_SPLIT_199, &OBF_FUNC_FLATTEN_SPLIT_208, &OBF_FUNC_FLATTEN_SPLIT_37, &OBF_FUNC_FLATTEN_SPLIT_57, &OBF_FUNC_FLATTEN_SPLIT_75, &OBF_FUNC_FLATTEN_SPLIT_99, &OBF_FUNC_FLATTEN_SPLIT_52, &OBF_FUNC_FLATTEN_SPLIT_9, &OBF_FUNC_FLATTEN_SPLIT_130, &OBF_FUNC_FLATTEN_SPLIT_73, &OBF_FUNC_FLATTEN_SPLIT_50, &OBF_FUNC_FLATTEN_SPLIT_176, &OBF_FUNC_FLATTEN_SPLIT_75, &OBF_FUNC_FLATTEN_SPLIT_197, &OBF_FUNC_FLATTEN_SPLIT_203, &OBF_FUNC_FLATTEN_SPLIT_75, &OBF_FUNC_FLATTEN_SPLIT_74, &OBF_FUNC_FLATTEN_SPLIT_200, &OBF_FUNC_FLATTEN_SPLIT_75, &OBF_FUNC_FLATTEN_SPLIT_95, &OBF_FUNC_FLATTEN_SPLIT_171, &OBF_FUNC_FLATTEN_SPLIT_126, &OBF_FUNC_FLATTEN_SPLIT_177, &OBF_FUNC_FLATTEN_SPLIT_170, &OBF_FUNC_FLATTEN_SPLIT_75, &OBF_FUNC_FLATTEN_SPLIT_86, &OBF_FUNC_FLATTEN_SPLIT_153, &OBF_FUNC_FLATTEN_SPLIT_193, &OBF_FUNC_FLATTEN_SPLIT_168, &OBF_FUNC_FLATTEN_SPLIT_180, &OBF_FUNC_FLATTEN_SPLIT_114, &OBF_FUNC_FLATTEN_SPLIT_128, &OBF_FUNC_FLATTEN_SPLIT_215, &OBF_FUNC_FLATTEN_SPLIT_185, &OBF_FUNC_FLATTEN_SPLIT_90, &OBF_FUNC_FLATTEN_SPLIT_98, &OBF_FUNC_FLATTEN_SPLIT_63, &OBF_FUNC_FLATTEN_SPLIT_96, &OBF_FUNC_FLATTEN_SPLIT_123, &OBF_FUNC_FLATTEN_SPLIT_80, &OBF_FUNC_FLATTEN_SPLIT_155, &OBF_FUNC_FLATTEN_SPLIT_66, &OBF_FUNC_FLATTEN_SPLIT_172, &OBF_FUNC_FLATTEN_SPLIT_75, &OBF_FUNC_FLATTEN_SPLIT_40, &OBF_FUNC_FLATTEN_SPLIT_143, &OBF_FUNC_FLATTEN_SPLIT_210, &OBF_FUNC_FLATTEN_SPLIT_142, &OBF_FUNC_FLATTEN_SPLIT_207, &OBF_FUNC_FLATTEN_SPLIT_31, &OBF_FUNC_FLATTEN_SPLIT_60, &OBF_FUNC_FLATTEN_SPLIT_75, &OBF_FUNC_FLATTEN_SPLIT_206, &OBF_FUNC_FLATTEN_SPLIT_75, &OBF_FUNC_FLATTEN_SPLIT_75, &OBF_FUNC_FLATTEN_SPLIT_198, &OBF_FUNC_FLATTEN_SPLIT_122, &OBF_FUNC_FLATTEN_SPLIT_174, &OBF_FUNC_FLATTEN_SPLIT_75, &OBF_FUNC_FLATTEN_SPLIT_42, &OBF_FUNC_FLATTEN_SPLIT_121, &OBF_FUNC_FLATTEN_SPLIT_213, &OBF_FUNC_FLATTEN_SPLIT_104, &OBF_FUNC_FLATTEN_SPLIT_84, &OBF_FUNC_FLATTEN_SPLIT_187, &OBF_FUNC_FLATTEN_SPLIT_190, &OBF_FUNC_FLATTEN_SPLIT_194, &OBF_FUNC_FLATTEN_SPLIT_75, &OBF_FUNC_FLATTEN_SPLIT_62, &OBF_FUNC_FLATTEN_SPLIT_64, &OBF_FUNC_FLATTEN_SPLIT_17, &OBF_FUNC_FLATTEN_SPLIT_59, &OBF_FUNC_FLATTEN_SPLIT_209, &OBF_FUNC_FLATTEN_SPLIT_93, &OBF_FUNC_FLATTEN_SPLIT_159, &OBF_FUNC_FLATTEN_SPLIT_97, &OBF_FUNC_FLATTEN_SPLIT_33, &OBF_FUNC_FLATTEN_SPLIT_151, &OBF_FUNC_FLATTEN_SPLIT_127, &OBF_FUNC_FLATTEN_SPLIT_75, &OBF_FUNC_FLATTEN_SPLIT_183, &OBF_FUNC_FLATTEN_SPLIT_103, &OBF_FUNC_FLATTEN_SPLIT_113, &OBF_FUNC_FLATTEN_SPLIT_36, &OBF_FUNC_FLATTEN_SPLIT_154, &OBF_FUNC_FLATTEN_SPLIT_75, &OBF_FUNC_FLATTEN_SPLIT_79, &OBF_FUNC_FLATTEN_SPLIT_78, &OBF_FUNC_FLATTEN_SPLIT_75, &OBF_FUNC_FLATTEN_SPLIT_186, &OBF_FUNC_FLATTEN_SPLIT_44, &OBF_FUNC_FLATTEN_SPLIT_105, &OBF_FUNC_FLATTEN_SPLIT_75, &OBF_FUNC_FLATTEN_SPLIT_188, &OBF_FUNC_FLATTEN_SPLIT_82, &OBF_FUNC_FLATTEN_SPLIT_132, &OBF_FUNC_FLATTEN_SPLIT_32, &OBF_FUNC_FLATTEN_SPLIT_158, &OBF_FUNC_FLATTEN_SPLIT_94, &OBF_FUNC_FLATTEN_SPLIT_75, &OBF_FUNC_FLATTEN_SPLIT_28, &OBF_FUNC_FLATTEN_SPLIT_75, &OBF_FUNC_FLATTEN_SPLIT_81};
   {
     { _1_OBF_FUNC_arg._1_OBF_FUNC_next = 240UL; }
     _1_OBF_FUNC_arg.i = &i;
@@ -2007,8 +1859,7 @@ int OBF_FUNC(int i) {
       if (_1_OBF_FUNC_arg._1_OBF_FUNC_next > 255) {
         return (_1_OBF_FUNC_arg._1_OBF_FUNC_return);
       } else {
-        (*(_1_OBF_FUNC_jumpTab[_1_OBF_FUNC_arg._1_OBF_FUNC_next - 0]))(
-            &_1_OBF_FUNC_arg);
+        (*(_1_OBF_FUNC_jumpTab[_1_OBF_FUNC_arg._1_OBF_FUNC_next - 0]))(&_1_OBF_FUNC_arg);
       }
     }
   }

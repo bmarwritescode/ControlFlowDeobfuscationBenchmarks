@@ -61,8 +61,7 @@ static __uint64_t __uint64_identity(__uint64_t __x);
 extern int(mkstemp)(char *__template);
 typedef unsigned long __nlink_t;
 typedef __nlink_t nlink_t;
-extern char *(qecvt)(long double __value, int __ndigit, int *__decpt,
-                     int *__sign);
+extern char *(qecvt)(long double __value, int __ndigit, int *__decpt, int *__sign);
 typedef unsigned long size_t;
 extern size_t(__ctype_get_mb_cur_max)(void);
 extern long(a64l)(char const *__s);
@@ -86,15 +85,13 @@ struct _2_OBF_FUNC_2_opaque_NodeStruct {
   int data;
   struct _2_OBF_FUNC_2_opaque_NodeStruct *next;
 };
-struct _2_OBF_FUNC_2_opaque_NodeStruct *_2_OBF_FUNC_2_opaque_list_2 =
-    (struct _2_OBF_FUNC_2_opaque_NodeStruct *)0;
+struct _2_OBF_FUNC_2_opaque_NodeStruct *_2_OBF_FUNC_2_opaque_list_2 = (struct _2_OBF_FUNC_2_opaque_NodeStruct *)0;
 struct _2_OBF_FUNC_1_opaque_NodeStruct {
   struct _2_OBF_FUNC_1_opaque_NodeStruct *next;
   int data;
   struct _2_OBF_FUNC_1_opaque_NodeStruct *prev;
 };
-struct _2_OBF_FUNC_1_opaque_NodeStruct *_2_OBF_FUNC_1_opaque_list_1 =
-    (struct _2_OBF_FUNC_1_opaque_NodeStruct *)0;
+struct _2_OBF_FUNC_1_opaque_NodeStruct *_2_OBF_FUNC_1_opaque_list_1 = (struct _2_OBF_FUNC_1_opaque_NodeStruct *)0;
 typedef int __clockid_t;
 typedef unsigned int __gid_t;
 typedef int __sig_atomic_t;
@@ -138,17 +135,14 @@ struct __anonstruct___sigset_t_973126068 {
 };
 extern long long(atoll)(char const *__nptr);
 typedef int register_t;
-extern int(qecvt_r)(long double __value, int __ndigit, int *__decpt,
-                    int *__sign, char *__buf, size_t __len);
+extern int(qecvt_r)(long double __value, int __ndigit, int *__decpt, int *__sign, char *__buf, size_t __len);
 extern char *(realpath)(char const *__name, char *__resolved);
 typedef struct __anonstruct_ldiv_t_790849867 ldiv_t;
 extern char *(l64a)(long __n);
-struct _2_OBF_FUNC_2_opaque_NodeStruct *_2_OBF_FUNC_2_opaque_ptr_1 =
-    (struct _2_OBF_FUNC_2_opaque_NodeStruct *)0;
+struct _2_OBF_FUNC_2_opaque_NodeStruct *_2_OBF_FUNC_2_opaque_ptr_1 = (struct _2_OBF_FUNC_2_opaque_NodeStruct *)0;
 typedef int __int32_t;
 typedef __off64_t __loff_t;
-struct _2_OBF_FUNC_1_opaque_NodeStruct *_2_OBF_FUNC_1_opaque_list_2 =
-    (struct _2_OBF_FUNC_1_opaque_NodeStruct *)0;
+struct _2_OBF_FUNC_1_opaque_NodeStruct *_2_OBF_FUNC_1_opaque_list_2 = (struct _2_OBF_FUNC_1_opaque_NodeStruct *)0;
 struct drand48_data {
   unsigned short __x[3];
   unsigned short __old_x[3];
@@ -185,8 +179,7 @@ typedef union __anonunion_pthread_barrier_t_145707746 pthread_barrier_t;
 typedef int (*__compar_fn_t)(void const *, void const *);
 extern void(exit)(int __status);
 extern long(jrand48)(unsigned short *__xsubi);
-extern int(fcvt_r)(double __value, int __ndigit, int *__decpt, int *__sign,
-                   char *__buf, size_t __len);
+extern int(fcvt_r)(double __value, int __ndigit, int *__decpt, int *__sign, char *__buf, size_t __len);
 typedef __int32_t int32_t;
 typedef __int16_t __int_least16_t;
 typedef __loff_t loff_t;
@@ -196,8 +189,7 @@ typedef struct __anonstruct___sigset_t_973126068 __sigset_t;
 typedef long __ssize_t;
 typedef __ssize_t ssize_t;
 extern long(labs)(long __x);
-extern int(nrand48_r)(unsigned short *__xsubi, struct drand48_data *__buffer,
-                      long *__result);
+extern int(nrand48_r)(unsigned short *__xsubi, struct drand48_data *__buffer, long *__result);
 extern void(srand)(unsigned int __seed);
 typedef unsigned long __rlim64_t;
 typedef __int32_t __int_least32_t;
@@ -225,12 +217,10 @@ typedef long __blkcnt64_t;
 extern int(setstate_r)(char *__statebuf, struct random_data *__buf);
 extern int(atexit)(void (*__func)(void));
 typedef __u_quad_t u_quad_t;
-extern char *(qfcvt)(long double __value, int __ndigit, int *__decpt,
-                     int *__sign);
+extern char *(qfcvt)(long double __value, int __ndigit, int *__decpt, int *__sign);
 extern char *(qgcvt)(long double __value, int __ndigit, char *__buf);
 extern int system(char const *__command);
-typedef struct _2_OBF_FUNC_2_opaque_NodeStruct
-    *_2_OBF_FUNC_2_opaque_StructureType;
+typedef struct _2_OBF_FUNC_2_opaque_NodeStruct *_2_OBF_FUNC_2_opaque_StructureType;
 union pthread_attr_t {
   char __size[56];
   long __align;
@@ -243,11 +233,8 @@ struct timeval {
 };
 typedef unsigned int __useconds_t;
 extern char *(fcvt)(double __value, int __ndigit, int *__decpt, int *__sign);
-extern void(qsort)(void *__base, size_t __nmemb, size_t __size,
-                   int (*__compar)(void const *, void const *));
-extern int pselect(int __nfds, fd_set *__readfds, fd_set *__writefds,
-                   fd_set *__exceptfds, struct timespec const *__timeout,
-                   __sigset_t const *__sigmask);
+extern void(qsort)(void *__base, size_t __nmemb, size_t __size, int (*__compar)(void const *, void const *));
+extern int pselect(int __nfds, fd_set *__readfds, fd_set *__writefds, fd_set *__exceptfds, struct timespec const *__timeout, __sigset_t const *__sigmask);
 typedef long __int64_t;
 typedef __int64_t int64_t;
 typedef __uint32_t u_int32_t;
@@ -257,8 +244,7 @@ extern char *(mkdtemp)(char *__template);
 typedef unsigned long __fsblkcnt64_t;
 typedef int pthread_once_t;
 extern double(atof)(char const *__nptr);
-typedef struct _2_OBF_FUNC_1_opaque_NodeStruct
-    *_2_OBF_FUNC_1_opaque_StructureType;
+typedef struct _2_OBF_FUNC_1_opaque_NodeStruct *_2_OBF_FUNC_1_opaque_StructureType;
 typedef __u_char u_char;
 typedef __sigset_t sigset_t;
 extern long long(strtoll)(char const *__nptr, char **__endptr, int __base);
@@ -306,14 +292,12 @@ struct random_data {
   int32_t *end_ptr;
 };
 typedef unsigned long __rlim_t;
-struct _2_OBF_FUNC_1_opaque_NodeStruct *_2_OBF_FUNC_1_opaque_ptr_2 =
-    (struct _2_OBF_FUNC_1_opaque_NodeStruct *)0;
+struct _2_OBF_FUNC_1_opaque_NodeStruct *_2_OBF_FUNC_1_opaque_ptr_2 = (struct _2_OBF_FUNC_1_opaque_NodeStruct *)0;
 typedef unsigned long __uintmax_t;
 extern void *(reallocarray)(void *__ptr, size_t __nmemb, size_t __size);
 extern int(getsubopt)(char **__optionp, char *const *__tokens, char **__valuep);
 extern unsigned short *(seed48)(unsigned short *__seed16v);
-extern int(qfcvt_r)(long double __value, int __ndigit, int *__decpt,
-                    int *__sign, char *__buf, size_t __len);
+extern int(qfcvt_r)(long double __value, int __ndigit, int *__decpt, int *__sign, char *__buf, size_t __len);
 typedef union __anonunion_pthread_mutex_t_335460617 pthread_mutex_t;
 typedef long __clock_t;
 struct __pthread_rwlock_arch_t {
@@ -338,25 +322,20 @@ union __anonunion_pthread_rwlock_t_656928968 {
   char __size[56];
   long __align;
 };
-struct _2_OBF_FUNC_2_opaque_NodeStruct *_2_OBF_FUNC_2_opaque_list_1 =
-    (struct _2_OBF_FUNC_2_opaque_NodeStruct *)0;
+struct _2_OBF_FUNC_2_opaque_NodeStruct *_2_OBF_FUNC_2_opaque_list_1 = (struct _2_OBF_FUNC_2_opaque_NodeStruct *)0;
 extern long double(strtold)(char const *__nptr, char **__endptr);
 typedef int __pid_t;
-struct _2_OBF_FUNC_1_opaque_NodeStruct *_2_OBF_FUNC_1_opaque_ptr_1 =
-    (struct _2_OBF_FUNC_1_opaque_NodeStruct *)0;
+struct _2_OBF_FUNC_1_opaque_NodeStruct *_2_OBF_FUNC_1_opaque_ptr_1 = (struct _2_OBF_FUNC_1_opaque_NodeStruct *)0;
 typedef struct __anonstruct_div_t_773697287 div_t;
 extern div_t(div)(int __numer, int __denom);
-extern void *(bsearch)(void const *__key, void const *__base, size_t __nmemb,
-                       size_t __size,
-                       int (*__compar)(void const *, void const *));
+extern void *(bsearch)(void const *__key, void const *__base, size_t __nmemb, size_t __size, int (*__compar)(void const *, void const *));
 extern long long(llabs)(long long __x);
 typedef unsigned int __uid_t;
 typedef __uid_t uid_t;
 struct __pthread_internal_slist {
   struct __pthread_internal_slist *__next;
 };
-extern unsigned long long(strtoull)(char const *__nptr, char **__endptr,
-                                    int __base);
+extern unsigned long long(strtoull)(char const *__nptr, char **__endptr, int __base);
 typedef __uint64_t __uint_least64_t;
 typedef union __anonunion_pthread_cond_t_951761805 pthread_cond_t;
 extern char *(gcvt)(double __value, int __ndigit, char *__buf);
@@ -401,12 +380,10 @@ char **_global_envp;
 extern long(lrand48)(void);
 extern void *(valloc)(size_t __size);
 extern int(random_r)(struct random_data *__buf, int32_t *__result);
-extern int select(int __nfds, fd_set *__readfds, fd_set *__writefds,
-                  fd_set *__exceptfds, struct timeval *__timeout);
+extern int select(int __nfds, fd_set *__readfds, fd_set *__writefds, fd_set *__exceptfds, struct timeval *__timeout);
 typedef unsigned long __syscall_ulong_t;
 enum __anonenum_idtype_t_558242672 { P_ALL = 0, P_PID = 1, P_PGID = 2 };
-extern int(ecvt_r)(double __value, int __ndigit, int *__decpt, int *__sign,
-                   char *__buf, size_t __len);
+extern int(ecvt_r)(double __value, int __ndigit, int *__decpt, int *__sign, char *__buf, size_t __len);
 extern unsigned long(strtoul)(char const *__nptr, char **__endptr, int __base);
 typedef __int8_t __int_least8_t;
 typedef __clock_t clock_t;
@@ -415,15 +392,12 @@ extern void(free)(void *__ptr);
 int main(int argc, char **argv, char **_formal_envp);
 extern int(lrand48_r)(struct drand48_data *__buffer, long *__result);
 extern char *(mktemp)(char *__template);
-extern int(jrand48_r)(unsigned short *__xsubi, struct drand48_data *__buffer,
-                      long *__result);
+extern int(jrand48_r)(unsigned short *__xsubi, struct drand48_data *__buffer, long *__result);
 extern long(nrand48)(unsigned short *__xsubi);
 extern int(wctomb)(char *__s, wchar_t __wchar);
-extern int(erand48_r)(unsigned short *__xsubi, struct drand48_data *__buffer,
-                      double *__result);
+extern int(erand48_r)(unsigned short *__xsubi, struct drand48_data *__buffer, double *__result);
 typedef long __intptr_t;
-extern char *(initstate)(unsigned int __seed, char *__statebuf,
-                         size_t __statelen);
+extern char *(initstate)(unsigned int __seed, char *__statebuf, size_t __statelen);
 int OBF_FUNC(int i);
 typedef __pid_t pid_t;
 typedef struct __pthread_internal_slist __pthread_slist_t;
@@ -453,12 +427,9 @@ union __anonunion_pthread_mutexattr_t_488594144 {
   int __align;
 };
 typedef unsigned short ushort;
-struct _2_OBF_FUNC_2_opaque_NodeStruct *_2_OBF_FUNC_2_opaque_ptr_2 =
-    (struct _2_OBF_FUNC_2_opaque_NodeStruct *)0;
-extern unsigned long long(strtouq)(char const *__nptr, char **__endptr,
-                                   int __base);
-extern int(initstate_r)(unsigned int __seed, char *__statebuf,
-                        size_t __statelen, struct random_data *__buf);
+struct _2_OBF_FUNC_2_opaque_NodeStruct *_2_OBF_FUNC_2_opaque_ptr_2 = (struct _2_OBF_FUNC_2_opaque_NodeStruct *)0;
+extern unsigned long long(strtouq)(char const *__nptr, char **__endptr, int __base);
+extern int(initstate_r)(unsigned int __seed, char *__statebuf, size_t __statelen, struct random_data *__buf);
 extern int(atoi)(char const *__nptr);
 struct __anonstruct_div_t_773697287 {
   int quot;
@@ -496,15 +467,13 @@ int OBF_FUNC(int i) {
   {
     {
       _2_OBF_FUNC__BEGIN_3 = 1;
-      p24 = (struct _2_OBF_FUNC_2_opaque_NodeStruct *)malloc(
-          sizeof(struct _2_OBF_FUNC_2_opaque_NodeStruct));
+      p24 = (struct _2_OBF_FUNC_2_opaque_NodeStruct *)malloc(sizeof(struct _2_OBF_FUNC_2_opaque_NodeStruct));
       p24->next = p24;
       p24->prev = p24;
       _2_OBF_FUNC_2_opaque_list_1 = p24;
       i25 = 0;
       while (i25 < 3) {
-        p26 = (struct _2_OBF_FUNC_2_opaque_NodeStruct *)malloc(
-            sizeof(struct _2_OBF_FUNC_2_opaque_NodeStruct));
+        p26 = (struct _2_OBF_FUNC_2_opaque_NodeStruct *)malloc(sizeof(struct _2_OBF_FUNC_2_opaque_NodeStruct));
         p26->data = i25 * (((_1_entropy & ~2) << 1UL) - (_1_entropy ^ 2));
         p26->next = _2_OBF_FUNC_2_opaque_list_1->next;
         p26->prev = _2_OBF_FUNC_2_opaque_list_1;
@@ -520,15 +489,13 @@ int OBF_FUNC(int i) {
     _2_OBF_FUNC__BARRIER_4 = 1;
     {
       _2_OBF_FUNC__BEGIN_1 = 1;
-      p18 = (struct _2_OBF_FUNC_1_opaque_NodeStruct *)malloc(
-          sizeof(struct _2_OBF_FUNC_1_opaque_NodeStruct));
+      p18 = (struct _2_OBF_FUNC_1_opaque_NodeStruct *)malloc(sizeof(struct _2_OBF_FUNC_1_opaque_NodeStruct));
       p18->next = p18;
       p18->prev = p18;
       _2_OBF_FUNC_1_opaque_list_1 = p18;
       i19 = 0;
       while (i19 < 3) {
-        p20 = (struct _2_OBF_FUNC_1_opaque_NodeStruct *)malloc(
-            sizeof(struct _2_OBF_FUNC_1_opaque_NodeStruct));
+        p20 = (struct _2_OBF_FUNC_1_opaque_NodeStruct *)malloc(sizeof(struct _2_OBF_FUNC_1_opaque_NodeStruct));
         p20->data = i19 * (((_1_entropy & ~1) << 1UL) - (_1_entropy ^ 1));
         p20->next = _2_OBF_FUNC_1_opaque_list_1->next;
         p20->prev = _2_OBF_FUNC_1_opaque_list_1;
@@ -574,8 +541,7 @@ int OBF_FUNC(int i) {
                       isPrime = (_Bool)0;
                     }
                     {
-                      if (_2_OBF_FUNC_2_opaque_ptr_1 !=
-                          _2_OBF_FUNC_2_opaque_ptr_2) {
+                      if (_2_OBF_FUNC_2_opaque_ptr_1 != _2_OBF_FUNC_2_opaque_ptr_2) {
                         k++;
                       } else {
                       }
@@ -662,8 +628,7 @@ int OBF_FUNC(int i) {
                 }
                 if (k___1 < m) {
                   if (isPrime) {
-                    if (_2_OBF_FUNC_1_opaque_ptr_1 !=
-                        _2_OBF_FUNC_1_opaque_ptr_2) {
+                    if (_2_OBF_FUNC_1_opaque_ptr_1 != _2_OBF_FUNC_1_opaque_ptr_2) {
                     } else if (m == j * k___1) {
                       isPrime = (_Bool)0;
                     }

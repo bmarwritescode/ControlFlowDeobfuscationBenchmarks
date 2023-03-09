@@ -35,8 +35,7 @@ struct _3_OBF_FUNC_2_opaque_NodeStruct {
   struct _3_OBF_FUNC_2_opaque_NodeStruct *next;
   struct _3_OBF_FUNC_2_opaque_NodeStruct *prev;
 };
-struct _3_OBF_FUNC_2_opaque_NodeStruct *_3_OBF_FUNC_2_opaque_ptr_1 =
-    (struct _3_OBF_FUNC_2_opaque_NodeStruct *)0;
+struct _3_OBF_FUNC_2_opaque_NodeStruct *_3_OBF_FUNC_2_opaque_ptr_1 = (struct _3_OBF_FUNC_2_opaque_NodeStruct *)0;
 typedef unsigned long __u_quad_t;
 typedef unsigned int __u_int;
 typedef __u_int u_int;
@@ -51,8 +50,7 @@ struct _3_OBF_FUNC_1_opaque_NodeStruct {
   struct _3_OBF_FUNC_1_opaque_NodeStruct *prev;
   int data;
 };
-struct _3_OBF_FUNC_1_opaque_NodeStruct *_3_OBF_FUNC_1_opaque_list_1 =
-    (struct _3_OBF_FUNC_1_opaque_NodeStruct *)0;
+struct _3_OBF_FUNC_1_opaque_NodeStruct *_3_OBF_FUNC_1_opaque_list_1 = (struct _3_OBF_FUNC_1_opaque_NodeStruct *)0;
 typedef long __blksize_t;
 typedef __blksize_t blksize_t;
 typedef int __daddr_t;
@@ -74,8 +72,7 @@ static __uint64_t __uint64_identity(__uint64_t __x);
 extern int(mkstemp)(char *__template);
 typedef unsigned long __nlink_t;
 typedef __nlink_t nlink_t;
-extern char *(qecvt)(long double __value, int __ndigit, int *__decpt,
-                     int *__sign);
+extern char *(qecvt)(long double __value, int __ndigit, int *__decpt, int *__sign);
 typedef unsigned long size_t;
 extern size_t(__ctype_get_mb_cur_max)(void);
 extern long(a64l)(char const *__s);
@@ -111,8 +108,7 @@ struct __anonstruct_ldiv_t_790849867 {
   long rem;
 };
 extern int(rand_r)(unsigned int *__seed);
-struct _3_OBF_FUNC_2_opaque_NodeStruct *_3_OBF_FUNC_2_opaque_ptr_2 =
-    (struct _3_OBF_FUNC_2_opaque_NodeStruct *)0;
+struct _3_OBF_FUNC_2_opaque_NodeStruct *_3_OBF_FUNC_2_opaque_ptr_2 = (struct _3_OBF_FUNC_2_opaque_NodeStruct *)0;
 typedef __mode_t mode_t;
 typedef void *__timer_t;
 typedef int wchar_t;
@@ -131,8 +127,7 @@ struct __anonstruct___sigset_t_973126068 {
 };
 extern long long(atoll)(char const *__nptr);
 typedef int register_t;
-extern int(qecvt_r)(long double __value, int __ndigit, int *__decpt,
-                    int *__sign, char *__buf, size_t __len);
+extern int(qecvt_r)(long double __value, int __ndigit, int *__decpt, int *__sign, char *__buf, size_t __len);
 extern char *(realpath)(char const *__name, char *__resolved);
 typedef struct __anonstruct_ldiv_t_790849867 ldiv_t;
 extern char *(l64a)(long __n);
@@ -181,8 +176,7 @@ typedef union __anonunion_pthread_barrier_t_145707746 pthread_barrier_t;
 typedef int (*__compar_fn_t)(void const *, void const *);
 extern void(exit)(int __status);
 extern long(jrand48)(unsigned short *__xsubi);
-extern int(fcvt_r)(double __value, int __ndigit, int *__decpt, int *__sign,
-                   char *__buf, size_t __len);
+extern int(fcvt_r)(double __value, int __ndigit, int *__decpt, int *__sign, char *__buf, size_t __len);
 typedef __loff_t loff_t;
 typedef __int16_t __int_least16_t;
 typedef __int32_t int32_t;
@@ -192,8 +186,7 @@ typedef struct __anonstruct___sigset_t_973126068 __sigset_t;
 typedef long __ssize_t;
 typedef __ssize_t ssize_t;
 extern long(labs)(long __x);
-extern int(nrand48_r)(unsigned short *__xsubi, struct drand48_data *__buffer,
-                      long *__result);
+extern int(nrand48_r)(unsigned short *__xsubi, struct drand48_data *__buffer, long *__result);
 extern void(srand)(unsigned int __seed);
 typedef unsigned long __rlim64_t;
 typedef __int32_t __int_least32_t;
@@ -221,10 +214,8 @@ typedef long __blkcnt64_t;
 extern int(setstate_r)(char *__statebuf, struct random_data *__buf);
 extern int(atexit)(void (*__func)(void));
 typedef __u_quad_t u_quad_t;
-extern char *(qfcvt)(long double __value, int __ndigit, int *__decpt,
-                     int *__sign);
-typedef struct _3_OBF_FUNC_1_opaque_NodeStruct
-    *_3_OBF_FUNC_1_opaque_StructureType;
+extern char *(qfcvt)(long double __value, int __ndigit, int *__decpt, int *__sign);
+typedef struct _3_OBF_FUNC_1_opaque_NodeStruct *_3_OBF_FUNC_1_opaque_StructureType;
 extern char *(qgcvt)(long double __value, int __ndigit, char *__buf);
 extern int system(char const *__command);
 union pthread_attr_t {
@@ -239,11 +230,8 @@ struct timeval {
 };
 typedef unsigned int __useconds_t;
 extern char *(fcvt)(double __value, int __ndigit, int *__decpt, int *__sign);
-extern void(qsort)(void *__base, size_t __nmemb, size_t __size,
-                   int (*__compar)(void const *, void const *));
-extern int pselect(int __nfds, fd_set *__readfds, fd_set *__writefds,
-                   fd_set *__exceptfds, struct timespec const *__timeout,
-                   __sigset_t const *__sigmask);
+extern void(qsort)(void *__base, size_t __nmemb, size_t __size, int (*__compar)(void const *, void const *));
+extern int pselect(int __nfds, fd_set *__readfds, fd_set *__writefds, fd_set *__exceptfds, struct timespec const *__timeout, __sigset_t const *__sigmask);
 typedef long __int64_t;
 typedef __int64_t int64_t;
 typedef __uint32_t u_int32_t;
@@ -284,8 +272,7 @@ union __anonunion_pthread_cond_t_951761805 {
 static __uint32_t __uint32_identity(__uint32_t __x);
 extern int(posix_memalign)(void **__memptr, size_t __alignment, size_t __size);
 typedef union __anonunion_pthread_rwlockattr_t_145707745 pthread_rwlockattr_t;
-typedef struct _3_OBF_FUNC_2_opaque_NodeStruct
-    *_3_OBF_FUNC_2_opaque_StructureType;
+typedef struct _3_OBF_FUNC_2_opaque_NodeStruct *_3_OBF_FUNC_2_opaque_StructureType;
 typedef unsigned int __socklen_t;
 extern long(random)(void);
 typedef __uint16_t u_int16_t;
@@ -306,8 +293,7 @@ typedef unsigned long __uintmax_t;
 extern void *(reallocarray)(void *__ptr, size_t __nmemb, size_t __size);
 extern int(getsubopt)(char **__optionp, char *const *__tokens, char **__valuep);
 extern unsigned short *(seed48)(unsigned short *__seed16v);
-extern int(qfcvt_r)(long double __value, int __ndigit, int *__decpt,
-                    int *__sign, char *__buf, size_t __len);
+extern int(qfcvt_r)(long double __value, int __ndigit, int *__decpt, int *__sign, char *__buf, size_t __len);
 typedef union __anonunion_pthread_mutex_t_335460617 pthread_mutex_t;
 typedef long __clock_t;
 struct __pthread_rwlock_arch_t {
@@ -327,8 +313,7 @@ struct __pthread_rwlock_arch_t {
 typedef union __anonunion_pthread_barrierattr_t_951761806 pthread_barrierattr_t;
 typedef __timer_t timer_t;
 extern char *(setstate)(char *__statebuf);
-struct _3_OBF_FUNC_1_opaque_NodeStruct *_3_OBF_FUNC_1_opaque_ptr_1 =
-    (struct _3_OBF_FUNC_1_opaque_NodeStruct *)0;
+struct _3_OBF_FUNC_1_opaque_NodeStruct *_3_OBF_FUNC_1_opaque_ptr_1 = (struct _3_OBF_FUNC_1_opaque_NodeStruct *)0;
 union __anonunion_pthread_rwlock_t_656928968 {
   struct __pthread_rwlock_arch_t __data;
   char __size[56];
@@ -338,17 +323,14 @@ extern long double(strtold)(char const *__nptr, char **__endptr);
 typedef int __pid_t;
 typedef struct __anonstruct_div_t_773697287 div_t;
 extern div_t(div)(int __numer, int __denom);
-extern void *(bsearch)(void const *__key, void const *__base, size_t __nmemb,
-                       size_t __size,
-                       int (*__compar)(void const *, void const *));
+extern void *(bsearch)(void const *__key, void const *__base, size_t __nmemb, size_t __size, int (*__compar)(void const *, void const *));
 extern long long(llabs)(long long __x);
 typedef unsigned int __uid_t;
 typedef __uid_t uid_t;
 struct __pthread_internal_slist {
   struct __pthread_internal_slist *__next;
 };
-extern unsigned long long(strtoull)(char const *__nptr, char **__endptr,
-                                    int __base);
+extern unsigned long long(strtoull)(char const *__nptr, char **__endptr, int __base);
 unsigned long _2_entropy = 5307323352338960400UL;
 typedef union __anonunion_pthread_cond_t_951761805 pthread_cond_t;
 typedef __uint64_t __uint_least64_t;
@@ -378,8 +360,7 @@ typedef char *__caddr_t;
 typedef __caddr_t caddr_t;
 typedef __gid_t gid_t;
 extern ldiv_t(ldiv)(long __numer, long __denom);
-struct _3_OBF_FUNC_2_opaque_NodeStruct *_3_OBF_FUNC_2_opaque_list_2 =
-    (struct _3_OBF_FUNC_2_opaque_NodeStruct *)0;
+struct _3_OBF_FUNC_2_opaque_NodeStruct *_3_OBF_FUNC_2_opaque_list_2 = (struct _3_OBF_FUNC_2_opaque_NodeStruct *)0;
 typedef long __intmax_t;
 union __anonunion_pthread_barrier_t_145707746 {
   char __size[32];
@@ -397,14 +378,11 @@ char **_global_envp;
 extern long(lrand48)(void);
 extern void *(valloc)(size_t __size);
 extern int(random_r)(struct random_data *__buf, int32_t *__result);
-extern int select(int __nfds, fd_set *__readfds, fd_set *__writefds,
-                  fd_set *__exceptfds, struct timeval *__timeout);
+extern int select(int __nfds, fd_set *__readfds, fd_set *__writefds, fd_set *__exceptfds, struct timeval *__timeout);
 typedef unsigned long __syscall_ulong_t;
 enum __anonenum_idtype_t_558242672 { P_ALL = 0, P_PID = 1, P_PGID = 2 };
-extern int(ecvt_r)(double __value, int __ndigit, int *__decpt, int *__sign,
-                   char *__buf, size_t __len);
-struct _3_OBF_FUNC_2_opaque_NodeStruct *_3_OBF_FUNC_2_opaque_list_1 =
-    (struct _3_OBF_FUNC_2_opaque_NodeStruct *)0;
+extern int(ecvt_r)(double __value, int __ndigit, int *__decpt, int *__sign, char *__buf, size_t __len);
+struct _3_OBF_FUNC_2_opaque_NodeStruct *_3_OBF_FUNC_2_opaque_list_1 = (struct _3_OBF_FUNC_2_opaque_NodeStruct *)0;
 extern unsigned long(strtoul)(char const *__nptr, char **__endptr, int __base);
 typedef __int8_t __int_least8_t;
 typedef __clock_t clock_t;
@@ -412,21 +390,16 @@ extern void *(alloca)(size_t __size);
 extern void(free)(void *__ptr);
 int main(int argc, char **argv, char **_formal_envp);
 extern int(lrand48_r)(struct drand48_data *__buffer, long *__result);
-extern int(jrand48_r)(unsigned short *__xsubi, struct drand48_data *__buffer,
-                      long *__result);
+extern int(jrand48_r)(unsigned short *__xsubi, struct drand48_data *__buffer, long *__result);
 extern char *(mktemp)(char *__template);
 extern long(nrand48)(unsigned short *__xsubi);
 extern int(wctomb)(char *__s, wchar_t __wchar);
-extern int(erand48_r)(unsigned short *__xsubi, struct drand48_data *__buffer,
-                      double *__result);
+extern int(erand48_r)(unsigned short *__xsubi, struct drand48_data *__buffer, double *__result);
 typedef long __intptr_t;
-extern char *(initstate)(unsigned int __seed, char *__statebuf,
-                         size_t __statelen);
+extern char *(initstate)(unsigned int __seed, char *__statebuf, size_t __statelen);
 int OBF_FUNC(int i);
-struct _3_OBF_FUNC_1_opaque_NodeStruct *_3_OBF_FUNC_1_opaque_list_2 =
-    (struct _3_OBF_FUNC_1_opaque_NodeStruct *)0;
-struct _3_OBF_FUNC_1_opaque_NodeStruct *_3_OBF_FUNC_1_opaque_ptr_2 =
-    (struct _3_OBF_FUNC_1_opaque_NodeStruct *)0;
+struct _3_OBF_FUNC_1_opaque_NodeStruct *_3_OBF_FUNC_1_opaque_list_2 = (struct _3_OBF_FUNC_1_opaque_NodeStruct *)0;
+struct _3_OBF_FUNC_1_opaque_NodeStruct *_3_OBF_FUNC_1_opaque_ptr_2 = (struct _3_OBF_FUNC_1_opaque_NodeStruct *)0;
 typedef struct __pthread_internal_slist __pthread_slist_t;
 typedef __pid_t pid_t;
 typedef long __fsword_t;
@@ -455,10 +428,8 @@ union __anonunion_pthread_mutexattr_t_488594144 {
   char __size[4];
   int __align;
 };
-extern int(initstate_r)(unsigned int __seed, char *__statebuf,
-                        size_t __statelen, struct random_data *__buf);
-extern unsigned long long(strtouq)(char const *__nptr, char **__endptr,
-                                   int __base);
+extern int(initstate_r)(unsigned int __seed, char *__statebuf, size_t __statelen, struct random_data *__buf);
+extern unsigned long long(strtouq)(char const *__nptr, char **__endptr, int __base);
 extern int(atoi)(char const *__nptr);
 struct __anonstruct_div_t_773697287 {
   int quot;
@@ -485,15 +456,13 @@ int OBF_FUNC(int i) {
   {
     {
       _3_OBF_FUNC__BEGIN_3 = 1;
-      p13 = (struct _3_OBF_FUNC_2_opaque_NodeStruct *)malloc(
-          sizeof(struct _3_OBF_FUNC_2_opaque_NodeStruct));
+      p13 = (struct _3_OBF_FUNC_2_opaque_NodeStruct *)malloc(sizeof(struct _3_OBF_FUNC_2_opaque_NodeStruct));
       p13->next = p13;
       p13->prev = p13;
       _3_OBF_FUNC_2_opaque_list_1 = p13;
       i14 = 0;
       while (i14 < 2) {
-        p15 = (struct _3_OBF_FUNC_2_opaque_NodeStruct *)malloc(
-            sizeof(struct _3_OBF_FUNC_2_opaque_NodeStruct));
+        p15 = (struct _3_OBF_FUNC_2_opaque_NodeStruct *)malloc(sizeof(struct _3_OBF_FUNC_2_opaque_NodeStruct));
         p15->data = i14 * ((_2_entropy + ~1) + 1UL);
         p15->next = _3_OBF_FUNC_2_opaque_list_1->next;
         p15->prev = _3_OBF_FUNC_2_opaque_list_1;
@@ -508,17 +477,14 @@ int OBF_FUNC(int i) {
     _3_OBF_FUNC__BARRIER_4 = 1;
     {
       _3_OBF_FUNC__BEGIN_1 = 1;
-      p7 = (struct _3_OBF_FUNC_1_opaque_NodeStruct *)malloc(
-          sizeof(struct _3_OBF_FUNC_1_opaque_NodeStruct));
+      p7 = (struct _3_OBF_FUNC_1_opaque_NodeStruct *)malloc(sizeof(struct _3_OBF_FUNC_1_opaque_NodeStruct));
       p7->next = p7;
       p7->prev = p7;
       _3_OBF_FUNC_1_opaque_list_1 = p7;
       i8 = 0;
       while (i8 < 2) {
-        p9 = (struct _3_OBF_FUNC_1_opaque_NodeStruct *)malloc(
-            sizeof(struct _3_OBF_FUNC_1_opaque_NodeStruct));
-        p9->data = i8 * ((_2_entropy & 4) * (_2_entropy | 4) +
-                         (_2_entropy & ~4) * (~_2_entropy & 4));
+        p9 = (struct _3_OBF_FUNC_1_opaque_NodeStruct *)malloc(sizeof(struct _3_OBF_FUNC_1_opaque_NodeStruct));
+        p9->data = i8 * ((_2_entropy & 4) * (_2_entropy | 4) + (_2_entropy & ~4) * (~_2_entropy & 4));
         p9->next = _3_OBF_FUNC_1_opaque_list_1->next;
         p9->prev = _3_OBF_FUNC_1_opaque_list_1;
         (_3_OBF_FUNC_1_opaque_list_1->next)->prev = p9;
@@ -534,127 +500,113 @@ int OBF_FUNC(int i) {
     _1_OBF_FUNC_next = 22UL;
     while (1) {
       switch (_1_OBF_FUNC_next) {
-        case 18:;
-          if (isPrime) {
-            _1_OBF_FUNC_next = 14UL;
-          } else {
-            _1_OBF_FUNC_next = 0UL;
-          }
-          break;
-        case 25:;
-          if (isPrime) {
-            _1_OBF_FUNC_next = 12UL;
-          } else {
-            _1_OBF_FUNC_next = 15UL;
-          }
-          break;
-        case 14:;
-          if (m == j * k) {
-            _1_OBF_FUNC_next = 16UL;
-          } else {
-            _1_OBF_FUNC_next = 5UL;
-          }
-          if (_3_OBF_FUNC_1_opaque_ptr_1 == _3_OBF_FUNC_1_opaque_ptr_2) {
-            return (i14);
-          } else {
-            break;
-          }
-        case 15:
-          m--;
-          _1_OBF_FUNC_next = 3UL;
-          break;
-        case 12:;
-          return (m);
-          break;
-        case 3:;
-          if (m > 1) {
-            _1_OBF_FUNC_next = 2UL;
-          } else {
-            _1_OBF_FUNC_next = 11UL;
-          }
-          break;
-        case 16:
-          isPrime = (_Bool)0;
+      case 18:;
+        if (isPrime) {
+          _1_OBF_FUNC_next = 14UL;
+        } else {
+          _1_OBF_FUNC_next = 0UL;
+        }
+        break;
+      case 25:;
+        if (isPrime) {
+          _1_OBF_FUNC_next = 12UL;
+        } else {
+          _1_OBF_FUNC_next = 15UL;
+        }
+        break;
+      case 14:;
+        if (m == j * k) {
+          _1_OBF_FUNC_next = 16UL;
+        } else {
           _1_OBF_FUNC_next = 5UL;
+        }
+        if (_3_OBF_FUNC_1_opaque_ptr_1 == _3_OBF_FUNC_1_opaque_ptr_2) {
+          return (i14);
+        } else {
           break;
-        case 24:
-          j = 2;
-          _1_OBF_FUNC_next = 21UL;
-          break;
-        case 21:;
-          if (j < m) {
-            _1_OBF_FUNC_next = 17UL;
+        }
+      case 15:
+        m--;
+        _1_OBF_FUNC_next = 3UL;
+        break;
+      case 12:;
+        return (m);
+        break;
+      case 3:;
+        if (m > 1) {
+          _1_OBF_FUNC_next = 2UL;
+        } else {
+          _1_OBF_FUNC_next = 11UL;
+        }
+        break;
+      case 16:
+        isPrime = (_Bool)0;
+        _1_OBF_FUNC_next = 5UL;
+        break;
+      case 24:
+        j = 2;
+        _1_OBF_FUNC_next = 21UL;
+        break;
+      case 21:;
+        if (j < m) {
+          _1_OBF_FUNC_next = 17UL;
+        } else {
+          _1_OBF_FUNC_next = 25UL;
+        }
+        break;
+      case 26:
+        m = i;
+        _1_OBF_FUNC_next = 3UL;
+        break;
+      case 11:;
+        return (-1);
+        break;
+      case 9:
+        k = 2;
+        _1_OBF_FUNC_next = 20UL;
+        break;
+      case 17:;
+        if (isPrime) {
+          _1_OBF_FUNC_next = 9UL;
+        } else {
+          _1_OBF_FUNC_next = 25UL;
+        }
+        break;
+      case 6:;
+        return (-1);
+        break;
+      case 22:;
+        if (i <= 0) {
+          _1_OBF_FUNC_next = 6UL;
+        } else {
+          _1_OBF_FUNC_next = 26UL;
+        }
+        break;
+      case 5:
+        k++;
+        _1_OBF_FUNC_next = 20UL;
+        break;
+      case 0:
+        j++;
+        _1_OBF_FUNC_next = 21UL;
+        {
+          if ((((_2_alwaysZero & ((_2_entropy & ~3) - (~_2_entropy & 3))) * (_2_alwaysZero | ((_2_entropy & ~3) - (~_2_entropy & 3))) + (_2_alwaysZero & ~((_2_entropy & ~3) - (~_2_entropy & 3))) * (~_2_alwaysZero & ((_2_entropy & ~3) - (~_2_entropy & 3)))) ^ 0) + ((((_2_alwaysZero & ((_2_entropy & ~3) - (~_2_entropy & 3))) * (_2_alwaysZero | ((_2_entropy & ~3) - (~_2_entropy & 3))) + (_2_alwaysZero & ~((_2_entropy & ~3) - (~_2_entropy & 3))) * (~_2_alwaysZero & ((_2_entropy & ~3) - (~_2_entropy & 3)))) & 0) << 1UL)) {
+            i8 = OBF_FUNC(k);
           } else {
-            _1_OBF_FUNC_next = 25UL;
           }
           break;
-        case 26:
-          m = i;
-          _1_OBF_FUNC_next = 3UL;
-          break;
-        case 11:;
-          return (-1);
-          break;
-        case 9:
-          k = 2;
-          _1_OBF_FUNC_next = 20UL;
-          break;
-        case 17:;
-          if (isPrime) {
-            _1_OBF_FUNC_next = 9UL;
-          } else {
-            _1_OBF_FUNC_next = 25UL;
-          }
-          break;
-        case 6:;
-          return (-1);
-          break;
-        case 22:;
-          if (i <= 0) {
-            _1_OBF_FUNC_next = 6UL;
-          } else {
-            _1_OBF_FUNC_next = 26UL;
-          }
-          break;
-        case 5:
-          k++;
-          _1_OBF_FUNC_next = 20UL;
-          break;
-        case 0:
-          j++;
-          _1_OBF_FUNC_next = 21UL;
-          {
-            if ((((_2_alwaysZero & ((_2_entropy & ~3) - (~_2_entropy & 3))) *
-                      (_2_alwaysZero |
-                       ((_2_entropy & ~3) - (~_2_entropy & 3))) +
-                  (_2_alwaysZero & ~((_2_entropy & ~3) - (~_2_entropy & 3))) *
-                      (~_2_alwaysZero &
-                       ((_2_entropy & ~3) - (~_2_entropy & 3)))) ^
-                 0) +
-                ((((_2_alwaysZero & ((_2_entropy & ~3) - (~_2_entropy & 3))) *
-                       (_2_alwaysZero |
-                        ((_2_entropy & ~3) - (~_2_entropy & 3))) +
-                   (_2_alwaysZero & ~((_2_entropy & ~3) - (~_2_entropy & 3))) *
-                       (~_2_alwaysZero &
-                        ((_2_entropy & ~3) - (~_2_entropy & 3)))) &
-                  0)
-                 << 1UL)) {
-              i8 = OBF_FUNC(k);
-            } else {
-            }
-            break;
-          }
-        case 2:
-          isPrime = (_Bool)1;
-          _1_OBF_FUNC_next = 24UL;
-          break;
-        case 20:;
-          if (k < m) {
-            _1_OBF_FUNC_next = 18UL;
-          } else {
-            _1_OBF_FUNC_next = 0UL;
-          }
-          break;
+        }
+      case 2:
+        isPrime = (_Bool)1;
+        _1_OBF_FUNC_next = 24UL;
+        break;
+      case 20:;
+        if (k < m) {
+          _1_OBF_FUNC_next = 18UL;
+        } else {
+          _1_OBF_FUNC_next = 0UL;
+        }
+        break;
       }
     }
   }
