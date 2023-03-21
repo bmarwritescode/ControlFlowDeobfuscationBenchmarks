@@ -1,0 +1,3 @@
+[submodule "C-Obfuscator"]
+	path = C-Obfuscator
+	url = https://github.com/bmarwritescode/C-Obfuscator.git
