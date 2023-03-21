@@ -1,0 +1,38 @@
+description: random-functions
+params: ["--Seed=114514", "--Verbosity=1"]
+args:
+  # single or multiple (separated by colon) function to obfuscate
+  func: OBF_FUNC
+
+  # options to postprocess obfuscated code
+  cleanup_kinds: removeUnusedFunctions
+
+templates:
+  - name: base
+    procedure:
+      - ["--Transform=RandomFuns", "--RandomFunsName={func}",
+          "--RandomFunsFunctionCount=1",
+          "--RandomFunsTrace=0",
+          "--RandomFunsType=long",
+          "--RandomFunsInputSize=1",
+          "--RandomFunsLocalStaticStateSize=1",
+          "--RandomFunsGlobalStaticStateSize=0",
+          "--RandomFunsLocalDynamicStateSize=0",
+          "--RandomFunsGlobalDynamicStateSize=0",
+          "--RandomFunsBoolSize=1",
+          "--RandomFunsLoopSize=20",
+          "--RandomFunsCodeSize=10",
+          "--RandomFunsOutputSize=1",
+          "--RandomFunsTimeCheckCount=0",
+          "--RandomFunsActivationCodeCheckCount=0",
+          "--RandomFunsActivationCode=42",
+          "--RandomFunsPasswordCheckCount=0",
+          "--RandomFunsPassword=secret",
+          "--RandomFunsFailureKind=segv"]
+
+variants:
+  - name: random-funs-base
+    use:
+      - template: base
+        args:
+          func: SECRET

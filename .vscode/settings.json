@@ -7,6 +7,7 @@
     "python.languageServer": "Default",
     "python.testing.pytestEnabled": true,
     "files.associations": {
-        "stdlib.h": "c"
+        "stdlib.h": "c",
+        "time.h": "c"
     },
 }
